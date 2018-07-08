@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.nysa.NewsActivity">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+
+
+
+                <TextView
+                    android:id="@+id/TagnameNews"
+                    android:layout_width="49dp"
+                    android:layout_height="17dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/tagdrawable"
+                    android:gravity="center"
+                    android:text="Hopeless"
+                    android:textSize="9sp"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:id="@+id/TitleNews"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Lorem ipsum dolor sit"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/AutorNews"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="30dp"
+
+                android:text="By Mr.Alergie" />
+
+            <Space
+                android:id="@+id/spatiuCitat1"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/citat1News"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="30dp"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscint. Sed quis est facilisis in mollbus vulputate libero, a iaculis augue pulvinar non. Praesent vel orci blandit, placerat augue mollis, feugiat tellus. Praesent eget maximus enim. Ut in interdum ipsum. Etiam placerat felis at ex commodo"
+                android:textColor="#85838E"
+                android:textStyle="italic"
+                android:visibility="visible" />
+
+            <Space
+                android:id="@+id/spatiuintermediar1"
+                android:layout_width="wrap_content"
+                android:layout_height="10dp" />
+
+            <Space
+                android:id="@+id/spatiuParagrafM1"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/ParagrafM"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscint. Sed quis est facilisis in mollbus vulputate libero, a iaculis augue pulvinar non. Praesent vel orci blandit, placerat augue mollis, feugiat tellus. Praesent eget maximus enim. Ut in interdum ipsum. Etiam placerat felis at ex commodo"
+                android:layout_marginEnd="20dp"
+                android:textStyle="normal" />
+
+            <Space
+                android:id="@+id/spatiuintermediar2"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp" />
+
+            <TextView
+                android:id="@+id/Subtitlu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="30dp"
+                android:text="Insert Subtitle Here"
+                android:textSize="20sp"
+
+                android:textStyle="bold" />
+
+            <Space
+                android:id="@+id/spatiuSubtitlu1"
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:id="@+id/ParagrafS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="30dp"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscint. Sed quis est facilisis in mollbus vulputate libero, a iaculis augue pulvinar non. Praesent vel orci blandit, placerat augue mollis, feugiat tellus. Praesent eget maximus enim. Ut in interdum ipsum. Etiam placerat felis at ex commodo"
+                android:textStyle="normal" />
+
+            <Space
+                android:id="@+id/spatiuParagraf11"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

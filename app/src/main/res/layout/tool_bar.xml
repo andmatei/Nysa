@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.nysa.MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#FFFFFF"
+        android:gravity="bottom"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#e7e7e7"
+        app:layout_constraintTop_toTopOf="@id/toolbar2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <ImageButton
+        android:id="@+id/homeBtn"
+        android:layout_width="56dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="8dp"
+        android:background="@android:color/transparent"
+        android:padding="4dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar2"
+        app:layout_constraintStart_toStartOf="@+id/toolbar2"
+        app:layout_constraintTop_toTopOf="@+id/toolbar2"
+        app:srcCompat="@drawable/nohome" />
+
+    <ImageButton
+        android:id="@+id/personBtn"
+        android:layout_width="57dp"
+        android:layout_height="42dp"
+        android:background="@android:color/transparent"
+        android:padding="4dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/homeBtn"
+        app:layout_constraintEnd_toStartOf="@+id/addBtn"
+        app:layout_constraintStart_toEndOf="@+id/homeBtn"
+        app:layout_constraintTop_toTopOf="@+id/homeBtn"
+        app:srcCompat="@drawable/noperson" />
+
+    <ImageButton
+        android:id="@+id/addBtn"
+        android:layout_width="57dp"
+        android:layout_height="42dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/personBtn"
+        app:layout_constraintEnd_toEndOf="@+id/graphBtn"
+        app:layout_constraintStart_toStartOf="@+id/homeBtn"
+        app:layout_constraintTop_toTopOf="@+id/personBtn"
+        app:srcCompat="@drawable/addtoolbar" />
+
+    <ImageButton
+        android:id="@+id/libraryBtn"
+        android:layout_width="57dp"
+        android:layout_height="42dp"
+        android:background="@android:color/transparent"
+        android:padding="4dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/personBtn"
+        app:layout_constraintEnd_toStartOf="@+id/graphBtn"
+        app:layout_constraintStart_toEndOf="@+id/addBtn"
+        app:layout_constraintTop_toTopOf="@+id/personBtn"
+        app:srcCompat="@drawable/nomenu" />
+
+    <ImageButton
+        android:id="@+id/graphBtn"
+        android:layout_width="57dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="8dp"
+        android:background="@android:color/transparent"
+        android:padding="4dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/addBtn"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar2"
+        app:layout_constraintTop_toTopOf="@+id/libraryBtn"
+        app:srcCompat="@drawable/nograph" />
+
+</android.support.constraint.ConstraintLayout>

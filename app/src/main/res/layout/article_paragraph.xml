@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingEnd="40dp"
+    android:paddingStart="40dp">
+    <TextView
+        android:id="@+id/SubtitleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Insert Subtitle Here."
+        android:fontFamily="@font/segoeuib"
+        android:textColor="@color/colorText75"
+        android:textSize="24dp"
+        android:layout_marginTop="24dp"
+        />
+
+    <ImageView
+        android:layout_marginTop="4dp"
+        android:id = "@+id/SubtitleUnderline"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorText75"/>
+
+    <TextView
+        android:id="@+id/ParagraphTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Dummy_text"
+        android:layout_marginTop="8dp"
+        android:textSize="14sp"
+        android:fontFamily="@font/segoe_ui_semilight_610"
+        android:textColor="@color/colorText75"
+        />
+</LinearLayout>

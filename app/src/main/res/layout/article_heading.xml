@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    android:paddingTop="40dp"
+    android:paddingStart="40dp"
+    android:paddingEnd="40dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:id="@+id/TagnameNews"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tagdrawable"
+        android:elevation="5dp"
+        android:fontFamily="@font/segoeuib"
+        android:paddingBottom="4dp"
+        android:paddingEnd="24dp"
+        android:paddingStart="24dp"
+        android:paddingTop="4dp"
+        android:text="News"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:textSize="9sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/exitArticle"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/TagnameNews"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/TagnameNews"
+        app:srcCompat="@drawable/x" />
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/segoeuib"
+        android:lineSpacingExtra="-8dp"
+        android:text="Lorem ipsum dolor sit."
+        android:textColor="@color/colorText"
+        android:textSize="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TagnameNews" />
+
+    <TextView
+        android:id="@+id/authorTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="By Mr.Ambrosia, allergist at Mr.Ambrosia Clinic"
+        android:textColor="@color/colorText"
+        android:fontFamily="@font/segoe_ui_semilight_610"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/titleTextView"
+        app:layout_constraintStart_toStartOf="@+id/titleTextView"
+        app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
+
+    <TextView
+        android:id="@+id/postedTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/segoe_ui_semilight_610"
+        android:text="4 hours ago"
+        android:textColor="@color/colorText"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="@+id/authorTextView"
+        app:layout_constraintTop_toBottomOf="@+id/authorTextView" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/main_background"
+        app:layout_constraintEnd_toEndOf="@+id/TagnameNews"
+        app:layout_constraintStart_toStartOf="@+id/postedTextView"
+        app:layout_constraintTop_toBottomOf="@+id/postedTextView" />
+
+</android.support.constraint.ConstraintLayout>

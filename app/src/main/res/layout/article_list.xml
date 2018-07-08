@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/list"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_bg"
+    android:paddingRight="8dp"
+    android:paddingTop="24dp"
+    android:paddingBottom="24dp"
+    android:paddingLeft="16dp"
+    android:orientation="vertical"
+    android:layout_marginTop="24dp"
+    android:layout_marginBottom="24dp"
+    android:layout_marginEnd="40dp"
+    android:layout_marginStart="40dp">
+
+    <TextView
+        android:id="@+id/listTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Note / List title:"
+        android:fontFamily="@font/segoeuil"
+        android:textStyle="italic"
+        android:textSize="16sp"
+        android:textColor="#347F5F"
+        />
+    <TextView
+        android:id="@+id/listItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="- Lorem ipsum dolor sit amet, consectetuer adipscing elit, sed diam nonummy nibh euismod"
+        android:fontFamily="@font/segoeuil"
+        android:textStyle="italic"
+        android:textSize="16sp"
+        android:textColor="#347F5F"
+        android:layout_marginTop="8dp"/>
+
+</LinearLayout>
