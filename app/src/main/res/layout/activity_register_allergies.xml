@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.nysa.RegisterAllergies">
+    tools:context="nysa.nysa_20.activity.AllergyRegisterActivity">
 
 
     <android.support.constraint.ConstraintLayout
@@ -15,18 +15,18 @@
             android:id="@+id/topBorder"
             android:layout_width="match_parent"
             android:layout_height="17dp"
-            android:background="@drawable/descrescator"
+            android:background="@drawable/top"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/Title"
+            android:id="@+id/titleTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="60dp"
-            android:text="@string/do_you_have_any_allergies"
+            android:text="Do you have any allergies?"
             android:textColor="#22B573"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -34,7 +34,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/libraryBtn"
+            android:id="@+id/libraryButton"
             android:layout_width="0dp"
             android:layout_height="24dp"
             android:layout_marginTop="24dp"
@@ -42,49 +42,39 @@
             android:text="@string/check_out_our_allergy_library_here"
             android:textAppearance="@style/TextAppearance.AppCompat.Caption"
             android:textColor="#FFFFFF"
-            app:layout_constraintEnd_toEndOf="@+id/Title"
-            app:layout_constraintStart_toStartOf="@+id/Title"
-            app:layout_constraintTop_toBottomOf="@+id/Title" />
+            app:layout_constraintEnd_toEndOf="@+id/titleTextView"
+            app:layout_constraintStart_toStartOf="@+id/titleTextView"
+            app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
 
 
-        <ImageButton
-            android:id="@+id/FoodIcon"
+        <ImageView
+            android:id="@+id/foodAllergyImageView"
             android:layout_width="34dp"
             android:layout_height="27dp"
             android:layout_marginStart="52dp"
             android:layout_marginTop="172dp"
-            android:background="@android:color/transparent"
             android:scaleType="fitCenter"
-            android:src="@drawable/nofood"
+            android:background="@drawable/nofood"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/FoodAllergytxt"
-            android:layout_width="112dp"
+            android:id="@+id/foodAllergyTextView"
+            android:layout_width="205dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="172dp"
+            android:layout_marginEnd="8dp"
             android:text="@string/food_allergy"
             android:textColor="#22B573"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.011"
-            app:layout_constraintStart_toEndOf="@+id/FoodIcon"
+            app:layout_constraintStart_toEndOf="@+id/foodAllergyImageView"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/FoodTitleBtn"
-            android:layout_width="193dp"
-            android:layout_height="35dp"
-            android:layout_marginBottom="13dp"
-            android:background="@android:color/transparent"
-            app:layout_constraintBottom_toTopOf="@+id/LactoseBtn"
-            app:layout_constraintStart_toEndOf="@+id/FoodIcon" />
-
         <ImageView
-            android:id="@+id/FoodUnderline"
+            android:id="@+id/foodUnderlineImage"
             android:layout_width="0dp"
             android:layout_height="1dp"
             android:layout_marginEnd="32dp"
@@ -93,40 +83,26 @@
             android:background="#D1D1D1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/FoodAllergytxt" />
+            app:layout_constraintTop_toBottomOf="@+id/foodAllergyTextView" />
 
         <ImageView
-            android:id="@+id/LactoseCheck"
+            android:id="@+id/lactoseImageView"
             android:layout_width="15dp"
             android:layout_height="15dp"
-            android:layout_marginBottom="16dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="88dp"
             android:layout_marginTop="16dp"
-            android:src="@drawable/unchecked"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/unchecked"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/LactoseTxt"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/FoodUnderline"
-            app:layout_constraintVertical_bias="0.0"
-         />
-
-        <Button
-            android:id="@+id/LactoseBtn"
-            android:layout_width="148dp"
-            android:layout_height="25dp"
-            android:layout_marginEnd="154dp"
-            android:layout_marginTop="12dp"
-            android:background="@android:color/transparent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/LactoseCheck"
-            app:layout_constraintTop_toBottomOf="@+id/FoodUnderline" />
+            app:layout_constraintEnd_toStartOf="@+id/lactoseTextView"
+            app:layout_constraintStart_toStartOf="@+id/eggImageView"
+            app:layout_constraintTop_toBottomOf="@+id/foodUnderlineImage"
+            app:layout_constraintVertical_bias="0.0" />
 
 
         <TextView
-            android:id="@+id/LactoseTxt"
-            android:layout_width="wrap_content"
+            android:id="@+id/lactoseTextView"
+            android:layout_width="205dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="120dp"
             android:layout_marginTop="12dp"
@@ -134,34 +110,22 @@
             android:textColor="#22B573"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/FoodUnderline" />
+            app:layout_constraintTop_toBottomOf="@+id/foodUnderlineImage" />
 
 
         <ImageView
-            android:id="@+id/EggCheck"
+            android:id="@+id/eggImageView"
             android:layout_width="15dp"
             android:layout_height="15dp"
             android:layout_marginTop="4dp"
-            android:src="@drawable/unchecked"
-            app:layout_constraintStart_toStartOf="@+id/LactoseCheck"
-            app:layout_constraintTop_toTopOf="@+id/EggTxt" />
-
-        <Button
-            android:id="@+id/EggBtn"
-            android:layout_width="148dp"
-            android:layout_height="25dp"
-            android:layout_marginEnd="152dp"
-            android:layout_marginStart="8dp"
-            android:background="@android:color/transparent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/LactoseBtn"
-            app:layout_constraintTop_toTopOf="@+id/EggTxt" />
+            android:background="@drawable/unchecked"
+            app:layout_constraintStart_toStartOf="@+id/glutenImageView"
+            app:layout_constraintTop_toTopOf="@+id/eggTextView" />
 
 
         <TextView
-            android:id="@+id/EggTxt"
-            android:layout_width="wrap_content"
+            android:id="@+id/eggTextView"
+            android:layout_width="205dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="120dp"
             android:layout_marginTop="3dp"
@@ -169,35 +133,24 @@
             android:textColor="#22B573"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/LactoseTxt" />
+            app:layout_constraintTop_toBottomOf="@+id/lactoseTextView" />
 
 
         <ImageView
-            android:id="@+id/GlutenCheck"
+            android:id="@+id/glutenImageView"
             android:layout_width="15dp"
             android:layout_height="15dp"
             android:layout_marginStart="97dp"
             android:layout_marginTop="4dp"
-            android:src="@drawable/unchecked"
+            android:background="@drawable/unchecked"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/GlutenTxt"
+            app:layout_constraintTop_toTopOf="@+id/glutenTextView"
             />
-
-        <Button
-            android:id="@+id/GlutenBtn"
-            android:layout_width="148dp"
-            android:layout_height="25dp"
-            android:layout_marginEnd="154dp"
-            android:background="@android:color/transparent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/EggCheck"
-            app:layout_constraintTop_toTopOf="@+id/GlutenTxt" />
 
 
         <TextView
-            android:id="@+id/GlutenTxt"
-            android:layout_width="wrap_content"
+            android:id="@+id/glutenTextView"
+            android:layout_width="205dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="120dp"
             android:layout_marginTop="3dp"
@@ -205,34 +158,23 @@
             android:textColor="#22B573"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/EggTxt" />
+            app:layout_constraintTop_toBottomOf="@+id/eggTextView" />
 
 
         <ImageView
-            android:id="@+id/SesameCheck"
+            android:id="@+id/sesameImageView"
             android:layout_width="15dp"
             android:layout_height="15dp"
             android:layout_marginStart="97dp"
             android:layout_marginTop="4dp"
+            android:background="@drawable/unchecked"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/SesameTxt"
-            android:src="@drawable/unchecked" />
-
-        <Button
-            android:id="@+id/SesameBtn"
-            android:layout_width="148dp"
-            android:layout_height="25dp"
-            android:layout_marginEnd="154dp"
-            android:background="@android:color/transparent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/GlutenCheck"
-            app:layout_constraintTop_toTopOf="@+id/SesameTxt" />
+            app:layout_constraintTop_toTopOf="@+id/sesameTextView" />
 
 
         <TextView
-            android:id="@+id/SesameTxt"
-            android:layout_width="wrap_content"
+            android:id="@+id/sesameTextView"
+            android:layout_width="205dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="120dp"
             android:layout_marginTop="3dp"
@@ -240,34 +182,23 @@
             android:textColor="#22B573"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/GlutenTxt" />
+            app:layout_constraintTop_toBottomOf="@+id/glutenTextView" />
 
 
         <ImageView
-            android:id="@+id/CrustaceansCheck"
+            android:id="@+id/crustaceansImageView"
             android:layout_width="15dp"
             android:layout_height="15dp"
             android:layout_marginStart="96dp"
             android:layout_marginTop="4dp"
+            android:background="@drawable/unchecked"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/CrustaceansTxt"
-            android:src="@drawable/unchecked" />
-
-        <Button
-            android:id="@+id/CrustaceansBtn"
-            android:layout_width="148dp"
-            android:layout_height="25dp"
-            android:layout_marginEnd="154dp"
-            android:background="@android:color/transparent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/SesameCheck"
-            app:layout_constraintTop_toTopOf="@+id/CrustaceansTxt" />
+            app:layout_constraintTop_toTopOf="@+id/crustaceansTextView" />
 
 
         <TextView
-            android:id="@+id/CrustaceansTxt"
-            android:layout_width="wrap_content"
+            android:id="@+id/crustaceansTextView"
+            android:layout_width="205dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="120dp"
             android:layout_marginTop="3dp"
@@ -275,34 +206,23 @@
             android:textColor="#22B573"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/SesameTxt" />
+            app:layout_constraintTop_toBottomOf="@+id/sesameTextView" />
 
 
         <ImageView
-            android:id="@+id/PeanutsCheck"
+            android:id="@+id/peanutsImageView"
             android:layout_width="15dp"
             android:layout_height="15dp"
             android:layout_marginStart="96dp"
             android:layout_marginTop="4dp"
+            android:background="@drawable/unchecked"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/PeanutsTxt"
-            android:src="@drawable/unchecked" />
-
-        <Button
-            android:id="@+id/PeanutsBtn"
-            android:layout_width="148dp"
-            android:layout_height="25dp"
-            android:layout_marginEnd="154dp"
-            android:background="@android:color/transparent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/CrustaceansCheck"
-            app:layout_constraintTop_toTopOf="@+id/PeanutsTxt" />
+            app:layout_constraintTop_toTopOf="@+id/peanutsTextView" />
 
 
         <TextView
-            android:id="@+id/PeanutsTxt"
-            android:layout_width="wrap_content"
+            android:id="@+id/peanutsTextView"
+            android:layout_width="205dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="120dp"
             android:layout_marginTop="3dp"
@@ -310,34 +230,23 @@
             android:textColor="#22B573"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/CrustaceansTxt" />
+            app:layout_constraintTop_toBottomOf="@+id/crustaceansTextView" />
 
 
         <ImageView
-            android:id="@+id/SoyCheck"
+            android:id="@+id/soyImageView"
             android:layout_width="15dp"
             android:layout_height="15dp"
             android:layout_marginStart="96dp"
             android:layout_marginTop="4dp"
+            android:background="@drawable/unchecked"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/SoyTxt"
-            android:src="@drawable/unchecked" />
-
-        <Button
-            android:id="@+id/SoyBtn"
-            android:layout_width="148dp"
-            android:layout_height="25dp"
-            android:layout_marginEnd="154dp"
-            android:background="@android:color/transparent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/PeanutsCheck"
-            app:layout_constraintTop_toTopOf="@+id/SoyTxt" />
+            app:layout_constraintTop_toTopOf="@+id/soyTextView" />
 
 
         <TextView
-            android:id="@+id/SoyTxt"
-            android:layout_width="wrap_content"
+            android:id="@+id/soyTextView"
+            android:layout_width="205dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="120dp"
             android:layout_marginTop="3dp"
@@ -345,34 +254,23 @@
             android:textColor="#22B573"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/PeanutsTxt" />
+            app:layout_constraintTop_toBottomOf="@+id/peanutsTextView" />
 
 
         <ImageView
-            android:id="@+id/NutsCheck"
+            android:id="@+id/nutsImageView"
             android:layout_width="15dp"
             android:layout_height="15dp"
             android:layout_marginStart="96dp"
             android:layout_marginTop="4dp"
+            android:background="@drawable/unchecked"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/NutsTxt"
-            android:src="@drawable/unchecked" />
-
-        <Button
-            android:id="@+id/NutsBtn"
-            android:layout_width="148dp"
-            android:layout_height="25dp"
-            android:layout_marginEnd="154dp"
-            android:background="@android:color/transparent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/SoyCheck"
-            app:layout_constraintTop_toTopOf="@+id/NutsTxt" />
+            app:layout_constraintTop_toTopOf="@+id/nutsTextView" />
 
 
         <TextView
-            android:id="@+id/NutsTxt"
-            android:layout_width="wrap_content"
+            android:id="@+id/nutsTextView"
+            android:layout_width="205dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="120dp"
             android:layout_marginTop="3dp"
@@ -380,84 +278,62 @@
             android:textColor="#22B573"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/SoyTxt" />
+            app:layout_constraintTop_toBottomOf="@+id/soyTextView" />
 
 
         <ImageView
-            android:id="@+id/FishCheck"
+            android:id="@+id/fishImageView"
             android:layout_width="15dp"
             android:layout_height="15dp"
             android:layout_marginStart="96dp"
             android:layout_marginTop="4dp"
+            android:background="@drawable/unchecked"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/FishTxt"
-            android:src="@drawable/unchecked" />
-
-        <Button
-            android:id="@+id/FishBtn"
-            android:layout_width="148dp"
-            android:layout_height="25dp"
-            android:layout_marginEnd="154dp"
-            android:background="@android:color/transparent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/NutsCheck"
-            app:layout_constraintTop_toTopOf="@+id/FishTxt" />
+            app:layout_constraintTop_toTopOf="@+id/fishTextView" />
 
 
         <TextView
-            android:id="@+id/FishTxt"
-            android:layout_width="wrap_content"
+            android:id="@+id/fishTextView"
+            android:layout_width="205dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="120dp"
+            android:layout_marginTop="3dp"
             android:text="@string/fish"
             android:textColor="#22B573"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/NutsTxt" />
+            app:layout_constraintTop_toBottomOf="@+id/nutsTextView" />
 
 
-        <ImageButton
-            android:id="@+id/PetIcon"
+        <ImageView
+            android:id="@+id/petAllergyImageView"
             android:layout_width="34dp"
             android:layout_height="27dp"
             android:layout_marginStart="52dp"
-            android:background="@android:color/transparent"
             android:scaleType="fitCenter"
-            android:src="@drawable/nopet"
+            android:background="@drawable/nopet"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/PetAllergytxt" />
+            app:layout_constraintTop_toTopOf="@+id/petAllergyTextView" />
 
         <TextView
-            android:id="@+id/PetAllergytxt"
-            android:layout_width="112dp"
+            android:id="@+id/petAllergyTextView"
+            android:layout_width="205dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-
             android:layout_marginTop="45dp"
+
+            android:layout_marginEnd="8dp"
             android:text="@string/pet_allergy"
             android:textColor="#22B573"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.011"
-            app:layout_constraintStart_toEndOf="@+id/PetIcon"
-            app:layout_constraintTop_toBottomOf="@+id/FishTxt" />
+            app:layout_constraintStart_toEndOf="@+id/petAllergyImageView"
+            app:layout_constraintTop_toBottomOf="@+id/fishTextView" />
 
-
-        <Button
-            android:id="@+id/PetTitleBtn"
-            android:layout_width="188dp"
-            android:layout_height="33dp"
-            android:layout_marginBottom="3dp"
-            android:layout_marginTop="50dp"
-            android:background="@android:color/transparent"
-            app:layout_constraintBottom_toTopOf="@+id/PetUnderline"
-            app:layout_constraintStart_toEndOf="@+id/PetIcon"
-            app:layout_constraintTop_toBottomOf="@+id/FishBtn" />
 
         <ImageView
-            android:id="@+id/PetUnderline"
+            android:id="@+id/petUnderlineImage"
             android:layout_width="0dp"
             android:layout_height="1dp"
             android:layout_marginEnd="32dp"
@@ -466,40 +342,29 @@
             android:background="#D1D1D1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/PetAllergytxt" />
+            app:layout_constraintTop_toBottomOf="@+id/petAllergyTextView" />
 
 
         <ImageView
-            android:id="@+id/DogCheck"
+            android:id="@+id/dogImageView"
             android:layout_width="15dp"
             android:layout_height="15dp"
-            android:layout_marginBottom="16dp"
-            android:layout_marginEnd="8dp"
             android:layout_marginStart="78dp"
             android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/unchecked"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/DogTxt"
+            app:layout_constraintEnd_toStartOf="@+id/dogTextView"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/DogTxt"
-            app:layout_constraintVertical_bias="0.0"
-            android:src="@drawable/unchecked" />
-
-        <Button
-            android:id="@+id/DogBtn"
-            android:layout_width="148dp"
-            android:layout_height="25dp"
-            android:layout_marginEnd="154dp"
-            android:background="@android:color/transparent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/DogCheck"
-            app:layout_constraintTop_toTopOf="@+id/DogTxt" />
+            app:layout_constraintTop_toTopOf="@+id/dogTextView"
+            app:layout_constraintVertical_bias="0.0" />
 
 
         <TextView
-            android:id="@+id/DogTxt"
-            android:layout_width="wrap_content"
+            android:id="@+id/dogTextView"
+            android:layout_width="205dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="120dp"
             android:layout_marginTop="12dp"
@@ -507,40 +372,29 @@
             android:textColor="#22B573"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/PetUnderline" />
+            app:layout_constraintTop_toBottomOf="@+id/petUnderlineImage" />
 
 
         <ImageView
-            android:id="@+id/CatCheck"
+            android:id="@+id/catImageView"
             android:layout_width="15dp"
             android:layout_height="15dp"
-            android:layout_marginBottom="16dp"
-            android:layout_marginEnd="8dp"
             android:layout_marginStart="78dp"
             android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/unchecked"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/EggTxt"
+            app:layout_constraintEnd_toStartOf="@+id/eggTextView"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/CatTxt"
-            app:layout_constraintVertical_bias="0.0"
-            android:src="@drawable/unchecked" />
-
-        <Button
-            android:id="@+id/CatBtn"
-            android:layout_width="148dp"
-            android:layout_height="25dp"
-            android:layout_marginEnd="154dp"
-            android:background="@android:color/transparent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/CatCheck"
-            app:layout_constraintTop_toTopOf="@+id/CatTxt" />
+            app:layout_constraintTop_toTopOf="@+id/catTextView"
+            app:layout_constraintVertical_bias="0.0" />
 
 
         <TextView
-            android:id="@+id/CatTxt"
-            android:layout_width="wrap_content"
+            android:id="@+id/catTextView"
+            android:layout_width="205dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="120dp"
             android:layout_marginTop="3dp"
@@ -548,50 +402,37 @@
             android:textColor="#22B573"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/DogTxt" />
+            app:layout_constraintTop_toBottomOf="@+id/dogTextView" />
 
 
-        <ImageButton
-            android:id="@+id/DrugIcon"
+        <ImageView
+            android:id="@+id/drugAllergyImageView"
             android:layout_width="34dp"
             android:layout_height="27dp"
             android:layout_marginStart="52dp"
-            android:background="@android:color/transparent"
             android:scaleType="fitCenter"
-            android:src="@drawable/nodrugs"
+            android:background="@drawable/nodrugs"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/DrugAllergytxt" />
+            app:layout_constraintTop_toTopOf="@+id/drugAllergyTextView" />
 
         <TextView
-            android:id="@+id/DrugAllergytxt"
-            android:layout_width="112dp"
+            android:id="@+id/drugAllergyTextView"
+            android:layout_width="205dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
+            android:layout_marginTop="70dp"
 
-            android:layout_marginTop="50dp"
+            android:layout_marginEnd="8dp"
             android:text="@string/drug_allergy"
             android:textColor="#22B573"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.011"
-            app:layout_constraintStart_toEndOf="@+id/DrugIcon"
-            app:layout_constraintTop_toBottomOf="@+id/CatBtn" />
-
-        <Button
-            android:id="@+id/DrugTitleBtn"
-            android:layout_width="195dp"
-            android:layout_height="31dp"
-            android:layout_marginBottom="2dp"
-            android:layout_marginStart="1dp"
-            android:layout_marginTop="45dp"
-            android:background="@android:color/transparent"
-            app:layout_constraintBottom_toTopOf="@+id/DrugUnderline"
-            app:layout_constraintStart_toEndOf="@+id/DrugIcon"
-            app:layout_constraintTop_toBottomOf="@+id/CatBtn" />
+            app:layout_constraintStart_toEndOf="@+id/drugAllergyImageView"
+            app:layout_constraintTop_toBottomOf="@+id/catTextView" />
 
         <TextView
-            android:id="@+id/DrugUnderline"
+            android:id="@+id/drugUnderlineImage"
             android:layout_width="0dp"
             android:layout_height="1dp"
             android:layout_marginEnd="32dp"
@@ -600,11 +441,11 @@
             android:background="#D1D1D1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/DrugAllergytxt" />
+            app:layout_constraintTop_toBottomOf="@+id/drugAllergyTextView" />
 
 
         <ImageView
-            android:id="@+id/PenicillinCheck"
+            android:id="@+id/penicillinImageView"
             android:layout_width="15dp"
             android:layout_height="15dp"
             android:layout_marginBottom="16dp"
@@ -612,268 +453,170 @@
             android:layout_marginStart="78dp"
             android:layout_marginTop="4dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/PenicillinTxt"
+            app:layout_constraintEnd_toStartOf="@+id/penicillinTextView"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/PenicillinTxt"
+            app:layout_constraintTop_toTopOf="@+id/penicillinTextView"
             app:layout_constraintVertical_bias="0.0"
-            android:src="@drawable/unchecked" />
-
-        <Button
-            android:id="@+id/PenicillinBtn"
-            android:layout_width="148dp"
-            android:layout_height="30dp"
-            android:layout_marginEnd="154dp"
-            android:background="@android:color/transparent"
-            app:layout_constraintBottom_toBottomOf="@id/PenicillinTxt"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/PenicillinCheck"
-            app:layout_constraintTop_toTopOf="@+id/PenicillinTxt" />
+            android:background="@drawable/unchecked" />
 
 
         <TextView
-            android:id="@+id/PenicillinTxt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/penicillinTextView"
+            android:layout_width="205dp"
+            android:layout_height="24dp"
             android:layout_marginStart="120dp"
             android:layout_marginTop="12dp"
             android:text="@string/penicillin"
             android:textColor="#22B573"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/DrugUnderline" />
+            app:layout_constraintTop_toBottomOf="@+id/drugUnderlineImage" />
 
         <ImageView
-            android:id="@+id/AntibioticsCheck"
+            android:id="@+id/antibioticsImageView"
             android:layout_width="15dp"
             android:layout_height="15dp"
             android:layout_marginTop="4dp"
-            app:layout_constraintStart_toStartOf="@+id/PenicillinCheck"
-            app:layout_constraintTop_toTopOf="@+id/AntibioticsTxt1"
-            android:src="@drawable/unchecked" />
-
-        <Button
-            android:id="@+id/AntibioticsBtn"
-            android:layout_width="247dp"
-            android:layout_height="57dp"
-            android:layout_marginEnd="8dp"
-            android:background="@android:color/transparent"
-            app:layout_constraintBottom_toBottomOf="@id/AntibioticsTxt2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/PenicillinBtn"
-            app:layout_constraintTop_toTopOf="@+id/AntibioticsTxt1" />
+            app:layout_constraintStart_toStartOf="@+id/penicillinImageView"
+            app:layout_constraintTop_toTopOf="@+id/antibioticsTextView"
+            android:background="@drawable/unchecked" />
 
         <TextView
-            android:id="@+id/AntibioticsTxt1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/antibioticsTextView"
+            android:layout_width="205dp"
+            android:layout_height="40dp"
             android:layout_marginStart="120dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="4dp"
+            android:breakStrategy="balanced"
             android:paddingEnd="8dp"
-            android:text="@string/antibiotics_containing"
+            android:text="@string/antibiotics_containing_sulfonamides"
             android:textColor="#22B573"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/PenicillinBtn" />
-
-        <TextView
-            android:id="@+id/AntibioticsTxt2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/sulfonamides"
-            android:textColor="#22B573"
-            android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="@+id/AntibioticsTxt1"
-            app:layout_constraintTop_toBottomOf="@+id/AntibioticsTxt1" />
+            app:layout_constraintTop_toBottomOf="@+id/penicillinTextView" />
 
         <ImageView
-            android:id="@+id/AnticonvulsantsCheck"
+            android:id="@+id/anticonvulsantsImageView"
             android:layout_width="15dp"
             android:layout_height="15dp"
             android:layout_marginTop="4dp"
-            app:layout_constraintStart_toStartOf="@+id/AntibioticsCheck"
-            app:layout_constraintTop_toTopOf="@+id/AnticonvulsantsTxt"
-            android:src="@drawable/unchecked" />
-
-        <Button
-            android:id="@+id/AnticonvulsantsBtn"
-            android:layout_width="169dp"
-            android:layout_height="29dp"
-            android:background="@android:color/transparent"
-            app:layout_constraintStart_toStartOf="@+id/AntibioticsBtn"
-            app:layout_constraintTop_toTopOf="@+id/AnticonvulsantsTxt" />
+            app:layout_constraintStart_toStartOf="@+id/antibioticsImageView"
+            app:layout_constraintTop_toTopOf="@+id/anticonvulsantsTextView"
+            android:background="@drawable/unchecked" />
 
         <TextView
-            android:id="@+id/AnticonvulsantsTxt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:id="@+id/anticonvulsantsTextView"
+            android:layout_width="205dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="4dp"
             android:text="@string/anticonvulsants"
             android:textColor="#22B573"
             android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="@+id/AntibioticsTxt2"
-            app:layout_constraintTop_toBottomOf="@+id/AntibioticsTxt2" />
+            app:layout_constraintStart_toStartOf="@+id/antibioticsTextView"
+            app:layout_constraintTop_toBottomOf="@+id/antibioticsTextView" />
 
         <ImageView
-            android:id="@+id/AsprinCheck"
+            android:id="@+id/aspirinImageView"
             android:layout_width="15dp"
             android:layout_height="15dp"
             android:layout_marginTop="5dp"
-            app:layout_constraintStart_toStartOf="@+id/AnticonvulsantsCheck"
-            app:layout_constraintTop_toTopOf="@+id/AspirinTxt1"
-            android:src="@drawable/unchecked" />
-
-        <Button
-            android:id="@+id/AsprinBtn"
-            android:layout_width="228dp"
-            android:layout_height="86dp"
-            android:background="@android:color/transparent"
-            app:layout_constraintBottom_toBottomOf="@id/AspirinTxt3"
-            app:layout_constraintStart_toStartOf="@+id/AnticonvulsantsBtn"
-            app:layout_constraintTop_toTopOf="@+id/AspirinTxt1" />
+            android:background="@drawable/unchecked"
+            app:layout_constraintStart_toStartOf="@+id/anticonvulsantsImageView"
+            app:layout_constraintTop_toTopOf="@+id/aspirinTextView" />
 
         <TextView
-            android:id="@+id/AspirinTxt1"
-            android:layout_width="wrap_content"
+            android:id="@+id/aspirinTextView"
+            android:layout_width="205dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="4dp"
+            android:breakStrategy="balanced"
             android:text="@string/aspirin_ibuprofen_or_other"
             android:textColor="#22B573"
             android:textSize="16sp"
-            android:layout_marginEnd="1dp"
-            app:layout_constraintStart_toStartOf="@+id/AnticonvulsantsTxt"
-            app:layout_constraintTop_toBottomOf="@+id/AnticonvulsantsTxt" />
-
-        <TextView
-            android:id="@+id/AspirinTxt2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/nonsteroidal_anti_inflammatory"
-            android:textColor="#22B573"
-            android:textSize="16sp"
-            android:layout_marginEnd="1dp"
-            app:layout_constraintStart_toStartOf="@+id/AspirinTxt1"
-            app:layout_constraintTop_toBottomOf="@+id/AspirinTxt1" />
-
-        <TextView
-            android:id="@+id/AspirinTxt3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/drugs"
-            android:textColor="#22B573"
-            android:textSize="16sp"
-            android:layout_marginEnd="1dp"
-            app:layout_constraintStart_toStartOf="@+id/AspirinTxt2"
-            app:layout_constraintTop_toBottomOf="@+id/AspirinTxt2" />
+            app:layout_constraintStart_toStartOf="@+id/anticonvulsantsTextView"
+            app:layout_constraintTop_toBottomOf="@+id/anticonvulsantsTextView" />
 
 
-        <ImageButton
-            android:id="@+id/InsectIcon"
+        <ImageView
+            android:id="@+id/insectAllergyImageView"
             android:layout_width="34dp"
             android:layout_height="27dp"
-            android:background="@android:color/transparent"
             android:scaleType="fitCenter"
-            android:src="@drawable/noganganie"
-            app:layout_constraintStart_toStartOf="@+id/DrugIcon"
-            app:layout_constraintTop_toTopOf="@+id/InsectAllergytxt" />
+            android:background="@drawable/noinsect"
+            app:layout_constraintStart_toStartOf="@+id/drugAllergyImageView"
+            app:layout_constraintTop_toTopOf="@+id/insectAllergyTextView" />
 
         <TextView
-            android:id="@+id/InsectAllergytxt"
-            android:layout_width="189dp"
+            android:id="@+id/insectAllergyTextView"
+            android:layout_width="260dp"
             android:layout_height="35dp"
-            android:layout_marginEnd="1dp"
             android:layout_marginStart="3dp"
-            android:layout_marginTop="65dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="1dp"
             android:text="@string/insect_sting_allergy"
             android:textColor="#22B573"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/InsectIcon"
-            app:layout_constraintTop_toBottomOf="@+id/AsprinBtn" />
-
-        <Button
-            android:id="@+id/InsectTitleBtn"
-            android:layout_width="218dp"
-            android:layout_height="31dp"
-            android:layout_marginTop="8dp"
-            android:background="@android:color/transparent"
-            app:layout_constraintBottom_toBottomOf="@+id/InsectAllergytxt"
-            app:layout_constraintStart_toStartOf="@+id/InsectAllergytxt"
-            app:layout_constraintTop_toTopOf="@+id/InsectAllergytxt"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintStart_toEndOf="@+id/insectAllergyImageView"
+            app:layout_constraintTop_toBottomOf="@+id/aspirinTextView" />
 
         <ImageView
-            android:id="@+id/InsectUnderline"
+            android:id="@+id/insectUnderlineImage"
             android:layout_width="0dp"
             android:layout_height="1dp"
             android:background="#D1D1D1"
-            app:layout_constraintEnd_toEndOf="@id/DrugUnderline"
-            app:layout_constraintStart_toStartOf="@id/DrugUnderline"
-            app:layout_constraintTop_toBottomOf="@+id/InsectAllergytxt" />
+            app:layout_constraintEnd_toEndOf="@id/drugUnderlineImage"
+            app:layout_constraintStart_toStartOf="@id/drugUnderlineImage"
+            app:layout_constraintTop_toBottomOf="@+id/insectAllergyTextView" />
 
 
-        <ImageButton
-            android:id="@+id/PolenIcon"
+        <ImageView
+            android:id="@+id/pollenAllergyImageView"
             android:layout_width="34dp"
             android:layout_height="27dp"
-            android:background="@android:color/transparent"
+            android:background="@drawable/nopollen"
             android:scaleType="fitCenter"
-            android:src="@drawable/nopolen"
             android:visibility="visible"
-            app:layout_constraintStart_toStartOf="@+id/InsectIcon"
-            app:layout_constraintTop_toTopOf="@+id/PolenAllergytxt" />
+            app:layout_constraintStart_toStartOf="@+id/insectAllergyImageView"
+            app:layout_constraintTop_toTopOf="@+id/pollenAllergyTextView" />
 
         <TextView
-            android:id="@+id/PolenAllergytxt"
-            android:layout_width="259dp"
+            android:id="@+id/pollenAllergyTextView"
+            android:layout_width="260dp"
             android:layout_height="wrap_content"
 
-            android:layout_marginEnd="5dp"
             android:layout_marginTop="8dp"
             android:text="@string/pollen_allergy_allergic_rhinitis"
             android:textColor="#22B573"
             android:textSize="20sp"
             android:visibility="visible"
-            app:layout_constraintStart_toEndOf="@+id/PolenIcon"
-            app:layout_constraintTop_toBottomOf="@+id/InsectAllergytxt" />
-
-        <Button
-            android:id="@+id/PolenTitleBtn"
-            android:layout_width="263dp"
-            android:layout_height="42dp"
-            android:background="@android:color/transparent"
-            app:layout_constraintBottom_toBottomOf="@id/PolenAllergytxt"
-            app:layout_constraintStart_toStartOf="@id/PolenAllergytxt"
-
-            app:layout_constraintTop_toTopOf="@id/PolenAllergytxt"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintStart_toEndOf="@+id/pollenAllergyImageView"
+            app:layout_constraintTop_toBottomOf="@+id/insectAllergyTextView" />
 
         <ImageView
-            android:id="@+id/PolenUnderline"
+            android:id="@+id/pollenUnderlineImage"
             android:layout_width="0dp"
             android:layout_height="1dp"
             android:layout_marginTop="4dp"
             android:background="#D1D1D1"
-            app:layout_constraintEnd_toEndOf="@id/DrugUnderline"
-            app:layout_constraintStart_toStartOf="@id/DrugUnderline"
-            app:layout_constraintTop_toBottomOf="@+id/PolenAllergytxt" />
+            app:layout_constraintEnd_toEndOf="@id/drugUnderlineImage"
+            app:layout_constraintStart_toStartOf="@id/drugUnderlineImage"
+            app:layout_constraintTop_toBottomOf="@+id/pollenAllergyTextView" />
 
-        <ImageButton
-            android:id="@+id/DustIcon"
+        <ImageView
+            android:id="@+id/dustAllergyImageView"
             android:layout_width="34dp"
             android:layout_height="27dp"
-            android:background="@android:color/transparent"
             android:scaleType="fitCenter"
-            android:src="@drawable/nodust"
-            app:layout_constraintStart_toStartOf="@+id/PolenIcon"
-            app:layout_constraintTop_toTopOf="@+id/DustAllergytxt" />
+            android:background="@drawable/nodust"
+            app:layout_constraintStart_toStartOf="@+id/pollenAllergyImageView"
+            app:layout_constraintTop_toTopOf="@+id/dustAllergyTextView" />
 
         <TextView
-            android:id="@+id/DustAllergytxt"
-            android:layout_width="259dp"
+            android:id="@+id/dustAllergyTextView"
+            android:layout_width="260dp"
             android:layout_height="wrap_content"
 
             android:layout_marginStart="3dp"
@@ -881,109 +624,83 @@
             android:text="@string/dust_allergy"
             android:textColor="#22B573"
             android:textSize="20sp"
-            app:layout_constraintStart_toEndOf="@+id/DustIcon"
-            app:layout_constraintTop_toBottomOf="@+id/PolenUnderline" />
-
-        <Button
-            android:id="@+id/DustTitleBtn"
-            android:layout_width="221dp"
-            android:layout_height="33dp"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:background="@android:color/transparent"
-            app:layout_constraintBottom_toBottomOf="@id/DustAllergytxt"
-            app:layout_constraintEnd_toEndOf="@+id/DustAllergytxt"
-            app:layout_constraintStart_toStartOf="@+id/DustAllergytxt"
-            app:layout_constraintTop_toTopOf="@id/DustAllergytxt" />
+            app:layout_constraintStart_toEndOf="@+id/dustAllergyImageView"
+            app:layout_constraintTop_toBottomOf="@+id/pollenUnderlineImage" />
 
 
         <ImageView
-            android:id="@+id/DustUnderline"
+            android:id="@+id/dustUnderlineImage"
             android:layout_width="0dp"
             android:layout_height="1dp"
             android:background="#D1D1D1"
-            app:layout_constraintEnd_toEndOf="@id/DrugUnderline"
-            app:layout_constraintStart_toStartOf="@id/DrugUnderline"
-            app:layout_constraintTop_toBottomOf="@+id/DustAllergytxt" />
+            app:layout_constraintEnd_toEndOf="@id/drugUnderlineImage"
+            app:layout_constraintStart_toStartOf="@id/drugUnderlineImage"
+            app:layout_constraintTop_toBottomOf="@+id/dustAllergyTextView" />
 
 
-        <ImageButton
-            android:id="@+id/MoldIcon"
+        <ImageView
+            android:id="@+id/moldAllergyImageView"
             android:layout_width="34dp"
             android:layout_height="27dp"
-            android:background="@android:color/transparent"
             android:scaleType="fitCenter"
-            android:src="@drawable/nomold"
-            app:layout_constraintStart_toStartOf="@+id/DustIcon"
-            app:layout_constraintTop_toTopOf="@+id/MoldAllergytxt" />
+            android:background="@drawable/nomold"
+            app:layout_constraintStart_toStartOf="@+id/dustAllergyImageView"
+            app:layout_constraintTop_toTopOf="@+id/moldAllergyTextView" />
 
         <TextView
-            android:id="@+id/MoldAllergytxt"
-            android:layout_width="259dp"
+            android:id="@+id/moldAllergyTextView"
+            android:layout_width="260dp"
             android:layout_height="wrap_content"
 
-            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:text="@string/mold_allergy"
             android:textColor="#22B573"
             android:textSize="20sp"
-            app:layout_constraintStart_toEndOf="@+id/MoldIcon"
-            app:layout_constraintTop_toBottomOf="@+id/DustUnderline" />
-
-        <Button
-            android:id="@+id/MoldTitleBtn"
-            android:layout_width="190dp"
-            android:layout_height="33dp"
-            android:background="@android:color/transparent"
-            app:layout_constraintBottom_toBottomOf="@id/MoldAllergytxt"
-            app:layout_constraintEnd_toEndOf="@id/MoldAllergytxt"
-            app:layout_constraintHorizontal_bias="0.115"
-
-            app:layout_constraintStart_toStartOf="@id/MoldAllergytxt"
-            app:layout_constraintTop_toTopOf="@id/MoldAllergytxt"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintStart_toStartOf="@+id/dustAllergyTextView"
+            app:layout_constraintTop_toBottomOf="@+id/dustUnderlineImage" />
 
 
         <ImageView
-            android:id="@+id/MoldUnderline"
+            android:id="@+id/moldUnderlineImage"
             android:layout_width="0dp"
             android:layout_height="1dp"
             android:layout_marginTop="4dp"
             android:background="#D1D1D1"
-            app:layout_constraintEnd_toEndOf="@id/DrugUnderline"
-            app:layout_constraintStart_toStartOf="@id/DrugUnderline"
-            app:layout_constraintTop_toBottomOf="@+id/MoldAllergytxt" />
+            app:layout_constraintEnd_toEndOf="@id/drugUnderlineImage"
+            app:layout_constraintStart_toStartOf="@id/drugUnderlineImage"
+            app:layout_constraintTop_toBottomOf="@+id/moldAllergyTextView" />
 
 
         <Button
-            android:id="@+id/NextBtn"
+            android:id="@+id/finishButton"
             android:layout_width="200dp"
             android:layout_height="33dp"
-            android:layout_marginEnd="80dp"
             android:layout_marginStart="80dp"
-            android:layout_marginTop="124dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="80dp"
+            android:layout_marginBottom="3dp"
             android:background="@drawable/oval_gray_btn"
             android:text="No allergies to declare"
             android:textAppearance="@style/TextAppearance.AppCompat.Caption"
             android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.49"
+            app:layout_constraintHorizontal_bias="0.392"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/DustUnderline" />
+            app:layout_constraintTop_toBottomOf="@+id/moldUnderlineImage" />
 
 
         <ImageView
-            android:id="@+id/botBorder"
+            android:id="@+id/bottomBorder"
             android:layout_width="match_parent"
             android:layout_height="17dp"
             android:layout_marginTop="50dp"
-            android:background="@drawable/crescator"
+            android:background="@drawable/bottom"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/NextBtn"
+            app:layout_constraintTop_toBottomOf="@+id/finishButton"
             app:layout_constraintVertical_bias="0.0" />
 
 

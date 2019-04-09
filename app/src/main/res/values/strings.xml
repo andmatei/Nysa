@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">NYSA</string>
+    <string name="app_name">NYSA 2.0</string>
     <string name="display_name">Display name</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
@@ -20,7 +20,6 @@
     <string name="username">Username</string>
     <string name="register">REGISTER</string>
     <string name="e_mail_address">E-mail address</string>
-    <string name="do_you_have_any_allergies">Do you have any allergies?</string>
     <string name="check_out_our_allergy_library_here">Check out our allergy library here</string>
     <string name="food_allergy">Food Allergy</string>
     <string name="lactose">Lactose</string>
@@ -37,10 +36,9 @@
     <string name="cat">Cat</string>
     <string name="drug_allergy">Drug Allergy</string>
     <string name="penicillin">Penicillin</string>
-    <string name="antibiotics_containing">Antibiotics containing</string>
+    <string name="antibiotics_containing_sulfonamides">Antibiotics containing sulfonamides</string>
     <string name="anticonvulsants">Anticonvulsants</string>
-    <string name="aspirin_ibuprofen_or_other">Aspirin, ibuprofen or other</string>
-    <string name="sulfonamides">sulfonamides</string>
+    <string name="aspirin_ibuprofen_or_other">Aspirin, ibuprofen or other nonsteroidal anti-inflammatory drugs</string>
     <string name="nonsteroidal_anti_inflammatory">nonsteroidal anti-inflammatory</string>
     <string name="drugs">drugs</string>
     <string name="insect_sting_allergy">Insect Sting Allergy</string>

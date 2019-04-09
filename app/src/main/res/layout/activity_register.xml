@@ -5,26 +5,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient_backround"
-    tools:context="com.nysa.RegisterActivity">
+    tools:context="nysa.nysa_20.activity.RegisterActivity">
 
 
     <Button
-        android:id="@+id/regBtn"
+        android:id="@+id/registerButton_Register"
         android:layout_width="0dp"
         android:layout_height="35dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/oval_btn_selected"
-        android:text="@string/register"
-        android:textColor="#22B573"
         android:elevation="10dp"
         android:fontFamily="@font/segoe_semibold"
-        app:layout_constraintBottom_toTopOf="@+id/lgBtn"
-        app:layout_constraintEnd_toEndOf="@+id/lgBtn"
+        android:text="@string/register"
+        android:textColor="#22B573"
+        app:layout_constraintBottom_toTopOf="@+id/loginButton_Register"
+        app:layout_constraintEnd_toEndOf="@+id/loginButton_Register"
         app:layout_constraintHorizontal_bias="0.487"
-        app:layout_constraintStart_toStartOf="@+id/lgBtn" />
+        app:layout_constraintStart_toStartOf="@+id/loginButton_Register" />
 
     <Button
-        android:id="@+id/lgBtn"
+        android:id="@+id/loginButton_Register"
         android:layout_width="0dp"
         android:layout_height="35dp"
         android:layout_marginBottom="48dp"
@@ -36,11 +36,11 @@
         android:text="@string/log_in"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@id/Username"
-        app:layout_constraintStart_toStartOf="@id/Username" />
+        app:layout_constraintEnd_toEndOf="@id/usernameEditText_Register"
+        app:layout_constraintStart_toStartOf="@id/usernameEditText_Register" />
 
     <EditText
-        android:id="@+id/FirstName"
+        android:id="@+id/firstNameEditText_Register"
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_marginTop="44dp"
@@ -53,12 +53,12 @@
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF"
         android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@id/regPagelogo"
-        app:layout_constraintTop_toBottomOf="@id/regPagelogo"
-        app:layout_constraintRight_toLeftOf="@id/LastName"/>
+        app:layout_constraintEnd_toStartOf="@+id/lastNameEditText_Register"
+        app:layout_constraintStart_toStartOf="@id/registerPageLogo"
+        app:layout_constraintTop_toBottomOf="@id/registerPageLogo" />
 
     <EditText
-        android:id="@+id/LastName"
+        android:id="@+id/lastNameEditText_Register"
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:background="@drawable/uprightroundcorner"
@@ -70,12 +70,12 @@
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF"
         android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="@+id/Username"
-        app:layout_constraintLeft_toRightOf="@id/FirstName"
-        app:layout_constraintTop_toTopOf="@+id/FirstName" />
+        app:layout_constraintEnd_toEndOf="@+id/usernameEditText_Register"
+        app:layout_constraintStart_toEndOf="@+id/firstNameEditText_Register"
+        app:layout_constraintTop_toTopOf="@+id/firstNameEditText_Register" />
 
     <EditText
-        android:id="@+id/Username"
+        android:id="@+id/usernameEditText_Register"
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_marginEnd="40dp"
@@ -90,10 +90,10 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LastName" />
+        app:layout_constraintTop_toBottomOf="@+id/lastNameEditText_Register" />
 
     <EditText
-        android:id="@+id/Email"
+        android:id="@+id/emailEditText_Register"
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:background="@drawable/edit_text"
@@ -105,9 +105,9 @@
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF"
         android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="@+id/Username"
-        app:layout_constraintStart_toStartOf="@+id/Username"
-        app:layout_constraintTop_toBottomOf="@+id/Username" />
+        app:layout_constraintEnd_toEndOf="@+id/usernameEditText_Register"
+        app:layout_constraintStart_toStartOf="@+id/usernameEditText_Register"
+        app:layout_constraintTop_toBottomOf="@+id/usernameEditText_Register" />
 
     <!--<EditText
         android:id="@+id/emailAddress"
@@ -129,7 +129,7 @@
         app:layout_constraintTop_toBottomOf="@+id/loginPagelogo" />-->
 
     <EditText
-        android:id="@+id/Password"
+        android:id="@+id/passwordEditText_Register"
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:background="@drawable/broundcorner"
@@ -141,19 +141,19 @@
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF"
         android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="@+id/Email"
-        app:layout_constraintStart_toStartOf="@+id/Email"
-        app:layout_constraintTop_toBottomOf="@+id/Email" />
+        app:layout_constraintEnd_toEndOf="@+id/emailEditText_Register"
+        app:layout_constraintStart_toStartOf="@+id/emailEditText_Register"
+        app:layout_constraintTop_toBottomOf="@+id/emailEditText_Register" />
 
 
     <ImageView
-        android:id="@+id/regPagelogo"
+        android:id="@+id/registerPageLogo"
         android:layout_width="0dp"
         android:layout_height="100dp"
         android:padding="20dp"
         android:layout_marginTop="72dp"
-        app:layout_constraintEnd_toEndOf="@id/Username"
-        app:layout_constraintStart_toStartOf="@id/Username"
+        app:layout_constraintEnd_toEndOf="@id/usernameEditText_Register"
+        app:layout_constraintStart_toStartOf="@id/usernameEditText_Register"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo"
         tools:ignore="NotSibling" />

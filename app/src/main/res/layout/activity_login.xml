@@ -5,26 +5,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient_backround"
-    tools:context="com.nysa.LoginActivity">
+    tools:context="nysa.nysa_20.activity.LoginActivity">
 
 
     <Button
-        android:id="@+id/lgBtn"
+        android:id="@+id/loginButton_Login"
         android:layout_width="0dp"
         android:layout_height="35dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/oval_btn_selected"
-        android:text="@string/log_in"
-        android:textColor="#22B573"
         android:elevation="10dp"
         android:fontFamily="@font/segoe_semibold"
-        app:layout_constraintBottom_toTopOf="@+id/regBtn"
-        app:layout_constraintEnd_toEndOf="@+id/regBtn"
+        android:text="@string/log_in"
+        android:textColor="#22B573"
+        app:layout_constraintBottom_toTopOf="@+id/registerButton_Login"
+        app:layout_constraintEnd_toEndOf="@+id/registerButton_Login"
         app:layout_constraintHorizontal_bias="0.487"
-        app:layout_constraintStart_toStartOf="@+id/regBtn" />
+        app:layout_constraintStart_toStartOf="@+id/registerButton_Login" />
 
     <Button
-        android:id="@+id/regBtn"
+        android:id="@+id/registerButton_Login"
         android:layout_width="0dp"
         android:layout_height="35dp"
         android:layout_marginBottom="48dp"
@@ -36,11 +36,11 @@
         android:text="@string/register"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/passwordAdress"
-        app:layout_constraintStart_toStartOf="@+id/passwordAdress" />
+        app:layout_constraintEnd_toEndOf="@+id/passwordEditText_Login"
+        app:layout_constraintStart_toStartOf="@+id/passwordEditText_Login" />
 
     <EditText
-        android:id="@+id/emailAddress"
+        android:id="@+id/emailEditText_Login"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginEnd="40dp"
@@ -57,10 +57,10 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginPagelogo" />
+        app:layout_constraintTop_toBottomOf="@+id/loginPageLogo" />
 
     <EditText
-        android:id="@+id/passwordAdress"
+        android:id="@+id/passwordEditText_Login"
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:background="@drawable/broundcorner"
@@ -73,18 +73,18 @@
         android:textColorHint="#FFFFFF"
         android:fontFamily="@font/segoe_ui"
         android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="@+id/emailAddress"
-        app:layout_constraintStart_toStartOf="@+id/emailAddress"
-        app:layout_constraintTop_toBottomOf="@+id/emailAddress" />
+        app:layout_constraintEnd_toEndOf="@+id/emailEditText_Login"
+        app:layout_constraintStart_toStartOf="@+id/emailEditText_Login"
+        app:layout_constraintTop_toBottomOf="@+id/emailEditText_Login" />
 
     <ImageView
-        android:id="@+id/loginPagelogo"
+        android:id="@+id/loginPageLogo"
         android:layout_width="0dp"
         android:layout_height="100dp"
         android:padding="20dp"
         android:layout_marginTop="72dp"
-        app:layout_constraintEnd_toEndOf="@+id/emailAddress"
-        app:layout_constraintStart_toStartOf="@+id/emailAddress"
+        app:layout_constraintEnd_toEndOf="@+id/emailEditText_Login"
+        app:layout_constraintStart_toStartOf="@+id/emailEditText_Login"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo" />
 
