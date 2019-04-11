@@ -17,7 +17,7 @@ public class ActivityShiftService {
     private ActivityShiftService(){
     }
 
-    public static void ToLoginActivity(Context context){
+    public static void toLoginActivity(Context context){
         Intent intent = new Intent(context, LoginActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         context.startActivity(intent);
@@ -60,7 +60,6 @@ public class ActivityShiftService {
 
     public static void toChatBotActivity(Context context){
         Intent intent = new Intent(context, ChatBotActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         context.startActivity(intent);
     }
 }

@@ -54,13 +54,13 @@ public class AllergyRegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_allergies);
 
-        formular  = new AllergyRegistrationFormular();
-        initComp();
+
+        initComponents();
 
 
     }
 
-    void initComp(){
+    void initComponents(){
 
         assignComponentReferences();
         assignComponentFunctionalities();
@@ -68,6 +68,7 @@ public class AllergyRegisterActivity extends AppCompatActivity {
         petSelectedCount = 0;
         drugSelectedCount = 0;
         overallSelectedCount = 0;
+        formular  = new AllergyRegistrationFormular();
     }
 
     void assignComponentReferences(){

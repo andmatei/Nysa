@@ -54,7 +54,7 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private void loginButtonClicked(){
-        ActivityShiftService.ToLoginActivity(this);
+        ActivityShiftService.toLoginActivity(this);
     }
 
     private void registerButtonClicked(){

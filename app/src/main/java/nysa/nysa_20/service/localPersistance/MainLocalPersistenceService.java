@@ -18,10 +18,6 @@ public class MainLocalPersistenceService {
 
         private MainLocalPersistenceService(){}
 
-        private static  FileOutputStream fileOutputStream;
-        private static  FileInputStream fileInputStream;
-        private static ObjectInputStream objectInputStream;
-        private static ObjectOutputStream objectOutputStream;
 
          private static File ACCOUNT_fILE;
 

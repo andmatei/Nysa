@@ -1,5 +1,7 @@
 package nysa.nysa_20.model;
 
+import nysa.nysa_20.service.localPersistance.MainLocalPersistenceService;
+
 public class AccountHolder {
 
     Account account;
@@ -32,7 +34,7 @@ public class AccountHolder {
 
     public static void disconnect(){
         isEmpty = true;
-        //TODO disconnectSequence
+        MainLocalPersistenceService.deleteCurrentAccount();
     }
 
 }

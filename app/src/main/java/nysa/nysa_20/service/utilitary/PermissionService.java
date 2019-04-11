@@ -17,11 +17,12 @@ public final class PermissionService {
 
     private PermissionService(){}
 
-    private static int READ_STORAGE_PERMISSION_CODE = 1;
-    private static int CAMERA_PERMISSION_CODE = 2;
-    private static int LOCATION_PERMISSION_CODE = 3;
-    private static int WRITE_STORAGE_PERMISSION_CODE = 4;
-    private static int INTERNET_PERMISSION_CODE = 5;
+    private static final int READ_STORAGE_PERMISSION_CODE = 1;
+    private static final int  CAMERA_PERMISSION_CODE = 2;
+    private static final int LOCATION_PERMISSION_CODE = 3;
+    private static final int WRITE_STORAGE_PERMISSION_CODE = 4;
+    private static final int INTERNET_PERMISSION_CODE = 5;
+    private static final int RECORD_AUDIO_PERMISSION_CODE = 6;
 
 
     public static void checkReadStoragePermission(Activity context ){
@@ -217,6 +218,45 @@ public final class PermissionService {
         }else{
 
             ActivityCompat.requestPermissions(context,new String[] {Manifest.permission.INTERNET},INTERNET_PERMISSION_CODE);
+        }
+
+    }
+
+    public static void checkRecordAudio(Activity context ){
+        if(ContextCompat.checkSelfPermission(context, Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED){
+            // Toast.makeText(context,"You have already granted this permission",Toast.LENGTH_SHORT).show();
+        }
+        else
+        {
+            requestInternetPermission(context);
+
+        }
+    }
+
+    private static void requestRecordAudioPermission(final Activity  context) {
+        if(ActivityCompat.shouldShowRequestPermissionRationale(context,Manifest.permission.RECORD_AUDIO)){
+            new AlertDialog.Builder(context)
+                    .setTitle("Permission needed")
+                    .setMessage("This permission is needed for getting location")
+                    .setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            ActivityCompat.requestPermissions(context,new String[] {Manifest.permission.RECORD_AUDIO},RECORD_AUDIO_PERMISSION_CODE);
+
+                        }
+                    })
+                    .setNegativeButton("cancel", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    })
+                    .create()
+                    .show();
+
+        }else{
+
+            ActivityCompat.requestPermissions(context,new String[] {Manifest.permission.RECORD_AUDIO},RECORD_AUDIO_PERMISSION_CODE);
         }
 
     }
