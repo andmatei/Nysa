@@ -1,5 +1,6 @@
 package nysa.nysa_20.activity;
 
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,17 +10,22 @@ import android.widget.Toast;
 
 import junit.framework.Test;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
 import nysa.nysa_20.R;
+import nysa.nysa_20.model.AccountHolder;
 import nysa.nysa_20.model.LoginFormular;
 import nysa.nysa_20.service.connectivity.LoginService;
+import nysa.nysa_20.service.localPersistance.MainLocalPersistenceService;
 import nysa.nysa_20.service.utilitary.ActivityShiftService;
 import nysa.nysa_20.service.utilitary.PermissionService;
 
@@ -33,16 +39,47 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_login);
 
 
-            prepareComponents();
-            PermissionService.checkWriteStoragePermission(this);
 
+
+
+        checkLoginStatus();
+            prepareComponents();
 
 
     }
 
+    private void checkLoginStatus() {
+        String filename = "AccountFile.txt";
+        File file = new File(this.getFilesDir(), filename);
+        String fileContents = "";
+        FileOutputStream outputStream;
+        if (!file.exists())
+
+            try {
+                outputStream = openFileOutput(filename, Context.MODE_PRIVATE);
+                outputStream.write(fileContents.getBytes());
+                outputStream.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+            MainLocalPersistenceService.setAccountFile(file);
+
+
+        if(MainLocalPersistenceService.isAnyAccountPersisted()){
+           MainLocalPersistenceService.retrievePersistedAccount();
+
+        }
+        if(!AccountHolder.isEmpty()){
+            ActivityShiftService.toMainActivity(this);
+        }
+
+
+    }
 
 
     private void prepareComponents() {

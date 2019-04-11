@@ -3,6 +3,8 @@ package nysa.nysa_20.service.connectivity;
 import nysa.nysa_20.model.AccountHolder;
 import nysa.nysa_20.model.RegistrationFormular;
 import nysa.nysa_20.model.Account;
+import nysa.nysa_20.service.localPersistance.MainLocalPersistenceService;
+
 public class RegisterService {
     private RegisterService(){
 
@@ -26,6 +28,9 @@ public class RegisterService {
 
     public static void finaliseRegisterSequence(){
         Account account = AccountHolder.getAccount();
+        MainLocalPersistenceService.persistCurrentAccount();
+
+
 
         //TODO account registration
     }

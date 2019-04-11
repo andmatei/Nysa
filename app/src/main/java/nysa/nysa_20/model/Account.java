@@ -1,9 +1,10 @@
 package nysa.nysa_20.model;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.HashMap;
 
-public class Account {
+public class Account implements Serializable {
 
     private String lastName;
     private String firstName;

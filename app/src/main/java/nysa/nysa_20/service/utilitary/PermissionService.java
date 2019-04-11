@@ -97,7 +97,7 @@ public final class PermissionService {
 
         }else{
 
-           // ActivityCompat.requestPermissions(context,new String[] {Manifest.permission.WRITE_EXTERNAL_STORAGE},WRITE_STORAGE_PERMISSION_CODE);
+            ActivityCompat.requestPermissions(context,new String[] {Manifest.permission.WRITE_EXTERNAL_STORAGE},WRITE_STORAGE_PERMISSION_CODE);
         }
 
     }
