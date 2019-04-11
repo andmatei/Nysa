@@ -4,6 +4,88 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.ChatBotActivity">
+    android:background="#F5F5F5"
+    tools:context="nysa.nysa_20.activity.ChatBotActivity">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/messagesRecycleView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/submitEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoToolBar" />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/logoToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/voiceCommandImageView"
+        android:layout_width="42dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="11dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/submitEditText"
+        app:layout_constraintTop_toBottomOf="@+id/messagesRecycleView"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/asset_1" />
+
+    <ImageView
+        android:id="@+id/submitImageView"
+        android:layout_width="42dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/submitEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/submitEditText"
+        app:layout_constraintTop_toBottomOf="@+id/messagesRecycleView"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/asset_2" />
+
+    <EditText
+        android:id="@+id/submitEditText"
+        android:layout_width="291dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/editinput"
+        android:ems="10"
+        android:inputType="text"
+        android:paddingStart="14dp"
+        android:paddingEnd="40dp"
+        android:textColor="#AAAAAA"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/logoChatBot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/asset_3" />
 
 </android.support.constraint.ConstraintLayout>
