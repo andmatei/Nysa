@@ -7,10 +7,21 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import junit.framework.Test;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
 import nysa.nysa_20.R;
 import nysa.nysa_20.model.LoginFormular;
 import nysa.nysa_20.service.connectivity.LoginService;
 import nysa.nysa_20.service.utilitary.ActivityShiftService;
+import nysa.nysa_20.service.utilitary.PermissionService;
 
 public class LoginActivity extends AppCompatActivity {
     private EditText emailEditText;
@@ -26,6 +37,8 @@ public class LoginActivity extends AppCompatActivity {
 
 
             prepareComponents();
+            PermissionService.checkWriteStoragePermission(this);
+
 
 
     }
@@ -57,18 +70,13 @@ public class LoginActivity extends AppCompatActivity {
                 .setPassword(passwordEditText.getText().toString().trim())
                 .build();
         if(loginFormular.isAnyEmpty()){
-            Toast.makeText(this,"All fields must be completed!",Toast.LENGTH_LONG).show();
-            try {
-                Thread.sleep(3000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+            Toast.makeText(this,"All fields must be completed!",Toast.LENGTH_SHORT).show();
         }
         else{
             int processCompleted = LoginService.initiateLoginSequence(loginFormular);
 
             if(processCompleted == 0) {
-                Toast.makeText(this,"Invalid email or password!", Toast.LENGTH_LONG).show();
+                Toast.makeText(this,"Invalid email or password!", Toast.LENGTH_SHORT).show();
             }
             else
                 if(processCompleted==1){

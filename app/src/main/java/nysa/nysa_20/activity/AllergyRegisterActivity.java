@@ -237,7 +237,7 @@ public class AllergyRegisterActivity extends AppCompatActivity {
 
 
     void tolibraryButtonClicked(){
-        //TODO libraryActivity
+        ActivityShiftService.toLibraryActivity(this);
 
     }
 
@@ -247,10 +247,6 @@ public class AllergyRegisterActivity extends AppCompatActivity {
         RegisterService.finaliseRegisterSequence();
         ActivityShiftService.toMainActivity(this);
     }
-
-
-
-
 
 
 }

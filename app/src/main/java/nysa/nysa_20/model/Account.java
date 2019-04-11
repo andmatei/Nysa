@@ -1,5 +1,6 @@
 package nysa.nysa_20.model;
 
+import java.time.LocalDate;
 import java.util.HashMap;
 
 public class Account {
@@ -8,10 +9,9 @@ public class Account {
     private String firstName;
     private String username;
     private String email;
-    private String password;
     private String id;
     private HashMap<String,Boolean> allergyMap;
-
+    private HashMap<java.time.LocalDate,SymptomEntry> historyMap;
 
 
     public Account(RegistrationFormular formular){
@@ -19,7 +19,9 @@ public class Account {
         this.firstName = formular.getFirstName();
         this.username = formular.getUsername();
         this.email = formular.getEmail();
-        this.password = formular.getPassword();
+        historyMap = new HashMap<>();
+
+
     }
 
     public Account(){
@@ -42,8 +44,8 @@ public class Account {
         return email;
     }
 
-    public String getPassword() {
-        return password;
+    public HashMap<LocalDate, SymptomEntry> getHistoryMap() {
+        return historyMap;
     }
 
     public HashMap<String, Boolean> getAllergyMap() {
@@ -61,7 +63,6 @@ public class Account {
                 ", firstName='" + firstName + '\'' +
                 ", username='" + username + '\'' +
                 ", email='" + email + '\'' +
-                ", password='" + password + '\'' +
                 ", id='" + id + '\'' +
                 ", allergyMap=" + allergyMap +
                 '}';

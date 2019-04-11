@@ -66,7 +66,7 @@ public class RegisterActivity extends AppCompatActivity {
                 .setPassword(passwordEditText.getText().toString().trim())
                 .build();
         if(registrationFormular.isAnyEmpty()){
-            Toast.makeText(this,"All fields must be completed!",Toast.LENGTH_LONG).show();
+            Toast.makeText(this,"All fields must be completed!",Toast.LENGTH_SHORT).show();
 
         }
         else{
@@ -74,11 +74,11 @@ public class RegisterActivity extends AppCompatActivity {
             int processCompleted =  RegisterService.initiateRegisterSequence(registrationFormular);
 
             if(processCompleted == 0){
-                Toast.makeText(this,"This account already exists!",Toast.LENGTH_LONG).show();
+                Toast.makeText(this,"This account already exists!",Toast.LENGTH_SHORT).show();
            }
            else
                if(processCompleted == 1){
-                    Toast.makeText(this,"Account successfully created!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(this,"Account successfully created!", Toast.LENGTH_SHORT).show();
 
 
                    Account account = new Account(registrationFormular);
@@ -87,7 +87,7 @@ public class RegisterActivity extends AppCompatActivity {
 
                }
                else{
-                   Toast.makeText(this,"Oh, no! There was an error!",Toast.LENGTH_LONG).show();
+                   Toast.makeText(this,"Oh, no! There was an error!",Toast.LENGTH_SHORT).show();
 
                }
 
