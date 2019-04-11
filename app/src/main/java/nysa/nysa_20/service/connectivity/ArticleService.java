@@ -15,19 +15,5 @@ public class ArticleService {
         return rez;
     }
 
-    public static JSONArray getArticles(String s){
-        JSONArray jsonArray = new JSONArray();
 
-        try {
-            JSONObject jsonObject = new JSONObject(s);
-
-            jsonArray = jsonObject.getJSONArray("articles");
-
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-
-
-        return jsonArray;
-    }
 }

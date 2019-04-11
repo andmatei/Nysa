@@ -22,6 +22,7 @@ import nysa.nysa_20.R;
 import nysa.nysa_20.service.connectivity.ArticleService;
 import nysa.nysa_20.service.connectivity.RegisterService;
 
+
 public class NewsRecyclerView extends RecyclerView.Adapter<NewsRecyclerView.ViewHolder> {
 
 
