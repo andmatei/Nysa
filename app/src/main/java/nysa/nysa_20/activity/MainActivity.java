@@ -1,125 +1,64 @@
 package nysa.nysa_20.activity;
 
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.ProgressBar;
-import android.widget.TextView;
-import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
 
-import org.json.JSONArray;
-
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-
 import nysa.nysa_20.R;
-import nysa.nysa_20.model.Account;
-import nysa.nysa_20.model.AccountHolder;
-import nysa.nysa_20.model.adaptors.NewsRecyclerView;
-import nysa.nysa_20.service.utilitary.ActivityShiftService;
-import nysa.nysa_20.service.utilitary.MainActivityUtilitaryClass;
-import nysa.nysa_20.service.utilitary.PermissionService;
-import nysa.nysa_20.service.utilitary.SymptomEntryService;
-
+import nysa.nysa_20.model.Toolbar_MainActivity;
+import nysa.nysa_20.model.adaptors.MainActivityPagerAdaptor;
 
 public class MainActivity extends AppCompatActivity {
-    private TextView currentDateTextView;
-    private TextView usernameTextView;
-    private TextView currentScoreTextView;
-    private TextView maxScoreTextView;
-    private ProgressBar progressBar;
-    private ImageView addSymptomButton;
-    private TextView noSymptom1TextView;
-    private TextView noSymptom2TextView;
-    private TextView symptom1TextView;
-    private Account account;
-    private RecyclerView recyclerView;
-
-
-
+    private static ViewPager trackPager;
+    private static MainActivityPagerAdaptor trackAdapter;
+    private static Toolbar_MainActivity toolbar_mainActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        account = AccountHolder.getAccount();
 
-        prepareComponents();
-
-    }
-
-    private void prepareComponents() {
-
-        initializeElements();
-        initializeElementFunctions();
-
-        prepareSymptomSugestion();
-
-        prepareNewsfeed();
+        initComponents();
 
     }
 
+    private   void initComponents(){
+        trackAdapter = new MainActivityPagerAdaptor(getSupportFragmentManager());
+        trackPager = findViewById(R.id.trackPager);
+        toolbar_mainActivity = findViewById(R.id.toolbarMainActivity);
 
-    private void initializeElements() {
-        currentDateTextView = findViewById(R.id.dateMainTextView);
-        usernameTextView = findViewById(R.id.usernameMainTextView);
-        currentScoreTextView = findViewById(R.id.currentScoreTextView);
-        maxScoreTextView = findViewById(R.id.maxScoreTextView);
-        progressBar = findViewById(R.id.progressBar);
-        addSymptomButton  = findViewById(R.id.addSymptomButtonImageView);
-        noSymptom1TextView = findViewById(R.id.noSymptoms1TextView);
-        noSymptom2TextView = findViewById(R.id.noSimptoms2TextView);
-        symptom1TextView = findViewById(R.id.symptom1TextView);
-        recyclerView = findViewById(R.id.recyclerviewid);
+        trackPager.setAdapter(trackAdapter);
+
+        prepareViewPager();
 
     }
 
-     private void initializeElementFunctions() {
-        currentDateTextView.setText(MainActivityUtilitaryClass.getCurrentTime());
-        usernameTextView.setText(account.getUsername());
-        addSymptomButton.setOnClickListener(ev -> ActivityShiftService.toSymptomTrackActivity(this));
+    private void prepareViewPager() {
+        trackPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                toolbar_mainActivity.updateToolbarImageResorces(position);
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
     }
 
-    private void prepareSymptomSugestion() {
 
-
-        if(SymptomEntryService.isTodayLastEntry()){
-            currentScoreTextView.setVisibility(View.VISIBLE);
-            maxScoreTextView.setVisibility(View.VISIBLE);
-            progressBar.setVisibility(View.VISIBLE);
-            symptom1TextView.setVisibility(View.VISIBLE);
-            noSymptom1TextView.setVisibility(View.GONE);
-            noSymptom2TextView.setVisibility(View.GONE);
-
-            int progress = Integer.parseInt(currentScoreTextView.getText().toString());
-            progressBar.setProgress(progress);
-        }
-        else{
-            currentScoreTextView.setVisibility(View.GONE);
-            maxScoreTextView.setVisibility(View.GONE);
-            progressBar.setVisibility(View.GONE);
-            symptom1TextView.setVisibility(View.GONE);
-            noSymptom1TextView.setVisibility(View.VISIBLE);
-            noSymptom2TextView.setVisibility(View.VISIBLE);
-
-
-        }
+    public static void setCurrentTab(int position){
+        trackPager.setCurrentItem(position);
+        toolbar_mainActivity.updateToolbarImageResorces(position);
     }
 
-    private void prepareNewsfeed(){
-        NewsRecyclerView adapter = new NewsRecyclerView(this);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(adapter);
-
-
-
-
-
-    }
 
 }

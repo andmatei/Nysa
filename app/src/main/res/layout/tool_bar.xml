@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context="nysa.nysa_20.activity.MainActivity">
+    tools:context="nysa.nysa_20.activity.HomeActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar2"

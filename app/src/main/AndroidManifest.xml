@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="nysa.nysa_20">
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
 
-    <uses-permission android:name="android.permission."/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission." />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -13,11 +14,12 @@
         android:roundIcon="@drawable/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".activity.MainActivity"></activity>
         <activity android:name=".activity.ChatBotActivity" />
         <activity android:name=".activity.SymptomTrackActivity" />
         <activity android:name=".activity.LibraryActivity" />
         <activity android:name=".activity.AccountSettingsActivity" />
-        <activity android:name=".activity.MainActivity" />
+        <activity android:name=".activity.HomeActivity" />
         <activity android:name=".activity.AllergyRegisterActivity" />
         <activity android:name=".activity.RegisterActivity" />
         <activity

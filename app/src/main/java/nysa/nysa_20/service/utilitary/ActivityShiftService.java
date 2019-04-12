@@ -6,6 +6,7 @@ import android.content.Intent;
 import nysa.nysa_20.activity.AccountSettingsActivity;
 import nysa.nysa_20.activity.AllergyRegisterActivity;
 import nysa.nysa_20.activity.ChatBotActivity;
+import nysa.nysa_20.activity.HomeActivity;
 import nysa.nysa_20.activity.LibraryActivity;
 import nysa.nysa_20.activity.LoginActivity;
 import nysa.nysa_20.activity.MainActivity;
@@ -54,6 +55,12 @@ public class ActivityShiftService {
 
     public static void toSymptomTrackActivity(Context context){
         Intent intent = new Intent(context, SymptomTrackActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        context.startActivity(intent);
+    }
+
+    public static void toHomeActivity(Context context){
+        Intent intent = new Intent(context, HomeActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         context.startActivity(intent);
     }

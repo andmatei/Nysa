@@ -4,242 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="nysa.nysa_20.activity.MainActivity">
+    tools:context=".activity.MainActivity">
 
-    <nysa.nysa_20.model.Tool_bar
-        android:id="@+id/tool_bar"
+    <nysa.nysa_20.model.Toolbar_MainActivity
+        android:id="@+id/toolbarMainActivity"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        android:background="#FFFFFF"
+        android:gravity="bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
 
-    <ScrollView
-        android:id="@+id/parentScroll"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:fillViewport="false"
-        android:focusableInTouchMode="false"
-        app:layout_constraintBottom_toTopOf="@+id/tool_bar"
+
+    </nysa.nysa_20.model.Toolbar_MainActivity>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/trackPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="?attr/actionBarSize"
+        app:layout_constraintBottom_toBottomOf="parent"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.749">
 
-        <android.support.constraint.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/mainBackground"
-                android:layout_width="0dp"
-                android:layout_height="801dp"
-                android:scaleType="fitCenter"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/main_background" />
-
-            <ImageView
-                android:id="@+id/logoMainActivity"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="48dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/logo" />
-
-            <TextView
-                android:id="@+id/helloTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="41dp"
-                android:layout_marginTop="52dp"
-                android:text="Hello,"
-                android:textColor="#FFFFFF"
-                android:textSize="34sp"
-                app:layout_constraintStart_toStartOf="@+id/logoMainActivity"
-                app:layout_constraintTop_toBottomOf="@+id/logoMainActivity" />
-
-            <TextView
-                android:id="@+id/usernameMainTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="#FFFFFF"
-                android:textSize="34sp"
-                app:layout_constraintStart_toStartOf="@+id/helloTextView"
-                app:layout_constraintTop_toBottomOf="@+id/helloTextView" />
-
-            <TextView
-                android:id="@+id/greetings1TextView"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                android:layout_marginEnd="32dp"
-                android:text="@string/hope_you_re_feeling_just_fine_for_a_lovely_day_here_s_your_daily_review_of_your_symtom_tracker_log"
-                android:textColor="#FFFFFF"
-                android:textSize="17sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/usernameMainTextView"
-                app:layout_constraintTop_toBottomOf="@+id/usernameMainTextView" />
-
-            <TextView
-                android:id="@+id/greetings2TextView"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="32dp"
-                android:layout_marginTop="20dp"
-                android:text="@string/check_out_your_newsfeed_the_lastest_topics_and_more_what_s_new_that_might_interest_you"
-                android:textColor="#FFFFFF"
-                android:textSize="15sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/greetings1TextView"
-                app:layout_constraintTop_toBottomOf="@+id/greetings1TextView" />
-
-            <TextView
-                android:id="@+id/dateMainTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="48dp"
-                android:text="TextView"
-                android:textColor="#FFFFFF"
-                android:textSize="15sp"
-                app:layout_constraintStart_toStartOf="@+id/greetings2TextView"
-                app:layout_constraintTop_toBottomOf="@+id/greetings2TextView" />
-
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/recyclerviewid"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/newsFeedText" />
-
-
-
-            <TextView
-                android:id="@+id/newsFeedText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="Newsfeed"
-                android:textSize="30sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.072"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/mainBackground" />
-
-            <ImageView
-                android:id="@+id/addSymptomButtonImageView"
-                android:layout_width="50dp"
-                android:layout_height="43dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginBottom="4dp"
-                app:layout_constraintBottom_toBottomOf="@+id/mainBackground"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/dateMainTextView"
-                app:layout_constraintVertical_bias="0.685"
-                app:srcCompat="@drawable/add_symptom" />
-
-            <TextView
-                android:id="@+id/noSymptoms1TextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginBottom="76dp"
-                android:text="You didn't track your symptoms yet"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:visibility="gone"
-                app:layout_constraintBottom_toTopOf="@id/addSymptomButtonImageView"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.355"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/dateMainTextView" />
-
-            <TextView
-                android:id="@+id/noSimptoms2TextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
-                android:padding="4dp"
-                android:text="To see your daily overview, complete the tracking form"
-                android:textColor="#FFFFFF"
-                android:textSize="13sp"
-                android:visibility="gone"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/noSymptoms1TextView" />
-
-            <ProgressBar
-                android:id="@+id/progressBar"
-                style="?android:attr/progressBarStyleHorizontal"
-                android:layout_width="296dp"
-                android:layout_height="40dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
-                android:clickable="false"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.494"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/currentScoreTextView" />
-
-            <TextView
-                android:id="@+id/currentScoreTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="80dp"
-                android:layout_marginTop="8dp"
-                android:text="75"
-                android:textColor="#FFFFFF"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                android:visibility="visible"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/symptom1TextView" />
-
-            <TextView
-                android:id="@+id/maxScoreTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginBottom="4dp"
-                android:text="/100"
-                android:textColor="#FFFFFF"
-                android:textStyle="bold"
-                android:visibility="visible"
-                app:layout_constraintBottom_toBottomOf="@+id/currentScoreTextView"
-                app:layout_constraintStart_toEndOf="@+id/currentScoreTextView" />
-
-            <TextView
-                android:id="@+id/symptom1TextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="76dp"
-                android:layout_marginEnd="8dp"
-                android:text="Your symptom score:"
-                android:textColor="#FFFFFF"
-                android:textSize="16sp"
-                android:textStyle="bold"
-
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.239"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/dateMainTextView" />
-
-        </android.support.constraint.ConstraintLayout>
-    </ScrollView>
+    </android.support.v4.view.ViewPager>
 
 </android.support.constraint.ConstraintLayout>
