@@ -1,10 +1,7 @@
 package nysa.nysa_20.activity;
 
-import android.graphics.Bitmap;
-import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.AppCompatImageButton;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -92,7 +89,7 @@ public class AllergyRegisterActivity extends AppCompatActivity {
         pollenAllergyTextView = findViewById(R.id.pollenAllergyTextView);
         dustAllergyTextView = findViewById(R.id.dustAllergyTextView);
         moldAllergyTextView = findViewById(R.id.moldAllergyTextView);
-        toLibraryButton = findViewById(R.id.libraryButton);
+        toLibraryButton = findViewById(R.id.respiratorySymptomsButton);
         finishButton = findViewById(R.id.finishButton);
     }
 

@@ -34,7 +34,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/libraryButton"
+            android:id="@+id/respiratorySymptomsButton"
             android:layout_width="0dp"
             android:layout_height="24dp"
             android:layout_marginTop="24dp"

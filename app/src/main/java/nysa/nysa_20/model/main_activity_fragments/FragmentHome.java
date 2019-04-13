@@ -33,6 +33,7 @@ public class FragmentHome extends Fragment {
     private RecyclerView recyclerView;
     private View view;
 
+
     public FragmentHome(){}
 
     @Override
@@ -78,7 +79,7 @@ public class FragmentHome extends Fragment {
     private void initializeElementFunctions() {
         currentDateTextView.setText(MainActivityUtilitaryClass.getCurrentTime());
         usernameTextView.setText(account.getUsername());
-        addSymptomButton.setOnClickListener(ev -> ActivityShiftService.toSymptomTrackActivity(view.getContext()));
+        addSymptomButton.setOnClickListener(ev -> ActivityShiftService.toSymptomEntryActivity(view.getContext()));
     }
 
     private void prepareSymptomSugestion() {

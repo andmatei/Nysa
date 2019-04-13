@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onPageSelected(int position) {
-                toolbar_mainActivity.updateToolbarImageResorces(position);
+                toolbar_mainActivity.updateToolbarImageResources(position);
             }
 
             @Override
@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
 
     public static void setCurrentTab(int position){
         trackPager.setCurrentItem(position);
-        toolbar_mainActivity.updateToolbarImageResorces(position);
+        toolbar_mainActivity.updateToolbarImageResources(position);
     }
 
 

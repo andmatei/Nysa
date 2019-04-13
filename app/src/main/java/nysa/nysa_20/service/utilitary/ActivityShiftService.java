@@ -11,6 +11,7 @@ import nysa.nysa_20.activity.LibraryActivity;
 import nysa.nysa_20.activity.LoginActivity;
 import nysa.nysa_20.activity.MainActivity;
 import nysa.nysa_20.activity.RegisterActivity;
+import nysa.nysa_20.activity.SymptomEntryActivity;
 import nysa.nysa_20.activity.SymptomTrackActivity;
 
 public class ActivityShiftService {
@@ -61,6 +62,12 @@ public class ActivityShiftService {
 
     public static void toHomeActivity(Context context){
         Intent intent = new Intent(context, HomeActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        context.startActivity(intent);
+    }
+
+    public static void toSymptomEntryActivity(Context context){
+        Intent intent = new Intent(context, SymptomEntryActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         context.startActivity(intent);
     }

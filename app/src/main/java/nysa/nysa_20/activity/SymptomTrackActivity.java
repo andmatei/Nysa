@@ -10,7 +10,7 @@ public class SymptomTrackActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_symptom_track);
+        setContentView(R.layout.activity_symptom_entry);
 
         //TODO: SymptomTrackActivity
     }

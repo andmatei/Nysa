@@ -3,19 +3,12 @@ package nysa.nysa_20.model;
 import android.app.Activity;
 import android.content.Context;
 import android.support.constraint.ConstraintLayout;
-import android.support.v4.app.Fragment;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
 import nysa.nysa_20.R;
-import nysa.nysa_20.activity.AccountSettingsActivity;
-import nysa.nysa_20.activity.ChatBotActivity;
-import nysa.nysa_20.activity.LibraryActivity;
-import nysa.nysa_20.activity.HomeActivity;
 import nysa.nysa_20.activity.MainActivity;
-import nysa.nysa_20.activity.SymptomTrackActivity;
 import nysa.nysa_20.service.utilitary.ActivityShiftService;
 
 public class Toolbar_MainActivity extends ConstraintLayout {
@@ -39,15 +32,15 @@ public class Toolbar_MainActivity extends ConstraintLayout {
 
     private void Inflate() {
         layoutInflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        layoutInflater.inflate(R.layout.tool_bar, this, true);
+        layoutInflater.inflate(R.layout.toolbar_main_activity, this, true);
     }
 
     private void BindViews() {
-        homeButton =  findViewById(R.id.homeButton);
-        accountButton = findViewById(R.id.accountButton);
-        chatBotButton =  findViewById(R.id.chatBotButton);
-        libraryButton =  findViewById(R.id.libraryButton);
-        historyButton =  findViewById(R.id.historyButton);
+        homeButton =  findViewById(R.id.eyeSymptomsButton);
+        accountButton = findViewById(R.id.painSymptomsButton);
+        chatBotButton =  findViewById(R.id.pain);
+        libraryButton =  findViewById(R.id.respiratorySymptomsButton);
+        historyButton =  findViewById(R.id.skinSymptomsButton);
     }
 
     private void ToolBarSetup (){
@@ -66,7 +59,7 @@ public class Toolbar_MainActivity extends ConstraintLayout {
 
     }
 
-    public void updateToolbarImageResorces(int position){
+    public void updateToolbarImageResources(int position){
 
         switch (position){
             case 0:  homeButton.setImageResource(R.drawable.home);

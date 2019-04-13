@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context="nysa.nysa_20.activity.HomeActivity">
+    tools:context="nysa.nysa_20.activity.MainActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar2"
@@ -24,7 +24,7 @@
         app:layout_constraintTop_toTopOf="@id/toolbar2" />
 
     <ImageButton
-        android:id="@+id/homeButton"
+        android:id="@+id/eyeSymptomsButton"
         android:layout_width="56dp"
         android:layout_height="42dp"
         android:layout_marginStart="8dp"
@@ -37,55 +37,55 @@
         app:srcCompat="@drawable/nohome" />
 
     <ImageButton
-        android:id="@+id/accountButton"
+        android:id="@+id/painSymptomsButton"
         android:layout_width="57dp"
         android:layout_height="42dp"
         android:background="@android:color/transparent"
         android:padding="4dp"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="@+id/homeButton"
-        app:layout_constraintEnd_toStartOf="@+id/chatBotButton"
-        app:layout_constraintStart_toEndOf="@+id/homeButton"
-        app:layout_constraintTop_toTopOf="@+id/homeButton"
+        app:layout_constraintBottom_toBottomOf="@+id/eyeSymptomsButton"
+        app:layout_constraintEnd_toStartOf="@+id/pain"
+        app:layout_constraintStart_toEndOf="@+id/eyeSymptomsButton"
+        app:layout_constraintTop_toTopOf="@+id/eyeSymptomsButton"
         app:srcCompat="@drawable/noperson" />
 
     <ImageButton
-        android:id="@+id/chatBotButton"
+        android:id="@+id/pain"
         android:layout_width="57dp"
         android:layout_height="42dp"
         android:adjustViewBounds="true"
         android:background="@android:color/transparent"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="@+id/accountButton"
-        app:layout_constraintEnd_toEndOf="@+id/historyButton"
-        app:layout_constraintStart_toStartOf="@+id/homeButton"
-        app:layout_constraintTop_toTopOf="@+id/accountButton"
+        app:layout_constraintBottom_toBottomOf="@+id/painSymptomsButton"
+        app:layout_constraintEnd_toEndOf="@+id/skinSymptomsButton"
+        app:layout_constraintStart_toStartOf="@+id/eyeSymptomsButton"
+        app:layout_constraintTop_toTopOf="@+id/painSymptomsButton"
         app:srcCompat="@drawable/addtoolbar" />
 
     <ImageButton
-        android:id="@+id/libraryButton"
+        android:id="@+id/respiratorySymptomsButton"
         android:layout_width="57dp"
         android:layout_height="42dp"
         android:background="@android:color/transparent"
         android:padding="4dp"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="@+id/accountButton"
-        app:layout_constraintEnd_toStartOf="@+id/historyButton"
-        app:layout_constraintStart_toEndOf="@+id/chatBotButton"
-        app:layout_constraintTop_toTopOf="@+id/accountButton"
+        app:layout_constraintBottom_toBottomOf="@+id/painSymptomsButton"
+        app:layout_constraintEnd_toStartOf="@+id/skinSymptomsButton"
+        app:layout_constraintStart_toEndOf="@+id/pain"
+        app:layout_constraintTop_toTopOf="@+id/painSymptomsButton"
         app:srcCompat="@drawable/nomenu" />
 
     <ImageButton
-        android:id="@+id/historyButton"
+        android:id="@+id/skinSymptomsButton"
         android:layout_width="57dp"
         android:layout_height="42dp"
         android:layout_marginEnd="8dp"
         android:background="@android:color/transparent"
         android:padding="4dp"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="@+id/chatBotButton"
+        app:layout_constraintBottom_toBottomOf="@+id/pain"
         app:layout_constraintEnd_toEndOf="@+id/toolbar2"
-        app:layout_constraintTop_toTopOf="@+id/libraryButton"
+        app:layout_constraintTop_toTopOf="@+id/respiratorySymptomsButton"
         app:srcCompat="@drawable/nograph" />
 
 </android.support.constraint.ConstraintLayout>
