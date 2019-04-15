@@ -4,8 +4,11 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
+
+import java.util.List;
 
 import nysa.nysa_20.R;
 import nysa.nysa_20.model.SymptomEntry;
@@ -13,6 +16,7 @@ import nysa.nysa_20.model.Toolbar_MainActivity;
 import nysa.nysa_20.model.Toolbar_SymptomEntryActivity;
 import nysa.nysa_20.model.adaptors.MainActivityPagerAdaptor;
 import nysa.nysa_20.model.adaptors.SymptomEntryActivityPagerAdaptor;
+import nysa.nysa_20.model.symptom_entry_activity_fragments.FragmentEyeSymptoms;
 import nysa.nysa_20.service.utilitary.ActivityShiftService;
 
 public class SymptomEntryActivity extends AppCompatActivity {
@@ -54,6 +58,10 @@ public class SymptomEntryActivity extends AppCompatActivity {
 
     private void saveButtonClicked() {
         ActivityShiftService.toMainActivity(this);
+        List<String> eyesightSymptoms = FragmentEyeSymptoms.getEyesightSymptoms();
+        if(eyesightSymptoms!=null){
+            Toast.makeText(this, "OH YEAHHH", Toast.LENGTH_LONG).show();
+        }
         //TODO SAVED BUTTON SYMPTOM ENTRY
     }
 

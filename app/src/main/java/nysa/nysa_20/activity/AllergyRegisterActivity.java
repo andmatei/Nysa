@@ -135,7 +135,6 @@ public class AllergyRegisterActivity extends AppCompatActivity {
         imageView.setBackgroundResource(oppositeImageViewID);
 
         int idFamily = RegisterActivityUtilitaryClass.getFamily(string);
-        System.out.println("Aici1");
         updateCounters(idFamily,currentImageStatus);
 
 

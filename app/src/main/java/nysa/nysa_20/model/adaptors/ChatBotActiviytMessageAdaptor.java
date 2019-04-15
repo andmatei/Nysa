@@ -15,10 +15,10 @@ import java.util.List;
 import nysa.nysa_20.R;
 import nysa.nysa_20.model.Messages;
 
-public class MessageAdaptor extends RecyclerView.Adapter<MessageAdaptor.MessageViewHolder>{
+public class ChatBotActiviytMessageAdaptor extends RecyclerView.Adapter<ChatBotActiviytMessageAdaptor.MessageViewHolder>{
 
     private List<Messages> mMessageList;
-    public MessageAdaptor(List<Messages> mMessageList){
+    public ChatBotActiviytMessageAdaptor(List<Messages> mMessageList){
         this.mMessageList=mMessageList;
 
     }

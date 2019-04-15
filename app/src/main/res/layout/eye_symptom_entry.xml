@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="45dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="408dp">
+
+            <ImageView
+                android:id="@+id/eyesightbackground1ImageView"
+                android:layout_width="0dp"
+                android:layout_height="660dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/symptom_entry_background" />
+
+            <ImageView
+                android:id="@+id/eyesightBackground2ImageView"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                app:layout_constraintBottom_toBottomOf="@+id/eyesightTitleTextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="?attr/colorBackgroundFloating" />
+
+            <TextView
+                android:id="@+id/eyesightTitleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="64dp"
+                android:layout_marginTop="48dp"
+                android:fontFamily="@font/segoeuib"
+                android:text="Eyesight"
+                android:textColor="@color/colorText"
+                android:textSize="50dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/eyesight_date_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/seguisb"
+                android:text="12 SEPTEMBER, 2017"
+                android:textColor="@color/colorText"
+                app:layout_constraintStart_toStartOf="@+id/eyesightTitleTextView"
+                app:layout_constraintTop_toBottomOf="@+id/eyesightTitleTextView" />
+
+            <ImageView
+                android:id="@+id/profileTitleUnderlineImageView3"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="32dp"
+                android:background="@drawable/symptom_overview_card"
+                app:layout_constraintLeft_toLeftOf="@+id/eyesight_date_TextView"
+                app:layout_constraintRight_toRightOf="@+id/eyesight_date_TextView"
+                app:layout_constraintTop_toBottomOf="@+id/eyesight_date_TextView" />
+
+            <TextView
+                android:id="@+id/q1_eyesightTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="112dp"
+                android:layout_marginEnd="8dp"
+                android:text="How would you rate your sight symptoms?"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.427"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/eyesightBackground2ImageView" />
+
+            <SeekBar
+                android:id="@+id/q1_eyesightSeekbar"
+                style="@style/MySeekBar"
+                android:layout_width="247dp"
+                android:layout_height="56dp"
+                android:layout_marginTop="16dp"
+                android:max="5"
+                android:thumb="@drawable/greybtn"
+                android:thumbTint="#2DA586"
+                android:tickMark="@drawable/greybtn"
+                android:tickMarkTint="#C8C8C8"
+                android:tickMarkTintMode="add"
+                app:layout_constraintStart_toStartOf="@+id/q1_eyesightTextView"
+                app:layout_constraintTop_toBottomOf="@+id/q1_eyesightTextView" />
+
+            <TextView
+                android:id="@+id/q1_redEyesSymptom_eyesightTextView"
+                android:layout_width="97dp"
+                android:layout_height="26dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/symptoms_buttons_unchecked"
+                android:fontFamily="@font/segoe_ui"
+                android:gravity="center"
+                android:text="Red eyes"
+                android:textColor="#2DA586"
+                app:layout_constraintEnd_toStartOf="@+id/q1_itchinessSymptom_eyesightTextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/q1_eyesightSeekbar" />
+
+            <TextView
+                android:id="@+id/q1_itchinessSymptom_eyesightTextView"
+                android:layout_width="97dp"
+                android:layout_height="26dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/symptoms_buttons_unchecked"
+                android:fontFamily="@font/segoe_ui"
+                android:gravity="center"
+                android:text="Itchiness"
+                android:textColor="#2DA586"
+                app:layout_constraintEnd_toStartOf="@+id/q1_tearingEyesSymptom_eyesightTextView"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/q1_redEyesSymptom_eyesightTextView"
+                app:layout_constraintTop_toBottomOf="@+id/q1_eyesightSeekbar" />
+
+            <TextView
+                android:id="@+id/q1_tearingEyesSymptom_eyesightTextView"
+                android:layout_width="111dp"
+                android:layout_height="26dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/symptoms_buttons_unchecked"
+                android:fontFamily="@font/segoe_ui"
+                android:gravity="center"
+                android:text="Tearing eyes"
+                android:textColor="#2DA586"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/q1_itchinessSymptom_eyesightTextView"
+                app:layout_constraintTop_toBottomOf="@+id/q1_eyesightSeekbar" />
+
+            <TextView
+                android:id="@+id/q1_sorenessEyelidsSymptom_eyesightTextView"
+                android:layout_width="121dp"
+                android:layout_height="26dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/symptoms_buttons_unchecked"
+                android:fontFamily="@font/segoe_ui"
+                android:gravity="center"
+                android:text="Swollen eyelids"
+                android:textColor="#2DA586"
+                app:layout_constraintStart_toStartOf="@+id/q1_redEyesSymptom_eyesightTextView"
+                app:layout_constraintTop_toBottomOf="@+id/q1_redEyesSymptom_eyesightTextView" />
+
+            <TextView
+                android:id="@+id/q1_swollenEyelidsSymptom_eyesightTextView"
+                android:layout_width="167dp"
+                android:layout_height="26dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/symptoms_buttons_unchecked"
+                android:fontFamily="@font/segoe_ui"
+                android:gravity="center"
+                android:text="Soreness or burning"
+                android:textColor="#2DA586"
+                app:layout_constraintStart_toEndOf="@+id/q1_sorenessEyelidsSymptom_eyesightTextView"
+                app:layout_constraintTop_toBottomOf="@+id/q1_itchinessSymptom_eyesightTextView" />
+
+            <TextView
+                android:id="@+id/q1_sensitivitytolightEyelidsSymptom_eyesightTextView"
+                android:layout_width="147dp"
+                android:layout_height="26dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/symptoms_buttons_unchecked"
+                android:fontFamily="@font/segoe_ui"
+                android:gravity="center"
+                android:text="Sensitivity to light"
+                android:textColor="#2DA586"
+                app:layout_constraintStart_toStartOf="@+id/q1_sorenessEyelidsSymptom_eyesightTextView"
+                app:layout_constraintTop_toBottomOf="@+id/q1_sorenessEyelidsSymptom_eyesightTextView" />
+
+            <EditText
+                android:id="@+id/q1_eyesightEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/symptoms_edittext_drawable"
+                android:ems="10"
+                android:fontFamily="@font/segoe_ui"
+                android:gravity="top"
+                android:hint="Please add in a more detailed description of your discomfort"
+                android:inputType="textMultiLine"
+                android:paddingStart="20dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="5dp"
+                android:textColor="#D43b3947"
+                android:textColorHint="#C8C8C8"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/q1_sensitivitytolightEyelidsSymptom_eyesightTextView"
+                app:layout_constraintTop_toBottomOf="@+id/q1_sensitivitytolightEyelidsSymptom_eyesightTextView" />
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

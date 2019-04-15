@@ -1,12 +1,9 @@
 package nysa.nysa_20.activity;
 
-import android.Manifest;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.os.AsyncTask;
 import android.speech.RecognizerIntent;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -16,7 +13,6 @@ import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -35,9 +31,8 @@ import java.util.List;
 
 import nysa.nysa_20.R;
 import nysa.nysa_20.model.Messages;
-import nysa.nysa_20.model.adaptors.MessageAdaptor;
+import nysa.nysa_20.model.adaptors.ChatBotActiviytMessageAdaptor;
 import nysa.nysa_20.service.utilitary.ActivityShiftService;
-import nysa.nysa_20.service.utilitary.PermissionService;
 
 public class ChatBotActivity extends AppCompatActivity {
     private EditText submitEditText;
@@ -46,7 +41,7 @@ public class ChatBotActivity extends AppCompatActivity {
     private RecyclerView messagesRecycleView;
     private final List<Messages> messagesList = new ArrayList<>();
     private LinearLayoutManager mLinearLayout;
-    private MessageAdaptor mAdaptor;
+    private ChatBotActiviytMessageAdaptor mAdaptor;
     private ImageView logoImageView;
 
     @Override
@@ -65,7 +60,7 @@ public class ChatBotActivity extends AppCompatActivity {
     }
 
     private void prepareComponents() {
-        mAdaptor = new MessageAdaptor(messagesList);
+        mAdaptor = new ChatBotActiviytMessageAdaptor(messagesList);
         mLinearLayout = new LinearLayoutManager(this);
         messagesRecycleView.setHasFixedSize(true);
         messagesRecycleView.setLayoutManager(mLinearLayout);

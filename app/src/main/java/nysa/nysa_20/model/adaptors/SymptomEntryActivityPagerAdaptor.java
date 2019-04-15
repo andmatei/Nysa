@@ -19,9 +19,9 @@ public class SymptomEntryActivityPagerAdaptor extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
         switch (position){
-            case 1: return new FragmentEyeSymptoms();
-            case 2: return new FragmentPainSymptoms();
-            case 3: return new FragmentRespiratorySymptoms();
+            case 0: return new FragmentEyeSymptoms();
+            case 1: return new FragmentPainSymptoms();
+            case 2: return new FragmentRespiratorySymptoms();
             default:return new FragmentSkinSymptoms();
 
 

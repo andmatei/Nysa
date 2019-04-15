@@ -4,16 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/symptom_entry_background"
+    android:background="#FFFFFF"
     tools:context=".activity.SymptomTrackActivity">
 
     <android.support.v4.view.ViewPager
         android:id="@+id/symptomEntryViewPager"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintBottom_toTopOf="@+id/symptomEntryToolBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.489"
@@ -33,50 +31,30 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/symptomEntryDateTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="176dp"
-        android:layout_marginTop="26dp"
-        android:layout_marginEnd="177dp"
-        android:text="12 SEPTEMBER, 2017"
-        android:textColor="#FFFFFF"
-        android:textSize="10sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
         android:id="@+id/saveSymptomEntryTextView"
         android:layout_width="55dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="30dp"
         android:text="Save"
         android:textAlignment="center"
-        android:textColor="#FFFFFF"
+        android:textColor="#C1C1C1"
         android:textSize="13sp"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.75"
-        app:layout_constraintStart_toEndOf="@+id/symptomEntryDateTextView"
-        app:layout_constraintTop_toTopOf="@+id/symptomEntryDateTextView" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/cancelSymptomEntryTextView"
         android:layout_width="55dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="16dp"
         android:text="Cancel"
         android:textAlignment="center"
-        android:textColor="#FFFFFF"
+        android:textColor="#C1C1C1"
         android:textSize="13sp"
         android:visibility="visible"
-        app:layout_constraintEnd_toStartOf="@+id/symptomEntryDateTextView"
-        app:layout_constraintHorizontal_bias="0.25"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/symptomEntryDateTextView" />
+        app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>

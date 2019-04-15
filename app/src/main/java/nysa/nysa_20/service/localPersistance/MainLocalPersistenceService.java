@@ -36,7 +36,7 @@ public class MainLocalPersistenceService {
             }
             try {
                 accountLocalDao.persistCurrentAccount();
-                System.out.println("Current Account ehs been persisted: " + AccountHolder.getAccount());
+                System.out.println("Current Account has been persisted: " + AccountHolder.getAccount());
             } catch (IOException e) {
                 e.printStackTrace();
             }
