@@ -5,7 +5,7 @@ import nysa.nysa_20.service.localPersistance.MainLocalPersistenceService;
 public class AccountHolder {
 
     Account account;
-    static boolean  isEmpty = true;
+    private static boolean  isEmpty = true;
 
     private AccountHolder(){
     }
@@ -35,6 +35,14 @@ public class AccountHolder {
     public static void disconnect(){
         isEmpty = true;
         MainLocalPersistenceService.deleteCurrentAccount();
+    }
+
+    public static void initiatePersistance(){
+        isEmpty = true;
+    }
+
+    public static void finishedPersistance(){
+        isEmpty = false;
     }
 
 }

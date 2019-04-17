@@ -58,7 +58,7 @@ public class Symptom implements Serializable {
         return "Symptom{" +
                 "symptoms=" + symptoms +
                 ", symptomRating=" + symptomRating +
-                ", symptomDclaration=" + symptomDeclaration +
+                ", symptomDeclaration=" + symptomDeclaration +
                 '}';
     }
 

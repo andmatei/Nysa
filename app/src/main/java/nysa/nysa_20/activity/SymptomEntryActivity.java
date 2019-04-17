@@ -3,6 +3,7 @@ package nysa.nysa_20.activity;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,6 +22,7 @@ import nysa.nysa_20.model.adaptors.SymptomEntryActivityPagerAdaptor;
 import nysa.nysa_20.model.symptom_entry_activity_fragments.FragmentEyeSymptoms;
 import nysa.nysa_20.model.symptom_entry_activity_fragments.FragmentPainSymptoms;
 import nysa.nysa_20.model.symptom_entry_activity_fragments.FragmentRespiratorySymptoms;
+import nysa.nysa_20.model.symptom_entry_activity_fragments.FragmentSkinSymptoms;
 import nysa.nysa_20.service.localPersistance.MainLocalPersistenceService;
 import nysa.nysa_20.service.utilitary.ActivityShiftService;
 import nysa.nysa_20.service.utilitary.SymptomEntryService;
@@ -32,6 +34,7 @@ public class SymptomEntryActivity extends AppCompatActivity {
     private static TextView saveButton;
     private static TextView cancelButton;
     private static Account account;
+    private static boolean isEveryPageVisited = false;
     SymptomEntry todaySymptomEntry;
 
 
@@ -48,6 +51,7 @@ public class SymptomEntryActivity extends AppCompatActivity {
             FragmentEyeSymptoms.retrievedData(todaySymptomEntry.getSymptomsSightEntry());
             FragmentPainSymptoms.retrievedData(todaySymptomEntry.getSymptomsPainEntry());
             FragmentRespiratorySymptoms.retrievedData(todaySymptomEntry.getSymptomsRespirationEntry());
+            FragmentSkinSymptoms.retrievedData(todaySymptomEntry.getSymptomsSkinEntry());
         }
 
     }
@@ -76,21 +80,26 @@ public class SymptomEntryActivity extends AppCompatActivity {
     }
 
     private void saveButtonClicked() {
-        ActivityShiftService.toMainActivity(this);
 
 
-        todaySymptomEntry.setSymptomsSightEntry( FragmentEyeSymptoms.getSymptoms());
-        todaySymptomEntry.setSymptomsPainEntry(FragmentPainSymptoms.getSymptoms());
-        todaySymptomEntry.setSymptomsRespirationEntry(FragmentRespiratorySymptoms.getSymptoms());
+            todaySymptomEntry.setSymptomsSightEntry( FragmentEyeSymptoms.getSymptoms());
+            todaySymptomEntry.setSymptomsPainEntry(FragmentPainSymptoms.getSymptoms());
+            todaySymptomEntry.setSymptomsRespirationEntry(FragmentRespiratorySymptoms.getSymptoms());
+            todaySymptomEntry.setSymptomsSkinEntry(FragmentSkinSymptoms.getSymptoms());
 
-        if(SymptomEntryService.isTodayLastEntry()){
-            account.getHistoryMap().replace(java.time.LocalDate.now(),todaySymptomEntry);
-        }
-        else{
-            account.getHistoryMap().put(java.time.LocalDate.now(),todaySymptomEntry);
-        }
+            if(SymptomEntryService.isTodayLastEntry()){
+                account.getHistoryMap().replace(java.time.LocalDate.now(),todaySymptomEntry);
+            }
+            else{
+                account.getHistoryMap().put(java.time.LocalDate.now(),todaySymptomEntry);
+            }
 
-        MainLocalPersistenceService.persistCurrentAccount();
+            MainLocalPersistenceService.persistCurrentAccount();
+
+
+            ActivityShiftService.toMainActivity(this);
+
+
 
     }
 
@@ -105,6 +114,13 @@ public class SymptomEntryActivity extends AppCompatActivity {
         symptomEntryPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+                if(position==3){
+                    isEveryPageVisited = true;
+                }
+
+                if(isEveryPageVisited){
+                    saveButton.setVisibility(View.VISIBLE);
+                }
 
             }
 

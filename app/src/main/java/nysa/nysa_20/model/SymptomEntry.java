@@ -51,4 +51,14 @@ public class SymptomEntry implements Serializable {
     public void setSymptomsSkinEntry(List<Symptom> symptomsSkinEntry) {
         this.symptomsSkinEntry = symptomsSkinEntry;
     }
+
+    @Override
+    public String toString() {
+        return "SymptomEntry{" +
+                "symptomsSightEntry=" + symptomsSightEntry +
+                ", symptomsPainEntry=" + symptomsPainEntry +
+                ", symptomsRespirationEntry=" + symptomsRespirationEntry +
+                ", symptomsSkinEntry=" + symptomsSkinEntry +
+                '}';
+    }
 }

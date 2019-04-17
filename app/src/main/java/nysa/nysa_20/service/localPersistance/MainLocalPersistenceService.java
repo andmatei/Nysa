@@ -30,6 +30,7 @@ public class MainLocalPersistenceService {
 
         public static void persistCurrentAccount(){
 
+            AccountHolder.initiatePersistance();
             AccountLocalDao accountLocalDao = new AccountLocalDao(ACCOUNT_fILE);
             if(isAnyAccountPersisted()){
                 deleteCurrentAccount();
@@ -42,6 +43,7 @@ public class MainLocalPersistenceService {
             }
 
 
+            AccountHolder.finishedPersistance();
         }
 
         public static boolean isAnyAccountPersisted(){

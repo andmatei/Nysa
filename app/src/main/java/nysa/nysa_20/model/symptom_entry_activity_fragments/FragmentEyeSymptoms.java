@@ -81,8 +81,8 @@ public class FragmentEyeSymptoms extends Fragment {
         q1_itchinessTextView.setOnClickListener(ev -> q1_textViewOnClick(R.id.q1_itchinessSymptom_eyesightTextView));
         q1_redEyesTextView.setOnClickListener(rv -> q1_textViewOnClick(R.id.q1_redEyesSymptom_eyesightTextView));
         q1_sensitivityTextView.setOnClickListener(ev -> q1_textViewOnClick(R.id.q1_sensitivitytolightSymptom_eyesightTextView));
-        q1_sorenessTextView.setOnClickListener(ev -> q1_textViewOnClick(R.id.q1_swollenEyelidsSymptom_eyesightTextView));
-        q1_swollenTextView.setOnClickListener(ev -> q1_textViewOnClick(R.id.q1_sorenessSymptom_eyesightTextView));
+        q1_swollenTextView.setOnClickListener(ev -> q1_textViewOnClick(R.id.q1_swollenEyelidsSymptom_eyesightTextView));
+        q1_sorenessTextView.setOnClickListener(ev -> q1_textViewOnClick(R.id.q1_sorenessSymptom_eyesightTextView));
         q1_tearingTextView.setOnClickListener(ev-> q1_textViewOnClick(R.id.q1_tearingEyesSymptom_eyesightTextView));
         q1_conjunctivitisTextView.setOnClickListener(ev -> q1_textViewOnClick(R.id.q1_conjunctivitisSymptom_eyesightTextView));
     }

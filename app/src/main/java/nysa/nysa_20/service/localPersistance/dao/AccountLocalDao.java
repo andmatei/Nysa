@@ -47,11 +47,13 @@ public class AccountLocalDao {
 
 
     public void deleteCurrentAccount() throws IOException {
+
         try(FileOutputStream fileOutputStream = new FileOutputStream(file);
             ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream)
         ){
             objectOutputStream.flush();
         }
+
 
     }
 

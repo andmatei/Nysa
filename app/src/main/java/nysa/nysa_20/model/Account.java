@@ -67,6 +67,7 @@ public class Account implements Serializable {
                 ", email='" + email + '\'' +
                 ", id='" + id + '\'' +
                 ", allergyMap=" + allergyMap +
+                ", historyMap=" + historyMap +
                 '}';
     }
 }
