@@ -120,8 +120,8 @@ public class FragmentEyeSymptoms extends Fragment {
         q1_redEyesTextView = view.findViewById(R.id.q1_redEyesSymptom_eyesightTextView);
         q1_seekBar = view.findViewById(R.id.q1_eyesightSeekbar);
         q1_sensitivityTextView = view.findViewById(R.id.q1_sensitivitytolightSymptom_eyesightTextView);
-        q1_sorenessTextView = view.findViewById(R.id.q1_swollenEyelidsSymptom_eyesightTextView);
-        q1_swollenTextView = view.findViewById(R.id.q1_sorenessSymptom_eyesightTextView);
+        q1_sorenessTextView = view.findViewById(R.id.q1_sorenessSymptom_eyesightTextView);
+        q1_swollenTextView = view.findViewById(R.id.q1_swollenEyelidsSymptom_eyesightTextView);
         q1_tearingTextView = view.findViewById(R.id.q1_tearingEyesSymptom_eyesightTextView);
         q1_conjunctivitisTextView = view.findViewById(R.id.q1_conjunctivitisSymptom_eyesightTextView);
     }

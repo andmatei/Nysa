@@ -129,11 +129,11 @@ public class FragmentPainSymptoms extends Fragment {
     }
 
     public static List<Symptom> getSymptoms(){
-        List<Symptom> sightSymptoms = new ArrayList<>();
+        List<Symptom> painSymptoms = new ArrayList<>();
 
-        sightSymptoms.add(getQ1Symptom());
+        painSymptoms.add(getQ1Symptom());
 
-        return sightSymptoms;
+        return painSymptoms;
     }
 
     private static Symptom getQ1Symptom() {

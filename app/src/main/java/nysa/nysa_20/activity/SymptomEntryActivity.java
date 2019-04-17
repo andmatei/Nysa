@@ -47,6 +47,7 @@ public class SymptomEntryActivity extends AppCompatActivity {
             todaySymptomEntry = account.getHistoryMap().get(java.time.LocalDate.now());
             FragmentEyeSymptoms.retrievedData(todaySymptomEntry.getSymptomsSightEntry());
             FragmentPainSymptoms.retrievedData(todaySymptomEntry.getSymptomsPainEntry());
+            FragmentRespiratorySymptoms.retrievedData(todaySymptomEntry.getSymptomsRespirationEntry());
         }
 
     }
@@ -80,6 +81,7 @@ public class SymptomEntryActivity extends AppCompatActivity {
 
         todaySymptomEntry.setSymptomsSightEntry( FragmentEyeSymptoms.getSymptoms());
         todaySymptomEntry.setSymptomsPainEntry(FragmentPainSymptoms.getSymptoms());
+        todaySymptomEntry.setSymptomsRespirationEntry(FragmentRespiratorySymptoms.getSymptoms());
 
         if(SymptomEntryService.isTodayLastEntry()){
             account.getHistoryMap().replace(java.time.LocalDate.now(),todaySymptomEntry);
