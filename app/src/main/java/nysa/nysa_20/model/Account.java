@@ -57,6 +57,7 @@ public class Account implements Serializable {
         this.allergyMap = allergyMap;
     }
 
+
     @Override
     public String toString() {
         return "Account{" +

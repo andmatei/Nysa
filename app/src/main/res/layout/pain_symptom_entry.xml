@@ -20,7 +20,7 @@
             tools:layout_editor_absoluteY="408dp">
 
             <ImageView
-                android:id="@+id/eyesightbackground1ImageView"
+                android:id="@+id/painbackground1ImageView"
                 android:layout_width="0dp"
                 android:layout_height="660dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -29,10 +29,10 @@
                 app:srcCompat="@drawable/symptom_entry_background" />
 
             <ImageView
-                android:id="@+id/eyesightBackground2ImageView"
+                android:id="@+id/painBackground2ImageView"
                 android:layout_width="0dp"
                 android:layout_height="150dp"
-                app:layout_constraintBottom_toBottomOf="@+id/eyesightTitleTextView"
+                app:layout_constraintBottom_toBottomOf="@+id/painTitleTextView"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -40,28 +40,28 @@
                 app:srcCompat="?attr/colorBackgroundFloating" />
 
             <TextView
-                android:id="@+id/eyesightTitleTextView"
+                android:id="@+id/painTitleTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="48dp"
                 android:fontFamily="@font/segoeuib"
-                android:text="Eyesight"
+                android:text="Pain"
                 android:textColor="@color/colorText"
                 android:textSize="50dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/eyesight_date_TextView"
+                android:id="@+id/pain_date_TextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:fontFamily="@font/seguisb"
                 android:text="12 SEPTEMBER, 2017"
                 android:textColor="@color/colorText"
-                app:layout_constraintStart_toStartOf="@+id/eyesightTitleTextView"
-                app:layout_constraintTop_toBottomOf="@+id/eyesightTitleTextView" />
+                app:layout_constraintStart_toStartOf="@+id/painTitleTextView"
+                app:layout_constraintTop_toBottomOf="@+id/painTitleTextView" />
 
             <ImageView
                 android:id="@+id/profileTitleUnderlineImageView3"
@@ -70,26 +70,26 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginRight="32dp"
                 android:background="@drawable/symptom_overview_card"
-                app:layout_constraintLeft_toLeftOf="@+id/eyesight_date_TextView"
-                app:layout_constraintRight_toRightOf="@+id/eyesight_date_TextView"
-                app:layout_constraintTop_toBottomOf="@+id/eyesight_date_TextView" />
+                app:layout_constraintLeft_toLeftOf="@+id/pain_date_TextView"
+                app:layout_constraintRight_toRightOf="@+id/pain_date_TextView"
+                app:layout_constraintTop_toBottomOf="@+id/pain_date_TextView" />
 
             <TextView
-                android:id="@+id/q1_eyesightTextView"
+                android:id="@+id/q1_painTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="18dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="112dp"
                 android:layout_marginEnd="8dp"
-                android:text="How would you rate your sight symptoms?"
+                android:text="How would you rate your pain symptoms?"
                 android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.427"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/eyesightBackground2ImageView" />
+                app:layout_constraintTop_toBottomOf="@+id/painBackground2ImageView" />
 
             <SeekBar
-                android:id="@+id/q1_eyesightSeekbar"
+                android:id="@+id/q1_painSeekbar"
                 style="@style/MySeekBar"
                 android:layout_width="247dp"
                 android:layout_height="56dp"
@@ -100,11 +100,11 @@
                 android:tickMark="@drawable/greybtn"
                 android:tickMarkTint="#C8C8C8"
                 android:tickMarkTintMode="add"
-                app:layout_constraintStart_toStartOf="@+id/q1_eyesightTextView"
-                app:layout_constraintTop_toBottomOf="@+id/q1_eyesightTextView" />
+                app:layout_constraintStart_toStartOf="@+id/q1_painTextView"
+                app:layout_constraintTop_toBottomOf="@+id/q1_painTextView" />
 
             <TextView
-                android:id="@+id/q1_redEyesSymptom_eyesightTextView"
+                android:id="@+id/q1_migraineSymptom_painTextView"
                 android:layout_width="97dp"
                 android:layout_height="26dp"
                 android:layout_marginStart="32dp"
@@ -113,15 +113,15 @@
                 android:background="@drawable/symptoms_buttons_unchecked"
                 android:fontFamily="@font/segoe_ui"
                 android:gravity="center"
-                android:text="Red eyes"
+                android:text="Migraine"
                 android:textColor="#2DA586"
-                app:layout_constraintEnd_toStartOf="@+id/q1_itchinessSymptom_eyesightTextView"
+                app:layout_constraintEnd_toStartOf="@+id/q1_tensionSymptom_painTextView"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/q1_eyesightSeekbar" />
+                app:layout_constraintTop_toBottomOf="@+id/q1_painSeekbar" />
 
             <TextView
-                android:id="@+id/q1_itchinessSymptom_eyesightTextView"
-                android:layout_width="97dp"
+                android:id="@+id/q1_tensionSymptom_painTextView"
+                android:layout_width="96dp"
                 android:layout_height="26dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="24dp"
@@ -129,16 +129,16 @@
                 android:background="@drawable/symptoms_buttons_unchecked"
                 android:fontFamily="@font/segoe_ui"
                 android:gravity="center"
-                android:text="Itchiness"
+                android:text="Tension"
                 android:textColor="#2DA586"
-                app:layout_constraintEnd_toStartOf="@+id/q1_tearingEyesSymptom_eyesightTextView"
+                app:layout_constraintEnd_toStartOf="@+id/q1_chestPainSymptom_painTextView"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/q1_redEyesSymptom_eyesightTextView"
-                app:layout_constraintTop_toBottomOf="@+id/q1_eyesightSeekbar" />
+                app:layout_constraintStart_toEndOf="@+id/q1_migraineSymptom_painTextView"
+                app:layout_constraintTop_toBottomOf="@+id/q1_painSeekbar" />
 
             <TextView
-                android:id="@+id/q1_tearingEyesSymptom_eyesightTextView"
-                android:layout_width="111dp"
+                android:id="@+id/q1_chestPainSymptom_painTextView"
+                android:layout_width="99dp"
                 android:layout_height="26dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="24dp"
@@ -146,68 +146,68 @@
                 android:background="@drawable/symptoms_buttons_unchecked"
                 android:fontFamily="@font/segoe_ui"
                 android:gravity="center"
-                android:text="Tearing eyes"
+                android:text="Chest pain"
                 android:textColor="#2DA586"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/q1_itchinessSymptom_eyesightTextView"
-                app:layout_constraintTop_toBottomOf="@+id/q1_eyesightSeekbar" />
+                app:layout_constraintStart_toEndOf="@+id/q1_tensionSymptom_painTextView"
+                app:layout_constraintTop_toBottomOf="@+id/q1_painSeekbar" />
 
             <TextView
-                android:id="@+id/q1_swollenEyelidsSymptom_eyesightTextView"
-                android:layout_width="124dp"
+                android:id="@+id/q1_sharpHeadacheSymptom_painTextView"
+                android:layout_width="140dp"
                 android:layout_height="26dp"
                 android:layout_marginTop="24dp"
                 android:background="@drawable/symptoms_buttons_unchecked"
                 android:fontFamily="@font/segoe_ui"
                 android:gravity="center"
-                android:text="Swollen eyelids"
+                android:text="Sharp headache"
                 android:textColor="#2DA586"
-                app:layout_constraintStart_toStartOf="@+id/q1_redEyesSymptom_eyesightTextView"
-                app:layout_constraintTop_toBottomOf="@+id/q1_redEyesSymptom_eyesightTextView" />
+                app:layout_constraintStart_toStartOf="@+id/q1_migraineSymptom_painTextView"
+                app:layout_constraintTop_toBottomOf="@+id/q1_migraineSymptom_painTextView" />
 
             <TextView
-                android:id="@+id/q1_sorenessSymptom_eyesightTextView"
-                android:layout_width="167dp"
-                android:layout_height="26dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="24dp"
-                android:background="@drawable/symptoms_buttons_unchecked"
-                android:fontFamily="@font/segoe_ui"
-                android:gravity="center"
-                android:text="Soreness or burning"
-                android:textColor="#2DA586"
-                app:layout_constraintStart_toEndOf="@+id/q1_swollenEyelidsSymptom_eyesightTextView"
-                app:layout_constraintTop_toBottomOf="@+id/q1_itchinessSymptom_eyesightTextView" />
-
-            <TextView
-                android:id="@+id/q1_sensitivitytolightSymptom_eyesightTextView"
-                android:layout_width="147dp"
-                android:layout_height="26dp"
-                android:layout_marginTop="24dp"
-                android:background="@drawable/symptoms_buttons_unchecked"
-                android:fontFamily="@font/segoe_ui"
-                android:gravity="center"
-                android:text="Sensitivity to light"
-                android:textColor="#2DA586"
-                app:layout_constraintStart_toStartOf="@+id/q1_swollenEyelidsSymptom_eyesightTextView"
-                app:layout_constraintTop_toBottomOf="@+id/q1_swollenEyelidsSymptom_eyesightTextView" />
-
-            <TextView
-                android:id="@+id/q1_conjunctivitisSymptom_eyesightTextView"
-                android:layout_width="117dp"
+                android:id="@+id/q1_abdominalPainSymptom_painTextView"
+                android:layout_width="135dp"
                 android:layout_height="26dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="24dp"
                 android:background="@drawable/symptoms_buttons_unchecked"
                 android:fontFamily="@font/segoe_ui"
                 android:gravity="center"
-                android:text="Conjunctivitis"
+                android:text="Abdominal pain"
                 android:textColor="#2DA586"
-                app:layout_constraintStart_toEndOf="@+id/q1_sensitivitytolightSymptom_eyesightTextView"
-                app:layout_constraintTop_toBottomOf="@+id/q1_swollenEyelidsSymptom_eyesightTextView" />
+                app:layout_constraintStart_toEndOf="@+id/q1_sharpHeadacheSymptom_painTextView"
+                app:layout_constraintTop_toBottomOf="@+id/q1_tensionSymptom_painTextView" />
+
+            <TextView
+                android:id="@+id/q1_clusterHeadacheSymptom_painTextView"
+                android:layout_width="148dp"
+                android:layout_height="26dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/symptoms_buttons_unchecked"
+                android:fontFamily="@font/segoe_ui"
+                android:gravity="center"
+                android:text="Cluster headache"
+                android:textColor="#2DA586"
+                app:layout_constraintStart_toStartOf="@+id/q1_sharpHeadacheSymptom_painTextView"
+                app:layout_constraintTop_toBottomOf="@+id/q1_sharpHeadacheSymptom_painTextView" />
+
+            <TextView
+                android:id="@+id/q1_nauseaSymptom_painTextView"
+                android:layout_width="83dp"
+                android:layout_height="26dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/symptoms_buttons_unchecked"
+                android:fontFamily="@font/segoe_ui"
+                android:gravity="center"
+                android:text="Nausea"
+                android:textColor="#2DA586"
+                app:layout_constraintStart_toEndOf="@+id/q1_clusterHeadacheSymptom_painTextView"
+                app:layout_constraintTop_toBottomOf="@+id/q1_sharpHeadacheSymptom_painTextView" />
 
             <EditText
-                android:id="@+id/q1_eyesightEditText"
+                android:id="@+id/q1_painEditText"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
@@ -226,8 +226,9 @@
                 android:textColorHint="#C8C8C8"
                 android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/q1_sensitivitytolightSymptom_eyesightTextView"
-                app:layout_constraintTop_toBottomOf="@+id/q1_sensitivitytolightSymptom_eyesightTextView" />
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/q1_clusterHeadacheSymptom_painTextView"
+                app:layout_constraintTop_toBottomOf="@+id/q1_clusterHeadacheSymptom_painTextView" />
 
         </android.support.constraint.ConstraintLayout>
     </ScrollView>

@@ -16,7 +16,7 @@ import nysa.nysa_20.model.Account;
 import nysa.nysa_20.model.AccountHolder;
 import nysa.nysa_20.model.adaptors.NewsRecyclerView;
 import nysa.nysa_20.service.utilitary.ActivityShiftService;
-import nysa.nysa_20.service.utilitary.MainActivityUtilitaryClass;
+import nysa.nysa_20.service.utilitary.TimeUtilitaryClass;
 import nysa.nysa_20.service.utilitary.SymptomEntryService;
 
 public class FragmentHome extends Fragment {
@@ -77,7 +77,7 @@ public class FragmentHome extends Fragment {
     }
 
     private void initializeElementFunctions() {
-        currentDateTextView.setText(MainActivityUtilitaryClass.getCurrentTime());
+        currentDateTextView.setText(TimeUtilitaryClass.getCurrentTimeFormatMainActivity());
         usernameTextView.setText(account.getUsername());
         addSymptomButton.setOnClickListener(ev -> ActivityShiftService.toSymptomEntryActivity(view.getContext()));
     }

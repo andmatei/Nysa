@@ -6,11 +6,11 @@ import org.jetbrains.annotations.NotNull;
 import java.time.LocalDate;
 import java.util.Date;
 
-public final class MainActivityUtilitaryClass {
-    private MainActivityUtilitaryClass(){}
+public final class TimeUtilitaryClass {
+    private TimeUtilitaryClass(){}
 
     @NotNull
-    public static String getCurrentTime(){
+    public static String getCurrentTimeFormatMainActivity(){
         StringBuilder sb = new StringBuilder("TODAY | ");
         LocalDate localDate = LocalDate.now();
         String year = localDate.toString().substring(0,4);
@@ -41,6 +41,17 @@ public final class MainActivityUtilitaryClass {
             default: return "";
 
         }
+    }
+
+    @NotNull
+    public static String getCurrentTimeFormatSymptomEntryActivity(){
+        StringBuilder sb = new StringBuilder();
+        LocalDate localDate = LocalDate.now();
+        String year = localDate.toString().substring(0,4);
+        int month = Integer.parseInt(localDate.toString().substring(5,7));
+        String day = localDate.toString().substring(8,10);
+        sb.append(day+" "+getCurrentMonthIntToString(month).toUpperCase()+", "+year);
+        return sb.toString();
     }
 
 

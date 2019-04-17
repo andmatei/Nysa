@@ -11,13 +11,19 @@ import org.w3c.dom.Text;
 import java.util.List;
 
 import nysa.nysa_20.R;
+import nysa.nysa_20.model.Account;
+import nysa.nysa_20.model.AccountHolder;
 import nysa.nysa_20.model.SymptomEntry;
 import nysa.nysa_20.model.Toolbar_MainActivity;
 import nysa.nysa_20.model.Toolbar_SymptomEntryActivity;
 import nysa.nysa_20.model.adaptors.MainActivityPagerAdaptor;
 import nysa.nysa_20.model.adaptors.SymptomEntryActivityPagerAdaptor;
 import nysa.nysa_20.model.symptom_entry_activity_fragments.FragmentEyeSymptoms;
+import nysa.nysa_20.model.symptom_entry_activity_fragments.FragmentPainSymptoms;
+import nysa.nysa_20.model.symptom_entry_activity_fragments.FragmentRespiratorySymptoms;
+import nysa.nysa_20.service.localPersistance.MainLocalPersistenceService;
 import nysa.nysa_20.service.utilitary.ActivityShiftService;
+import nysa.nysa_20.service.utilitary.SymptomEntryService;
 
 public class SymptomEntryActivity extends AppCompatActivity {
     private static ViewPager symptomEntryPager;
@@ -25,6 +31,9 @@ public class SymptomEntryActivity extends AppCompatActivity {
     private static Toolbar_SymptomEntryActivity toolbar_symptomEntryActivity;
     private static TextView saveButton;
     private static TextView cancelButton;
+    private static Account account;
+    SymptomEntry todaySymptomEntry;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +41,14 @@ public class SymptomEntryActivity extends AppCompatActivity {
         setContentView(R.layout.activity_symptom_entry);
 
         initComponenets();
+
+        if(SymptomEntryService.isTodayLastEntry()){
+
+            todaySymptomEntry = account.getHistoryMap().get(java.time.LocalDate.now());
+            FragmentEyeSymptoms.retrievedData(todaySymptomEntry.getSymptomsSightEntry());
+            FragmentPainSymptoms.retrievedData(todaySymptomEntry.getSymptomsPainEntry());
+        }
+
     }
 
     private void initComponenets() {
@@ -39,7 +56,8 @@ public class SymptomEntryActivity extends AppCompatActivity {
         initElements();
         initElementsFunction();
         prepareViewPager();
-
+        account = AccountHolder.getAccount();
+        todaySymptomEntry = new SymptomEntry();
 
     }
 
@@ -58,11 +76,20 @@ public class SymptomEntryActivity extends AppCompatActivity {
 
     private void saveButtonClicked() {
         ActivityShiftService.toMainActivity(this);
-        List<String> eyesightSymptoms = FragmentEyeSymptoms.getEyesightSymptoms();
-        if(eyesightSymptoms!=null){
-            Toast.makeText(this, "OH YEAHHH", Toast.LENGTH_LONG).show();
+
+
+        todaySymptomEntry.setSymptomsSightEntry( FragmentEyeSymptoms.getSymptoms());
+        todaySymptomEntry.setSymptomsPainEntry(FragmentPainSymptoms.getSymptoms());
+
+        if(SymptomEntryService.isTodayLastEntry()){
+            account.getHistoryMap().replace(java.time.LocalDate.now(),todaySymptomEntry);
         }
-        //TODO SAVED BUTTON SYMPTOM ENTRY
+        else{
+            account.getHistoryMap().put(java.time.LocalDate.now(),todaySymptomEntry);
+        }
+
+        MainLocalPersistenceService.persistCurrentAccount();
+
     }
 
     private void initElements() {
