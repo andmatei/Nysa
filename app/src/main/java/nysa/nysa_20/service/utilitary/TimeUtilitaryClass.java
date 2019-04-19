@@ -4,6 +4,7 @@ import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 
 import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.Date;
 
 public final class TimeUtilitaryClass {
@@ -52,6 +53,20 @@ public final class TimeUtilitaryClass {
         String day = localDate.toString().substring(8,10);
         sb.append(day+" "+getCurrentMonthIntToString(month).toUpperCase()+", "+year);
         return sb.toString();
+    }
+
+    public static String getCurrentMonthYearFormat(){
+        StringBuilder sb = new StringBuilder();
+        LocalDate localDate = LocalDate.now();
+        String year = localDate.toString().substring(0,4);
+        int month = Integer.parseInt(localDate.toString().substring(5,7));
+      return getCurrentMonthIntToString(month)+" "+year;
+    }
+
+    public static LocalDate convertToLocalDate(Date dateToConvert) {
+        return dateToConvert.toInstant()
+                .atZone(ZoneId.systemDefault())
+                .toLocalDate();
     }
 
 

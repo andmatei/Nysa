@@ -6,17 +6,236 @@
     android:layout_height="match_parent"
     tools:context=".activity.SymptomEntryActivity">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="109dp"
-        android:layout_height="39dp"
-        android:layout_marginStart="166dp"
-        android:layout_marginTop="293dp"
-        android:layout_marginEnd="187dp"
-        android:layout_marginBottom="419dp"
-        android:text="Symptoms"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/statisticsTitleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="48dp"
+                android:fontFamily="@font/segoeuib"
+                android:text="Statistics"
+                android:textColor="@color/colorText"
+                android:textSize="50dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/profileTitleUnderlineImageView2"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_marginEnd="60dp"
+                android:background="@drawable/symptom_overview_card"
+                app:layout_constraintEnd_toEndOf="@+id/statisticsTitleTextView"
+                app:layout_constraintStart_toStartOf="@+id/statisticsTitleTextView"
+                app:layout_constraintTop_toBottomOf="@+id/statisticsTitleTextView" />
+
+            <com.github.sundeepk.compactcalendarview.CompactCalendarView
+                android:id="@+id/calendarView"
+                android:layout_width="0dp"
+                android:layout_height="282dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                app:compactCalendarCurrentDayBackgroundColor="#2DA586"
+                app:compactCalendarCurrentSelectedDayBackgroundColor="#A8D6CA"
+                app:compactCalendarTextSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/monthTextView" />
+
+            <TextView
+                android:id="@+id/monthTextView"
+                android:layout_width="0dp"
+                android:layout_height="29dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="84dp"
+                android:layout_marginEnd="8dp"
+                android:background="#2DA586"
+                android:gravity="center"
+                android:text="TextView"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/statisticsTitleTextView" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/selectedDate_data"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/calendarView">
+
+                <TextView
+                    android:id="@+id/discomfortLevelStatementTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="32dp"
+                    android:text="Discomfort Level :"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/discomfortLevelSelectedTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="65"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/discomfortLevelStatementTextView"
+                    app:layout_constraintStart_toEndOf="@+id/discomfortLevelStatementTextView"
+                    app:layout_constraintTop_toTopOf="@+id/discomfortLevelStatementTextView" />
+
+                <TextView
+                    android:id="@+id/eyesightSymptomsStatementTextView_Tracker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="24dp"
+                    android:text="Eyesight Symptoms : "
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/discomfortLevelStatementTextView" />
+
+                <TextView
+                    android:id="@+id/eyesightSymptomsTextView_Tracker"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/eyesightSymptomsStatementTextView_Tracker"
+                    app:layout_constraintTop_toTopOf="@+id/eyesightSymptomsStatementTextView_Tracker" />
+
+                <TextView
+                    android:id="@+id/respirationSymptomsStatementTextView_Tracker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Respiration Symptoms : "
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/eyesightDeclarationTextView_Tracker" />
+
+                <TextView
+                    android:id="@+id/respirationSymptomsTextView_Tracker"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/respirationSymptomsStatementTextView_Tracker"
+                    app:layout_constraintTop_toTopOf="@+id/respirationSymptomsStatementTextView_Tracker" />
+
+                <TextView
+                    android:id="@+id/painSymptomsStatementTextView_Tracker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Pain Symptoms : "
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/respirationDeclarationTextView_Tracker" />
+
+                <TextView
+                    android:id="@+id/painSymptomsTextView_Tracker"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/painSymptomsStatementTextView_Tracker"
+                    app:layout_constraintTop_toTopOf="@+id/painSymptomsStatementTextView_Tracker" />
+
+                <TextView
+                    android:id="@+id/skinSymptomsStatementTextView_Tracker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Skin Symptoms : "
+                    android:visibility="visible"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/painDeclarationTextView_Tracker" />
+
+                <TextView
+                    android:id="@+id/skinSymptomsTextView_Tracker"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/skinSymptomsStatementTextView_Tracker"
+                    app:layout_constraintTop_toTopOf="@+id/skinSymptomsStatementTextView_Tracker" />
+
+                <TextView
+                    android:id="@+id/eyesightDeclarationTextView_Tracker"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/eyesightSymptomsTextView_Tracker" />
+
+                <TextView
+                    android:id="@+id/respirationDeclarationTextView_Tracker"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/respirationSymptomsTextView_Tracker" />
+
+                <TextView
+                    android:id="@+id/painDeclarationTextView_Tracker"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/painSymptomsTextView_Tracker" />
+
+                <TextView
+                    android:id="@+id/skinDeclarationTextView_Tracker"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/skinSymptomsTextView_Tracker" />
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
 </android.support.constraint.ConstraintLayout>

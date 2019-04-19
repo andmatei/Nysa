@@ -6,17 +6,5 @@
     android:layout_height="match_parent"
     tools:context=".activity.LibraryActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="341dp"
-        android:layout_height="122dp"
-        android:layout_marginBottom="8dp"
-        android:text="Library"
-        android:textSize="80sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.312"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.41" />
+
 </android.support.constraint.ConstraintLayout>

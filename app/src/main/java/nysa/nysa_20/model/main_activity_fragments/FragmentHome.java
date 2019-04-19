@@ -11,6 +11,8 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import java.util.Objects;
+
 import nysa.nysa_20.R;
 import nysa.nysa_20.model.Account;
 import nysa.nysa_20.model.AccountHolder;
@@ -95,7 +97,8 @@ public class FragmentHome extends Fragment {
             noSymptom1TextView.setVisibility(View.GONE);
             noSymptom2TextView.setVisibility(View.GONE);
 
-            int progress = Integer.parseInt(currentScoreTextView.getText().toString());
+            int progress = SymptomEntryService.getScore(Objects.requireNonNull(SymptomEntryService.getTodaySymptomEntry()));
+            currentScoreTextView.setText(String.valueOf(progress));
             progressBar.setProgress(progress);
         }
         else{

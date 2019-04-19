@@ -16,6 +16,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import nysa.nysa_20.R;
+import nysa.nysa_20.activity.SymptomEntryActivity;
 import nysa.nysa_20.model.Symptom;
 import nysa.nysa_20.service.utilitary.TimeUtilitaryClass;
 import nysa.nysa_20.service.utilitary.SymptomEntryService;
@@ -44,7 +45,7 @@ public class FragmentEyeSymptoms extends Fragment {
 
 
 
-        initComponents();
+            initComponents();
 
 
         if(eyesightSymptoms!=null){
@@ -98,6 +99,8 @@ public class FragmentEyeSymptoms extends Fragment {
 
     }
     private void q1_textViewOnClick(Integer id) {
+
+
         TextView textView = view.findViewById(id);
         String symptom = idSymptoms.get(id);
 
@@ -124,6 +127,7 @@ public class FragmentEyeSymptoms extends Fragment {
         q1_swollenTextView = view.findViewById(R.id.q1_swollenEyelidsSymptom_eyesightTextView);
         q1_tearingTextView = view.findViewById(R.id.q1_tearingEyesSymptom_eyesightTextView);
         q1_conjunctivitisTextView = view.findViewById(R.id.q1_conjunctivitisSymptom_eyesightTextView);
+
     }
 
     public static List<Symptom> getSymptoms(){
@@ -174,5 +178,6 @@ public class FragmentEyeSymptoms extends Fragment {
             textView.setTextColor(view.getResources().getColor(R.color.whiteText,null));
         }
     }
+
 
 }
