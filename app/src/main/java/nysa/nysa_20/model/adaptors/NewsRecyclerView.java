@@ -1,7 +1,6 @@
 package nysa.nysa_20.model.adaptors;
 
 import android.content.Context;
-import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.RecyclerView;
@@ -10,28 +9,24 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.List;
-
 import nysa.nysa_20.R;
-import nysa.nysa_20.service.connectivity.ArticleService;
-import nysa.nysa_20.service.connectivity.RegisterService;
+import nysa.nysa_20.service.connectivity.LocationService;
 
 
 public class NewsRecyclerView extends RecyclerView.Adapter<NewsRecyclerView.ViewHolder> {
 
 
     public Context mContext;
-    public JSONArray mData;
+    public JSONArray mData = new JSONArray();
 
     public NewsRecyclerView(Context mContext) {
         this.mContext = mContext;
-        mData = ArticleService.getArticles();
+       //TODO: get mDATA
     }
 
     @NonNull

@@ -24,6 +24,7 @@ import java.nio.file.Paths;
 import nysa.nysa_20.R;
 import nysa.nysa_20.model.AccountHolder;
 import nysa.nysa_20.model.LoginFormular;
+import nysa.nysa_20.service.connectivity.LocationService;
 import nysa.nysa_20.service.connectivity.LoginService;
 import nysa.nysa_20.service.localPersistance.MainLocalPersistenceService;
 import nysa.nysa_20.service.utilitary.ActivityShiftService;
@@ -48,6 +49,11 @@ public class LoginActivity extends AppCompatActivity {
 
         checkLoginStatus();
             prepareComponents();
+
+
+
+
+
 
 
     }

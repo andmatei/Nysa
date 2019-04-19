@@ -19,10 +19,11 @@ public final class PermissionService {
 
     private static final int READ_STORAGE_PERMISSION_CODE = 1;
     private static final int  CAMERA_PERMISSION_CODE = 2;
-    private static final int LOCATION_PERMISSION_CODE = 3;
+    private static final int FINE_LOCATION_PERMISSION_CODE = 3;
     private static final int WRITE_STORAGE_PERMISSION_CODE = 4;
     private static final int INTERNET_PERMISSION_CODE = 5;
     private static final int RECORD_AUDIO_PERMISSION_CODE = 6;
+    private static final int COARSE_LOCATION_PERMISSION_CODE = 7;
 
 
     public static void checkReadStoragePermission(Activity context ){
@@ -145,18 +146,18 @@ public final class PermissionService {
 
 
 
-    public static void checkLocationPermission(Activity context ){
+    public static void checkFineLocationPermission(Activity context ){
         if(ContextCompat.checkSelfPermission(context, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED){
             // Toast.makeText(context,"You have already granted this permission",Toast.LENGTH_SHORT).show();
         }
         else
         {
-            requestLocationPermission(context);
+            requestFineLocationPermission(context);
 
         }
     }
 
-    private static void requestLocationPermission(final Activity  context) {
+    private static void requestFineLocationPermission(final Activity  context) {
         if(ActivityCompat.shouldShowRequestPermissionRationale(context,Manifest.permission.ACCESS_FINE_LOCATION)){
             new AlertDialog.Builder(context)
                     .setTitle("Permission needed")
@@ -164,7 +165,7 @@ public final class PermissionService {
                     .setPositiveButton("ok", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                            ActivityCompat.requestPermissions(context,new String[] {Manifest.permission.ACCESS_FINE_LOCATION},LOCATION_PERMISSION_CODE);
+                            ActivityCompat.requestPermissions(context,new String[] {Manifest.permission.ACCESS_FINE_LOCATION},FINE_LOCATION_PERMISSION_CODE);
 
                         }
                     })
@@ -179,7 +180,7 @@ public final class PermissionService {
 
         }else{
 
-            ActivityCompat.requestPermissions(context,new String[] {Manifest.permission.ACCESS_FINE_LOCATION},LOCATION_PERMISSION_CODE);
+            ActivityCompat.requestPermissions(context,new String[] {Manifest.permission.ACCESS_FINE_LOCATION},FINE_LOCATION_PERMISSION_CODE);
         }
 
     }
@@ -198,7 +199,7 @@ public final class PermissionService {
         if(ActivityCompat.shouldShowRequestPermissionRationale(context,Manifest.permission.INTERNET)){
             new AlertDialog.Builder(context)
                     .setTitle("Permission needed")
-                    .setMessage("This permission is needed for getting location")
+                    .setMessage("This permission is needed for getting internet access")
                     .setPositiveButton("ok", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
@@ -237,7 +238,7 @@ public final class PermissionService {
         if(ActivityCompat.shouldShowRequestPermissionRationale(context,Manifest.permission.RECORD_AUDIO)){
             new AlertDialog.Builder(context)
                     .setTitle("Permission needed")
-                    .setMessage("This permission is needed for getting location")
+                    .setMessage("This permission is needed for getting audio input")
                     .setPositiveButton("ok", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
@@ -257,6 +258,44 @@ public final class PermissionService {
         }else{
 
             ActivityCompat.requestPermissions(context,new String[] {Manifest.permission.RECORD_AUDIO},RECORD_AUDIO_PERMISSION_CODE);
+        }
+
+    }
+    public static void checkCoarseLocation(Activity context ){
+        if(ContextCompat.checkSelfPermission(context, Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED){
+            // Toast.makeText(context,"You have already granted this permission",Toast.LENGTH_SHORT).show();
+        }
+        else
+        {
+            requestInternetPermission(context);
+
+        }
+    }
+    private static void requestCoarseLocationPermission(final Activity  context) {
+        if(ActivityCompat.shouldShowRequestPermissionRationale(context,Manifest.permission.ACCESS_COARSE_LOCATION)){
+            new AlertDialog.Builder(context)
+                    .setTitle("Permission needed")
+                    .setMessage("This permission is needed for getting location")
+                    .setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            ActivityCompat.requestPermissions(context,new String[] {Manifest.permission.ACCESS_COARSE_LOCATION},COARSE_LOCATION_PERMISSION_CODE);
+
+                        }
+                    })
+                    .setNegativeButton("cancel", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    })
+                    .create()
+                    .show();
+
+        }else{
+
+            ActivityCompat.requestPermissions(context,new String[] {Manifest.permission.ACCESS_COARSE_LOCATION},COARSE_LOCATION_PERMISSION_CODE);
+
         }
 
     }

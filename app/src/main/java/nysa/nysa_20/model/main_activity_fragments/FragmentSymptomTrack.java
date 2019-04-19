@@ -12,13 +12,21 @@ import android.widget.CalendarView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.github.mikephil.charting.charts.PieChart;
+import com.github.mikephil.charting.components.Legend;
+import com.github.mikephil.charting.data.Entry;
+import com.github.mikephil.charting.data.PieData;
+import com.github.mikephil.charting.data.PieDataSet;
+import com.github.mikephil.charting.utils.ColorTemplate;
 import com.github.sundeepk.compactcalendarview.CompactCalendarView;
 import com.github.sundeepk.compactcalendarview.domain.Event;
 
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -55,7 +63,7 @@ public class FragmentSymptomTrack extends Fragment {
         view = inflater.inflate(R.layout.activity_symptom_track, container, false);
 
         initComponents();
-
+        setupPieChart();
         return view;
 
     }
@@ -65,6 +73,7 @@ public class FragmentSymptomTrack extends Fragment {
         initComponentsReferences();
 
         prepareCalendar();
+        setupPieChart();
     }
 
     private void initComponentsReferences() {
@@ -157,6 +166,37 @@ public class FragmentSymptomTrack extends Fragment {
         skinTextView.setText(SymptomEntryService.getSkinSymptoms(entry));
         String skinDeclaration = SymptomEntryService.getSkinDeclaration(entry);
         skinDeclarationTextView.setText("Declaration : "+skinDeclaration);
+    }
+
+    private static void setupPieChart(){
+        PieChart chart  = view.findViewById(R.id.chart);
+        chart.setUsePercentValues(true);;
+
+
+
+        ArrayList<Entry> values = new ArrayList<>();
+        values.add(new Entry(25,0));
+        values.add(new Entry(26,1));
+        values.add(new Entry(27,2));
+        values.add(new Entry(28,3));
+        values.add(new Entry(29,4));
+
+
+
+        PieDataSet dataSet = new PieDataSet(values,"The proportion of symptoms in categories");
+        dataSet.setColors(ColorTemplate.COLORFUL_COLORS);
+        dataSet.setDrawValues(true);
+
+        PieData data = new PieData();
+        data.addDataSet(dataSet);
+        data.setValueTextSize(11f);
+        data.setValueTextColor(Color.WHITE);
+
+
+        chart.setData(data);
+        chart.setDescription("");
+        chart.invalidate();
+
     }
 
 

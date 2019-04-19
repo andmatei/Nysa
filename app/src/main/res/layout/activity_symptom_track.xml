@@ -235,6 +235,17 @@
                     app:layout_constraintTop_toBottomOf="@+id/skinSymptomsTextView_Tracker" />
             </android.support.constraint.ConstraintLayout>
 
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/chart"
+                android:layout_width="match_parent"
+                android:layout_height="382dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/selectedDate_data" />
+
+
         </android.support.constraint.ConstraintLayout>
     </ScrollView>
 

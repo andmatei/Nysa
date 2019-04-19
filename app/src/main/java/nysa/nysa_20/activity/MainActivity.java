@@ -1,14 +1,21 @@
 package nysa.nysa_20.activity;
 
+import android.location.LocationManager;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
+
 import nysa.nysa_20.R;
+import nysa.nysa_20.model.LocationDataKeeper;
 import nysa.nysa_20.model.Toolbar_MainActivity;
 import nysa.nysa_20.model.adaptors.MainActivityPagerAdaptor;
+import nysa.nysa_20.service.connectivity.LocationService;
 
 public class MainActivity extends AppCompatActivity {
     private static ViewPager trackPager;
@@ -20,7 +27,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         initComponents();
+
+        LocationService service = new LocationService(MainActivity.this);
+        Toast.makeText(MainActivity.this, LocationDataKeeper.getLatitude()+" "+LocationDataKeeper.getLongitude()+" "+LocationDataKeeper.getLocality()+LocationDataKeeper.getCountry(),Toast.LENGTH_LONG).show();
+
+
+
+
 
     }
 
@@ -32,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
         trackPager.setAdapter(trackAdapter);
 
         prepareViewPager();
+
 
     }
 
@@ -58,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
     public static void setCurrentTab(int position){
         trackPager.setCurrentItem(position);
         toolbar_mainActivity.updateToolbarImageResources(position);
+
     }
 
 

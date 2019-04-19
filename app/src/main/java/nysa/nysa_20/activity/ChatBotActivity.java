@@ -30,6 +30,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import nysa.nysa_20.R;
+import nysa.nysa_20.model.LocationDataKeeper;
 import nysa.nysa_20.model.Messages;
 import nysa.nysa_20.model.adaptors.ChatBotActiviytMessageAdaptor;
 import nysa.nysa_20.service.utilitary.ActivityShiftService;
@@ -50,6 +51,7 @@ public class ChatBotActivity extends AppCompatActivity {
         setContentView(R.layout.activity_chat_bot);
 
         initComponents();
+        Toast.makeText(ChatBotActivity.this, LocationDataKeeper.getLatitude()+" "+LocationDataKeeper.getLongitude()+" "+LocationDataKeeper.getLocality()+LocationDataKeeper.getCountry(),Toast.LENGTH_LONG).show();
 
     }
 
