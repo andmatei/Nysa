@@ -3,16 +3,12 @@ package nysa.nysa_20.service.utilitary;
 import android.content.Context;
 import android.content.Intent;
 
-import nysa.nysa_20.activity.AccountSettingsActivity;
 import nysa.nysa_20.activity.AllergyRegisterActivity;
 import nysa.nysa_20.activity.ChatBotActivity;
-import nysa.nysa_20.activity.HomeActivity;
-import nysa.nysa_20.activity.LibraryActivity;
 import nysa.nysa_20.activity.LoginActivity;
 import nysa.nysa_20.activity.MainActivity;
 import nysa.nysa_20.activity.RegisterActivity;
 import nysa.nysa_20.activity.SymptomEntryActivity;
-import nysa.nysa_20.activity.SymptomTrackActivity;
 
 public class ActivityShiftService {
 

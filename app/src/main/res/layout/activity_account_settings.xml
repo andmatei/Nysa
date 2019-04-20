@@ -74,6 +74,20 @@
                 app:layout_constraintTop_toBottomOf="@+id/emailAccountSettingsTextView">
 
                 <Button
+                    android:id="@+id/managementDoctorButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/underline_bg"
+                    android:fontFamily="@font/segoe_ui_semilight_610"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:text="Manage your doctor list"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorText"
+                    android:textSize="14sp" />
+
+                <Button
                     android:id="@+id/changeAllergiesButton"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
