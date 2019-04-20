@@ -69,5 +69,14 @@ public final class TimeUtilitaryClass {
                 .toLocalDate();
     }
 
+    public static String getLocalDateToStringFormatSymptomTrack(LocalDate localDate){
+        StringBuilder sb = new StringBuilder();
+        String year = localDate.toString().substring(0,4);
+        int month = Integer.parseInt(localDate.toString().substring(5,7));
+        String day = localDate.toString().substring(8,10);
+        sb.append(day+" "+getCurrentMonthIntToString(month)+", "+year);
+        return sb.toString();
+    }
+
 
 }

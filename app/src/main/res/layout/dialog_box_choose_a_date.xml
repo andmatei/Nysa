@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.github.sundeepk.compactcalendarview.CompactCalendarView
+        android:id="@+id/calendarView_DialogBox"
+        android:layout_width="0dp"
+        android:layout_height="339dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:compactCalendarCurrentDayBackgroundColor="#2DA586"
+        app:compactCalendarCurrentSelectedDayBackgroundColor="#FFFFFF"
+        app:compactCalendarTextSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/monthTextView_DialogBox" />
+
+    <TextView
+        android:id="@+id/monthTextView_DialogBox"
+        android:layout_width="0dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="#2DA586"
+        android:gravity="center"
+        android:text="TextView"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>
+
+
+
+
+
