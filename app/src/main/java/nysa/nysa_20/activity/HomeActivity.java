@@ -1,5 +1,6 @@
 package nysa.nysa_20.activity;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -13,6 +14,7 @@ import nysa.nysa_20.R;
 import nysa.nysa_20.model.Account;
 import nysa.nysa_20.model.AccountHolder;
 import nysa.nysa_20.model.adaptors.NewsRecyclerView;
+import nysa.nysa_20.service.QRService.QRReader;
 import nysa.nysa_20.service.utilitary.ActivityShiftService;
 import nysa.nysa_20.service.utilitary.TimeUtilitaryClass;
 import nysa.nysa_20.service.utilitary.SymptomEntryService;
@@ -41,6 +43,8 @@ public class HomeActivity extends AppCompatActivity {
         account = AccountHolder.getAccount();
 
         prepareComponents();
+
+
 
     }
 

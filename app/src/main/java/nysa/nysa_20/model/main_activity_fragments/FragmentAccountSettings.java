@@ -1,5 +1,6 @@
 package nysa.nysa_20.model.main_activity_fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -9,8 +10,10 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import nysa.nysa_20.R;
+import nysa.nysa_20.activity.MainActivity;
 import nysa.nysa_20.model.Account;
 import nysa.nysa_20.model.AccountHolder;
+import nysa.nysa_20.service.QRService.QRReader;
 import nysa.nysa_20.service.utilitary.ActivityShiftService;
 
 public class FragmentAccountSettings extends Fragment {
@@ -48,6 +51,7 @@ public class FragmentAccountSettings extends Fragment {
         AccountHolder.disconnect();
         ActivityShiftService.toLoginActivity(view.getContext());
         //TODO deleteAccount
+
     }
 
     private void logOutButtonClicked() {
@@ -56,8 +60,9 @@ public class FragmentAccountSettings extends Fragment {
     }
 
     private void changeAllergiesButtonClicked() {
-        ActivityShiftService.toAllergyRegisterActivity(view.getContext());
-
+       // ActivityShiftService.toAllergyRegisterActivity(view.getContext());
+        Intent intent = new Intent(view.getContext(), QRReader.class);
+        this.startActivity(intent);
     }
 
     private void assignComponentReferences() {

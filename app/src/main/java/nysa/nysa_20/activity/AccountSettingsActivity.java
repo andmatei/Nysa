@@ -1,5 +1,6 @@
 package nysa.nysa_20.activity;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
@@ -8,6 +9,7 @@ import android.widget.TextView;
 import nysa.nysa_20.R;
 import nysa.nysa_20.model.Account;
 import nysa.nysa_20.model.AccountHolder;
+import nysa.nysa_20.service.QRService.QRReader;
 import nysa.nysa_20.service.utilitary.ActivityShiftService;
 
 public class AccountSettingsActivity extends AppCompatActivity {
@@ -39,9 +41,10 @@ public class AccountSettingsActivity extends AppCompatActivity {
     }
 
     private void deleteAccountClicked() {
-        AccountHolder.disconnect();
-        ActivityShiftService.toLoginActivity(this);
+        //AccountHolder.disconnect();
+        //ActivityShiftService.toLoginActivity(this);
         //TODO deleteAccount
+
     }
 
     private void logOutButtonClicked() {

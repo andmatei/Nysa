@@ -31,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
         initComponents();
 
         LocationService service = new LocationService(MainActivity.this);
-        Toast.makeText(MainActivity.this, LocationDataKeeper.getLatitude()+" "+LocationDataKeeper.getLongitude()+" "+LocationDataKeeper.getLocality()+LocationDataKeeper.getCountry(),Toast.LENGTH_LONG).show();
 
 
 

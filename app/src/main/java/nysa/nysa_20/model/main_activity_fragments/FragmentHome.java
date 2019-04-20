@@ -61,7 +61,6 @@ public class FragmentHome extends Fragment {
 
         prepareNewsfeed();
 
-        System.out.println("---------------------------------------------------------"+account.toString());
 
     }
 
