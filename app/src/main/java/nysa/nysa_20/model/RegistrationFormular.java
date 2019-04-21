@@ -101,4 +101,16 @@ public class RegistrationFormular {
     public boolean isAnyEmpty() {
         return isAnyEmpty;
     }
+
+    @Override
+    public String toString() {
+        return "RegistrationFormular{" +
+                "lastName='" + lastName + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", username='" + username + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", isAnyEmpty=" + isAnyEmpty +
+                '}';
+    }
 }

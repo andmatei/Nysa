@@ -48,9 +48,10 @@ public class LocationService  {
                     Geocoder geocoder = new Geocoder(activity);
                     try {
                         List<Address> addressList = geocoder.getFromLocation(latitude,longitude,1);
-                        locality = addressList.get(0).getLocality();
 
+                        locality = addressList.get(0).getLocality();
                         country = addressList.get(0).getCountryName();
+
                         System.out.println("------------"+latitude+"----"+longitude+"-----"+locality+"-------"+country);
                         LocationDataKeeper.setLatitude(new Double(latitude));
                         LocationDataKeeper.setLongitude(new Double(longitude));
