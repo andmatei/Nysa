@@ -9,7 +9,6 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.VIBRATE" />
 
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -17,14 +16,12 @@
         android:roundIcon="@drawable/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".service.QRService.QRReader"></activity>
-        <activity android:name=".activity.SymptomEntryActivity"></activity>
+        <activity android:name=".service.QRService.QRGenerator"></activity>
+        <activity android:name=".activity.ManagementDoctorsActivity" />
+        <activity android:name=".service.QRService.QRReader" />
+        <activity android:name=".activity.SymptomEntryActivity" />
         <activity android:name=".activity.MainActivity" />
         <activity android:name=".activity.ChatBotActivity" />
-        <activity android:name=".activity.SymptomTrackActivity" />
-        <activity android:name=".activity.LibraryActivity" />
-        <activity android:name=".activity.AccountSettingsActivity" />
-        <activity android:name=".activity.HomeActivity" />
         <activity android:name=".activity.AllergyRegisterActivity" />
         <activity android:name=".activity.RegisterActivity" />
         <activity
@@ -36,7 +33,10 @@
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <meta-data android:name="com.google.android.gms.vision.DEPENDENCIES" android:value="barcode"/>
+
+        <meta-data
+            android:name="com.google.android.gms.vision.DEPENDENCIES"
+            android:value="barcode" />
     </application>
 
 </manifest>

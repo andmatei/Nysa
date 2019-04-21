@@ -25,6 +25,7 @@ import java.io.IOException;
 
 import nysa.nysa_20.R;
 import nysa.nysa_20.activity.MainActivity;
+import nysa.nysa_20.model.Doctor;
 import nysa.nysa_20.service.utilitary.ActivityShiftService;
 import nysa.nysa_20.service.utilitary.PermissionService;
 
@@ -33,7 +34,7 @@ public class QRReader extends AppCompatActivity {
 
     private SurfaceView cameraPreview;
 
-    private static String rez;
+    private static String rez = "";
     private BarcodeDetector detector;
     private CameraSource cameraSource;
     @Override
@@ -87,6 +88,8 @@ public class QRReader extends AppCompatActivity {
                 if(qrcodes.size() != 0)
                 {
                     rez = qrcodes.valueAt(0).displayValue;
+                    Doctor doctor = new Doctor();
+                    //TODO getData
                     finish();
 
                 }

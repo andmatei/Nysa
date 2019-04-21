@@ -23,6 +23,7 @@ public class FragmentAccountSettings extends Fragment {
     private Button logOutButton;
     private Button deleteAccount;
     private View view;
+    private Button managementButton;
     public FragmentAccountSettings(){}
 
 
@@ -45,6 +46,11 @@ public class FragmentAccountSettings extends Fragment {
         changeAllergiesButton.setOnClickListener(ev -> changeAllergiesButtonClicked());
         logOutButton.setOnClickListener(ev -> logOutButtonClicked());
         deleteAccount.setOnClickListener(ev -> deleteAccountClicked());
+        managementButton.setOnClickListener(ev -> managementButtonClicked());
+    }
+
+    private void managementButtonClicked() {
+
     }
 
     private void deleteAccountClicked() {
@@ -71,5 +77,6 @@ public class FragmentAccountSettings extends Fragment {
         changeAllergiesButton = view.findViewById(R.id.changeAllergiesButton);
         logOutButton = view.findViewById(R.id.logOutButton);
         deleteAccount = view.findViewById(R.id.deleteAccountButton);
+        managementButton = view.findViewById(R.id.managementDoctorButton);
     }
 }

@@ -13,6 +13,7 @@ public class Account implements Serializable {
     private String id;
     private HashMap<String,Boolean> allergyMap;
     private HashMap<java.time.LocalDate,SymptomEntry> historyMap;
+    private Doctor doctor;
 
 
     public Account(RegistrationFormular formular){
@@ -57,6 +58,13 @@ public class Account implements Serializable {
         this.allergyMap = allergyMap;
     }
 
+    public Doctor getDoctor() {
+        return doctor;
+    }
+
+    public void setDoctor(Doctor doctor) {
+        this.doctor = doctor;
+    }
 
     @Override
     public String toString() {

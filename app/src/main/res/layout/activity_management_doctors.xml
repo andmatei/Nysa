@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ManagementDoctorsActivity">
+
+    <TextView
+        android:id="@+id/managementDoctorTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/segoeuib"
+        android:text="Doctor"
+        android:textColor="@color/colorText"
+        android:textSize="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/managementDoctorTitleUnderlineImageView"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginRight="60dp"
+        android:background="@drawable/symptom_overview_card"
+        app:layout_constraintLeft_toLeftOf="@+id/managementDoctorTitleTextView"
+        app:layout_constraintRight_toRightOf="@+id/managementDoctorTitleTextView"
+        app:layout_constraintTop_toBottomOf="@+id/managementDoctorTitleTextView" />
+
+    <TextView
+        android:id="@+id/addDoctorTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:text="addDoctor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nameDoctorStatementTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="52dp"
+        android:text="Name :"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/managementDoctorTitleTextView" />
+
+    <TextView
+        android:id="@+id/nameDoctorTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="43dp"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/nameDoctorStatementTextView"
+        app:layout_constraintStart_toEndOf="@+id/nameDoctorStatementTextView" />
+
+    <TextView
+        android:id="@+id/phoneDoctorStatementTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="24dp"
+        android:text="Phone :"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameDoctorStatementTextView" />
+
+    <TextView
+        android:id="@+id/phoneDoctorTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="43dp"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/phoneDoctorStatementTextView"
+        app:layout_constraintStart_toEndOf="@+id/phoneDoctorStatementTextView" />
+
+    <TextView
+        android:id="@+id/emailDoctorStatementTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="24dp"
+        android:text="Phone :"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phoneDoctorStatementTextView" />
+
+    <TextView
+        android:id="@+id/emailDoctorTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="43dp"
+        android:inputType="textMultiLine"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/emailDoctorStatementTextView"
+        app:layout_constraintStart_toEndOf="@+id/emailDoctorStatementTextView" />
+</android.support.constraint.ConstraintLayout>
