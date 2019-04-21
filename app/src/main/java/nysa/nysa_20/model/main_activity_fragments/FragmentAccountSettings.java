@@ -13,6 +13,7 @@ import nysa.nysa_20.R;
 import nysa.nysa_20.activity.MainActivity;
 import nysa.nysa_20.model.Account;
 import nysa.nysa_20.model.AccountHolder;
+import nysa.nysa_20.service.QRService.QRGenerator;
 import nysa.nysa_20.service.QRService.QRReader;
 import nysa.nysa_20.service.utilitary.ActivityShiftService;
 
@@ -50,7 +51,8 @@ public class FragmentAccountSettings extends Fragment {
     }
 
     private void managementButtonClicked() {
-
+            Intent intent = new Intent(this.getContext(),QRGenerator.class);
+            this.startActivity(intent);
     }
 
     private void deleteAccountClicked() {

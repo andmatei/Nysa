@@ -45,6 +45,7 @@ public class RegisterService implements Callable {
     @Override
     public Object call() throws Exception {
 
+        finaliseRegisterSequence();
         //TODO if registration is possible ; if another account already exists result = 0; if there has beeen an error result = -1;
 
         initializeRetrofit();
