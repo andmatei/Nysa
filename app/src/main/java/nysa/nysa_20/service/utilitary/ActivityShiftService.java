@@ -39,29 +39,6 @@ public class ActivityShiftService {
         context.startActivity(intent);
     }
 
-    public static void toAccountSettingsActivity(Context context){
-        Intent intent = new Intent(context, AccountSettingsActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-        context.startActivity(intent);
-    }
-
-    public static void toLibraryActivity(Context context){
-        Intent intent = new Intent(context, LibraryActivity.class);
-        context.startActivity(intent);
-    }
-
-    public static void toSymptomTrackActivity(Context context){
-        Intent intent = new Intent(context, SymptomTrackActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-        context.startActivity(intent);
-    }
-
-    public static void toHomeActivity(Context context){
-        Intent intent = new Intent(context, HomeActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-        context.startActivity(intent);
-    }
-
     public static void toSymptomEntryActivity(Context context){
         Intent intent = new Intent(context, SymptomEntryActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);

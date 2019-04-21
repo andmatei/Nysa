@@ -15,11 +15,11 @@ public class RegistrationFormular {
 
     public static class Builder{
 
-        private String lastName;
-        private String firstName;
-        private String username;
-        private String email;
-        private String password;
+        private String lastName = "";
+        private String firstName = "";
+        private String username = "";
+        private String email = "";
+        private String password = "";
 
         public Builder setFirstName(String firstName){
             this.firstName = firstName;
@@ -61,7 +61,7 @@ public class RegistrationFormular {
 
         }
 
-        private  boolean checkIsAnyEmpty(){
+        private boolean checkIsAnyEmpty(){
             boolean result = false;
             if(firstName.equals("")) result = true;
             else

@@ -234,7 +234,7 @@ public class AllergyRegisterActivity extends AppCompatActivity {
 
 
     void tolibraryButtonClicked(){
-        ActivityShiftService.toLibraryActivity(this);
+//        ActivityShiftService.toLibraryActivity(this);
 
     }
 
