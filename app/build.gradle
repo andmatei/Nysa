@@ -51,6 +51,8 @@ dependencies {
     implementation 'com.google.android.gms:play-services:9.8.0'
     implementation 'com.squareup.retrofit2:retrofit:2.5.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.journeyapps:zxing-android-embedded:3.0.2@aar'
+    implementation  'com.google.zxing:core:3.2.1'
 
 
 }

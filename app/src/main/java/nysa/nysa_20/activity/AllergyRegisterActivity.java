@@ -113,7 +113,6 @@ public class AllergyRegisterActivity extends AppCompatActivity {
           pollenAllergyTextView.setOnClickListener(ev -> textViewOnClick("pollenAllergy"));
           dustAllergyTextView.setOnClickListener(ev -> textViewOnClick("dustAllergy"));
           moldAllergyTextView.setOnClickListener(ev -> textViewOnClick("moldAllergy"));
-          toLibraryButton.setOnClickListener(ev -> tolibraryButtonClicked());
           finishButton.setOnClickListener(ev -> finishButtonClicked());
     }
 
@@ -232,11 +231,6 @@ public class AllergyRegisterActivity extends AppCompatActivity {
        finishButton.setText(s);
     }
 
-
-    void tolibraryButtonClicked(){
-        ActivityShiftService.toLibraryActivity(this);
-
-    }
 
     void finishButtonClicked(){
         Account account = AccountHolder.getAccount();
