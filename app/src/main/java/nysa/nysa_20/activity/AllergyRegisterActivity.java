@@ -230,8 +230,7 @@ public class AllergyRegisterActivity extends AppCompatActivity {
             }
        finishButton.setText(s);
     }
-
-
+    
     void finishButtonClicked(){
         Account account = AccountHolder.getAccount();
         account.setAllergyMap(formular.getAllergyMap());

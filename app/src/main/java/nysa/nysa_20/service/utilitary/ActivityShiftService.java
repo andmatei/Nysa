@@ -39,8 +39,6 @@ public class ActivityShiftService {
         context.startActivity(intent);
     }
 
-
-
     public static void toSymptomEntryActivity(Context context){
         Intent intent = new Intent(context, SymptomEntryActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);

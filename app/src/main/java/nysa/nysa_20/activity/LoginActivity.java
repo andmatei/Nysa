@@ -2,6 +2,7 @@ package nysa.nysa_20.activity;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
@@ -9,6 +10,9 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import junit.framework.Test;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -20,10 +24,16 @@ import java.io.InputStreamReader;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 
 import nysa.nysa_20.R;
+import nysa.nysa_20.model.Account;
 import nysa.nysa_20.model.AccountHolder;
 import nysa.nysa_20.model.LoginFormular;
+import nysa.nysa_20.model.RegistrationFormular;
 import nysa.nysa_20.service.connectivity.LocationService;
 import nysa.nysa_20.service.connectivity.LoginService;
 import nysa.nysa_20.service.localPersistance.MainLocalPersistenceService;
@@ -106,21 +116,50 @@ public class LoginActivity extends AppCompatActivity {
             Toast.makeText(this,"All fields must be completed!",Toast.LENGTH_SHORT).show();
         }
         else{
-            int processCompleted = LoginService.initiateLoginSequence(loginFormular);
 
-            if(processCompleted == 0) {
-                Toast.makeText(this,"Invalid email or password!", Toast.LENGTH_SHORT).show();
+            ExecutorService executorService = Executors.newCachedThreadPool();
+            LoginService loginService = new LoginService(loginFormular);
+            Future<JSONObject> future = executorService.submit(loginService);
+            try {
+
+                JSONObject apiResponse  = future.get();
+                if(apiResponse.getString("status").equals("FAIL"))
+                    Toast.makeText(this,apiResponse.getString("messege"), Toast.LENGTH_SHORT).show();
+                else {
+                    Toast.makeText(this,"Successfully logged in!", Toast.LENGTH_SHORT).show();
+
+                    JSONObject data = apiResponse.getJSONObject("data");
+                    Account account = new Account(
+                            new RegistrationFormular.Builder()
+                                .setEmail(data.getString("email"))
+                                .setFirstName(data.getString("first_name"))
+                                .setLastName(data.getString("last_name"))
+                                .setUsername(data.getString("username"))
+                                .build()
+                    );
+                    AccountHolder.setAccount(account);
+                    ActivityShiftService.toMainActivity(this);
+
+                    SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+                    SharedPreferences.Editor editor = preferences.edit();
+
+                    editor.putString("authToken", data.getString("auth_token"));
+                    editor.putString("refreshToken", data.getString("refresh_token"));
+                    editor.putString("id", data.getString("id"));
+
+                    editor.apply();
+                }
+
+            } catch (InterruptedException | ExecutionException e){
+                e.printStackTrace();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            } catch (Exception e) {
+                e.printStackTrace();
             }
-            else
-                if(processCompleted==1){
-
-                    Toast.makeText(this,"Login successful!",Toast.LENGTH_LONG).show();
-                    //TODO retrieve data and continue the flow
-                }
-                else{
-                    Toast.makeText(this,"Oh, no! There was an error!",Toast.LENGTH_LONG).show();
-                }
-
+            finally {
+                executorService.shutdown();
+            }
         }
 
 
