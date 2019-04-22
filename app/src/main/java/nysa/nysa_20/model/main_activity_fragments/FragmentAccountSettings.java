@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import nysa.nysa_20.R;
 import nysa.nysa_20.activity.MainActivity;
+import nysa.nysa_20.activity.ManagementDoctorsActivity;
 import nysa.nysa_20.model.Account;
 import nysa.nysa_20.model.AccountHolder;
 import nysa.nysa_20.service.QRService.QRGenerator;
@@ -51,7 +52,7 @@ public class FragmentAccountSettings extends Fragment {
     }
 
     private void managementButtonClicked() {
-            Intent intent = new Intent(this.getContext(),QRGenerator.class);
+            Intent intent = new Intent(this.getContext(), ManagementDoctorsActivity.class);
             this.startActivity(intent);
     }
 

@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">NYSA 2.0PhD</string>
+    <string name="display_name">Display name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="log_out">Log Out</string>
+    <string name="all_users">All Users</string>
+    <string name="account_settings">Account Settings</string>
+    <string name="create_a_new_account">Create a New Account</string>
+
+    <string name="create_account">Create Account</string>
+    <string name="need_a_new_account">NEED A NEW ACCOUNT</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="aici_vine_biblioteca">Aici vine Biblioteca</string>
+    <string name="aici_vin_noutatile">Aici vin noutatile</string>
+    <string name="aici_vine_chatul">Aici vine chatul</string>
+    <string name="log_in">LOG IN</string>
+
+    <string name="username">Username</string>
+    <string name="register">REGISTER</string>
+    <string name="e_mail_address">E-mail address</string>
+    <string name="check_out_our_allergy_library_here">Check out our allergy library here</string>
+    <string name="food_allergy">Food Allergy</string>
+    <string name="lactose">Lactose</string>
+    <string name="egg">Egg</string>
+    <string name="gluten">Gluten</string>
+    <string name="sesame">Sesame</string>
+    <string name="crustaceans">Crustaceans</string>
+    <string name="peanuts">Peanuts</string>
+    <string name="soy">Soy</string>
+    <string name="nuts">Nuts</string>
+    <string name="fish">Fish</string>
+    <string name="pet_allergy">Pet Allergy</string>
+    <string name="dog">Dog</string>
+    <string name="cat">Cat</string>
+    <string name="drug_allergy">Drug Allergy</string>
+    <string name="penicillin">Penicillin</string>
+    <string name="antibiotics_containing_sulfonamides">Antibiotics containing sulfonamides</string>
+    <string name="anticonvulsants">Anticonvulsants</string>
+    <string name="aspirin_ibuprofen_or_other">Aspirin, ibuprofen or other nonsteroidal anti-inflammatory drugs</string>
+    <string name="nonsteroidal_anti_inflammatory">nonsteroidal anti-inflammatory</string>
+    <string name="drugs">drugs</string>
+    <string name="insect_sting_allergy">Insect Sting Allergy</string>
+    <string name="pollen_allergy_allergic_rhinitis">Pollen Allergy/Allergic Rhinitis</string>
+    <string name="dust_allergy">Dust Allergy</string>
+    <string name="mold_allergy">Mold Allergy</string>
+    <string name="hope_you_re_feeling_just_fine_for_a_lovely_day_here_s_your_daily_review_of_your_symtom_tracker_log">Hope you\'re feeling just fine for a lovely day. Here\'s your daily review of your symtom tracker log.</string>
+    <string name="check_out_your_newsfeed_the_lastest_topics_and_more_what_s_new_that_might_interest_you">Check out your newsfeed, the lastest topics and more. What\'s new that might interest you?</string>
+    <string name="Dummy_text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo.</string>
+
+</resources>

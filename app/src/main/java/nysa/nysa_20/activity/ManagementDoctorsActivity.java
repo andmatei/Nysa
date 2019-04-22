@@ -47,7 +47,7 @@ public class ManagementDoctorsActivity extends AppCompatActivity {
         if(account.getDoctor()!=null){
             Doctor doctor = account.getDoctor();
             nameDoctor.setText(doctor.getNume());
-            phoneDoctor.setText(doctor.getTelefon());
+            phoneDoctor.setText(doctor.getPhone());
             mailDoctor.setText(doctor.getEmail());
         }
         addDoctor.setOnClickListener(ev -> addDoctorClicked());
@@ -57,6 +57,7 @@ public class ManagementDoctorsActivity extends AppCompatActivity {
     private void addDoctorClicked() {
         Intent intent = new Intent(this, QRReader.class);
         this.startActivity(intent);
+        finish();
 
     }
 }

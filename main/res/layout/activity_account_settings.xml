@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context="nysa.nysa_20.activity.AccountSettingsActivity">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="40dp">
+
+            <TextView
+                android:id="@+id/profileTitleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/segoeuib"
+                android:text="Profile"
+                android:textColor="@color/colorText"
+                android:textSize="50dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/profileTitleUnderlineImageView"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_marginRight="60dp"
+                android:background="@drawable/symptom_overview_card"
+                app:layout_constraintLeft_toLeftOf="@+id/profileTitleTextView"
+                app:layout_constraintRight_toRightOf="@+id/profileTitleTextView"
+                app:layout_constraintTop_toBottomOf="@+id/profileTitleTextView" />
+
+            <TextView
+                android:id="@+id/nameAccountSettingsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/segoe_ui_semilight_610"
+                android:text="Mr. Ambrosia"
+                android:textColor="#2DA586"
+                android:textSize="28sp"
+                app:layout_constraintStart_toStartOf="@+id/profileTitleUnderlineImageView"
+                app:layout_constraintTop_toBottomOf="@+id/profileTitleUnderlineImageView" />
+
+            <TextView
+                android:id="@+id/emailAccountSettingsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="meh@meh.com"
+                android:textColor="#2DA586"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/nameAccountSettingsTextView"
+                app:layout_constraintTop_toBottomOf="@+id/nameAccountSettingsTextView" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/emailAccountSettingsTextView">
+
+                <Button
+                    android:id="@+id/managementPatientsButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/underline_bg"
+                    android:fontFamily="@font/segoe_ui_semilight_610"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:text="Manage your patients list"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorText"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/logOutButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/underline_bg"
+                    android:fontFamily="@font/segoe_ui_semilight_610"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:text="Log Out"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorText"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/deleteAccountButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/underline_bg"
+                    android:fontFamily="@font/segoe_ui_semilight_610"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:text="Delete Account"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorText"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

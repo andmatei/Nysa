@@ -1,0 +1,27 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="MySeekBar" parent="Widget.AppCompat.SeekBar.Discrete">
+        <item name="android:progressBackgroundTint">#C8C8C8</item>
+        <item name="android:progressTint">#C8C8C8</item>
+        <item name="android:colorControlActivated">#C8C8C8</item>
+        <item name="android:colorAccent">#C8C8C8</item>
+        <item name="android:colorPrimary">#C8C8C8</item>
+        <item name="android:colorPrimaryDark">#C8C8C8</item>
+    </style>
+
+    <style name="MyCalendar"  >
+        <item name="android:colorControlActivated">#C8C8C8</item>
+        <item name="android:colorAccent">#2DA586</item>
+        <item name="android:colorPrimary">#2DA586</item>
+        <item name="android:colorPrimaryDark">#2DA586</item>
+    </style>
+
+</resources>

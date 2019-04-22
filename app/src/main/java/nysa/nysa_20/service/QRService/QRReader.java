@@ -1,20 +1,13 @@
 package nysa.nysa_20.service.QRService;
 
 import android.Manifest;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Vibrator;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.SparseArray;
-import android.view.LayoutInflater;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.gms.vision.CameraSource;
 import com.google.android.gms.vision.Detector;
@@ -24,9 +17,9 @@ import com.google.android.gms.vision.barcode.BarcodeDetector;
 import java.io.IOException;
 
 import nysa.nysa_20.R;
-import nysa.nysa_20.activity.MainActivity;
+import nysa.nysa_20.model.Account;
+import nysa.nysa_20.model.AccountHolder;
 import nysa.nysa_20.model.Doctor;
-import nysa.nysa_20.service.utilitary.ActivityShiftService;
 import nysa.nysa_20.service.utilitary.PermissionService;
 
 public class QRReader extends AppCompatActivity {
@@ -89,7 +82,17 @@ public class QRReader extends AppCompatActivity {
                 {
                     rez = qrcodes.valueAt(0).displayValue;
                     Doctor doctor = new Doctor();
-                    //TODO getData
+                    String id = rez.substring(rez.indexOf("Id")+2,rez.indexOf("Name"));
+                    String name = rez.substring(rez.indexOf("Name")+4,rez.indexOf("Phone"));
+                    String phone = rez.substring(rez.indexOf("Phone")+5,rez.indexOf("Email"));
+                    String email = rez.substring(rez.indexOf("Email")+5);
+                    doctor.setId(id);
+                    doctor.setEmail(email);
+                    doctor.setNume(name);
+                    doctor.setPhone(phone);
+                    Account account = AccountHolder.getAccount();
+                    account.setDoctor(doctor);
+
                     finish();
 
                 }

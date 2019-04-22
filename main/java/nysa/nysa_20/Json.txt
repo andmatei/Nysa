@@ -1,0 +1,177 @@
+[  
+   {  
+      "title":"Allergies: Basic Info",
+      "description":"What is an allergy? What happens during an allergic reaction? What are the symptoms? Here you can find out.",
+      "tagname":"Basic",
+      "article_data":[  
+         {  
+            "type":"heading",
+            "title":"Allergies: Basic Info",
+            "author":"information taken from WebMd",
+            "posted":"30 May 2018",
+            "tagname":"Basic"
+         },
+         {  
+            "type":"paragraph",
+            "subtitle":"What is an allergy?",
+            "paragraph":"   It's what happens when your immune system reacts to something that’s usually harmless. Those triggers, which doctors call allergens, can include pollen, mold, and animal dander, certain foods, or things that irritate your skin."
+         },
+         {  
+            "type":"paragraph",
+            "subtitle":"What happens during an allergic reaction?",
+            "paragraph":"   Allergies are very common."
+         },
+         {  
+            "type":"paragraph",
+            "subtitle":"",
+            "paragraph":"   It starts when you come into contact with a trigger that you inhale, swallow, or get on your skin."
+         },
+         {  
+            "type":"paragraph",
+            "subtitle":"",
+            "paragraph":"   In response, your body starts to make a protein called IgE, which grabs onto the allergen. Then histamine and other chemicals get released into the blood. That causes the symptoms you notice."
+         },
+         {  
+            "type":"paragraph",
+            "subtitle":"What are the symptoms?",
+            "paragraph":"   Your symptoms depend on how you’re exposed through the air, your skin, food, or through an insect sting."
+         },
+         {  
+            "type":"paragraph",
+            "subtitle":"",
+            "paragraph":"   If you’ve got a nasal allergy (one that's triggered by something you inhale), common symptoms include:"
+         },
+         {  
+            "type":"list",
+            "title":"",
+            "list":"&#8226 ;   Itchy, watery eyes <br> &#8226; Sneezing <br> &#8226; Itchy, runny nose <br> &#8226; Feeling tired or ill <br> "
+         },
+         {  
+            "type":"paragraph",
+            "subtitle":"",
+            "paragraph":"   Common symptoms of a skin allergy include rashes and hives (a rash with raised red patches)."
+         }
+      ]
+   },
+   {  
+      "title":"Food Allergies: Basic Info",
+      "description":"What happens when your immune system reacts to something that you’ve eaten. Find out more about Food Allergies.",
+      "tagname":"Food",
+      "article_data":[  
+         {  
+            "type":"heading",
+            "title":"Food Allergies: Basic Info",
+            "author":"information taken from WebMd",
+            "posted":"30 May 2018",
+            "tagname":"Food"
+         },
+         {  
+            "type":"paragraph",
+            "subtitle":"",
+            "paragraph":"   A food allergy happens when your immune system reacts to something that you’ve eaten."
+         },
+         {  
+            "type":"paragraph",
+            "subtitle":"",
+            "paragraph":"   When you eat something you are allergic to, your body makes antibodies. Over time, sometimes as soon as the second time you eat it, the antibodies spring into action, starting a process that includes the release of lots of histamine to fight what it believes is invading your body."
+         },
+         {  
+            "type":"paragraph",
+            "subtitle":"",
+            "paragraph":"   Histamine is a powerful chemical that can affect your respiratory system, digestive tract, skin, and heart and blood vessels."
+         },
+         {  
+            "type":"paragraph",
+            "subtitle":"What Are the Symptoms of a Food Allergy?",
+            "paragraph":"   Symptoms may appear almost immediately or up to 2 hours after you've eaten the food (rarely, they appear 4-6 hours later). Symptoms can include:"
+         },
+         {  
+            "type":"list",
+            "title":"",
+            "list":"&#8226; A tingling sensation of the mouth <br> &#8226; Swelling of the tongue and throat <br> &#8226; Hives <br> &#8226; Skin rashes <br> &#8226; Vomiting <br> &#8226; Abdominal cramps <br> &#8226; Trouble breathing <br> &#8226; Diarrhea <br> &#8226; A drop in blood pressure <br> &#8226; Loss of conciousness <br>"
+         },
+         {  
+            "type":"paragraph",
+            "subtitle":"",
+            "paragraph":"   Severe reactions, called anaphylaxis, can result in death."
+         },
+         {  
+            "type":"paragraph",
+            "subtitle":"",
+            "paragraph":"   You can get a rash in areas that come in contact with foods. Some people are so sensitive to food allergens that the odor of that particular food can cause a reaction."
+         },
+         {  
+            "type":"paragraph",
+            "subtitle":"Which Foods Most Often Cause Allergic Reactions?",
+            "paragraph":"The most common food allergies are reactions to:"
+         },
+         {  
+            "type":"list",
+            "title":"",
+            "list":"&#8226; Milk <br> &#8226; Eggs <br> &#8226; Peanuts <br> &#8226; Seafood <br> &#8226; Milk <br> Tree nuts (such as walnuts, pecans, almonds, pine nuts, and Brazil nuts)"
+         },
+         {  
+            "type":"paragraph",
+            "subtitle":"How Are Food Allergies Diagnosed?",
+            "paragraph":"   If you keep a food diary, your doctor will have a better starting point to figure out foods that could trigger your allergies."
+         },
+         {  
+            "type":"paragraph",
+            "subtitle":"",
+            "paragraph":"   Your doctor may suggest a food elimination diet. If he does, you may be asked to eliminate one or several foods to see if the reaction goes away."
+         },
+         {  
+            "type":"paragraph",
+            "subtitle":"",
+            "paragraph":"   Oral food challenges -- exposing the person to the suspected food under medical supervision -- are thought to be helpful as well. These are usually done after the elimination diet."
+         },
+         {  
+            "type":"paragraph",
+            "subtitle":"",
+            "paragraph":"  Your doctor may do a radioallergosorbent blood test (he may call it a RAST) to see how many antibodies your immune system makes. High levels of some antibodies can help your doctor spot specific food allergies."
+         },
+         {  
+            "type":"paragraph",
+            "subtitle":"",
+            "paragraph":"You may also get an allergy skin test, also called a scratch test."
+         },
+         {  
+            "type":"paragraph",
+            "subtitle":"",
+            "paragraph":"Some food allergies are very mild, and in difficult-to-diagnose cases, a promising new antibody test may help. More research is needed. Also, there are now genetic tests, especially for gluten and celiac (wheat, barley, rye, and some oats)."
+         },
+         {  
+            "type":"paragraph",
+            "subtitle":"How Are Food Allergies Treated?",
+            "paragraph":"he best way to avoid a reaction is to stay away from foods that cause it. Mild reactions usually will go away without treatment. For rashes, skin creams may ease discomfort, while antihistamines can help reduce itching and other symptoms."
+         },
+         {  
+            "type":"paragraph",
+            "subtitle":"",
+            "paragraph":"For more serious reactions, corticosteroids like prednisone will reduce swelling. In life-threatening situations, an epinephrine injection can start to reverse symptoms and is the only effective treatment."
+         },
+         {  
+            "type":"paragraph",
+            "subtitle":"How Can I Be Prepared for an Allergic Reaction?",
+            "paragraph":"Once you and your doctor have found which foods cause your allergies, stay away from them. But you need to maintain a healthy, nutritious diet. Ask your doctor to suggest foods that will give you the nutrients you need."
+         },
+         {  
+            "type":"paragraph",
+            "subtitle":"",
+            "paragraph":"You should also be aware of the ingredients in processed foods. Learn to read labels, and read them every time to know what you are about to eat. Your doctor, nurse, or a registered dietitian can help you learn how to read food labels to learn about hidden sources of food allergens."
+         },
+         {  
+            "type":"paragraph",
+            "subtitle":"",
+            "paragraph":"If you are prone to allergic reactions, ask your doctor to prescribe an epinephrine injection kit (epi pen), and carry two with you at all times."
+         },
+         {  
+            "type":"paragraph",
+            "subtitle":"",
+            "paragraph":"Don’t hesitate to use the epinephrine auto-injector pen if you show any symptom of anaphylaxis. The injection won’t hurt you and could save your life."
+         }
+      ]
+   }
+]
+
+https://api.myjson.com/bins/etfao

@@ -2,13 +2,13 @@ package nysa.nysa_20.model;
 
 public class Doctor {
     private String nume;
-    private String telefon;
+    private String phone;
     private String email;
     private String id;
 
-    public Doctor(String nume, String telefon, String email, String id) {
+    public Doctor(String nume, String phone, String email, String id) {
         this.nume = nume;
-        this.telefon = telefon;
+        this.phone = phone;
         this.email = email;
         this.id = id;
     }
@@ -16,9 +16,9 @@ public class Doctor {
     public Doctor() {
     }
 
-    public Doctor(String nume, String telefon, String email) {
+    public Doctor(String nume, String phone, String email) {
         this.nume = nume;
-        this.telefon = telefon;
+        this.phone = phone;
         this.email = email;
     }
 
@@ -31,12 +31,12 @@ public class Doctor {
     }
 
 
-    public String getTelefon() {
-        return telefon;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setTelefon(String telefon) {
-        this.telefon = telefon;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public String getEmail() {

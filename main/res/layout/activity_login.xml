@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_backround"
+    tools:context="nysa.nysa_20.activity.LoginActivity">
+
+
+    <Button
+        android:id="@+id/loginButton_Login"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/oval_btn_selected"
+        android:elevation="10dp"
+        android:fontFamily="@font/segoe_semibold"
+        android:text="@string/log_in"
+        android:textColor="#22B573"
+        app:layout_constraintBottom_toTopOf="@+id/registerButton_Login"
+        app:layout_constraintEnd_toEndOf="@+id/registerButton_Login"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="@+id/registerButton_Login" />
+
+    <Button
+        android:id="@+id/registerButton_Login"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="48dp"
+        android:elevation="0dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:background="@drawable/oval_btn_unselected"
+        android:fontFamily="@font/segoe_semibold"
+        android:text="@string/register"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/passwordEditText_Login"
+        app:layout_constraintStart_toStartOf="@+id/passwordEditText_Login" />
+
+    <EditText
+        android:id="@+id/emailEditText_Login"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="64dp"
+        android:background="@drawable/uroundcorner"
+        android:fontFamily="@font/segoe_ui"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:paddingStart="20dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginPageLogo" />
+
+    <EditText
+        android:id="@+id/passwordEditText_Login"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:background="@drawable/broundcorner"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:paddingLeft="20dp"
+        android:textAlignment="textStart"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:fontFamily="@font/segoe_ui"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/emailEditText_Login"
+        app:layout_constraintStart_toStartOf="@+id/emailEditText_Login"
+        app:layout_constraintTop_toBottomOf="@+id/emailEditText_Login" />
+
+    <ImageView
+        android:id="@+id/loginPageLogo"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:padding="20dp"
+        android:layout_marginTop="72dp"
+        app:layout_constraintEnd_toEndOf="@+id/emailEditText_Login"
+        app:layout_constraintStart_toStartOf="@+id/emailEditText_Login"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+</android.support.constraint.ConstraintLayout>

@@ -49,7 +49,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void checkLoginStatus() {
-        String filename = "AccountFile.txt";
+        String filename = "PatientAccountFile.txt";
         File file = new File(this.getFilesDir(), filename);
         String fileContents = "";
         FileOutputStream outputStream;

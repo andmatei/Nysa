@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.SymptomEntryActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="0dp">
+
+            <TextView
+                android:id="@+id/statisticsTitleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="48dp"
+                android:fontFamily="@font/segoeuib"
+                android:text="Statistics"
+                android:textColor="@color/colorText"
+                android:textSize="50dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/profileTitleUnderlineImageView2"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_marginEnd="60dp"
+                android:background="@drawable/symptom_overview_card"
+                app:layout_constraintEnd_toEndOf="@+id/statisticsTitleTextView"
+                app:layout_constraintStart_toStartOf="@+id/statisticsTitleTextView"
+                app:layout_constraintTop_toBottomOf="@+id/statisticsTitleTextView" />
+
+            <com.github.sundeepk.compactcalendarview.CompactCalendarView
+                android:id="@+id/calendarView_DialogBox"
+                android:layout_width="0dp"
+                android:layout_height="282dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                app:compactCalendarCurrentDayBackgroundColor="#2DA586"
+                app:compactCalendarCurrentSelectedDayBackgroundColor="#A8D6CA"
+                app:compactCalendarTextSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/monthTextView" />
+
+            <TextView
+                android:id="@+id/monthTextView"
+                android:layout_width="0dp"
+                android:layout_height="29dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="84dp"
+                android:layout_marginEnd="8dp"
+                android:background="#2DA586"
+                android:gravity="center"
+                android:text="TextView"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/statisticsTitleTextView" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/selectedDate_data"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/calendarView_DialogBox">
+
+                <TextView
+                    android:id="@+id/discomfortLevelStatementTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="32dp"
+                    android:text="Discomfort Level :"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/discomfortLevelSelectedTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="65"
+                    android:textColor="#2DA586"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/discomfortLevelStatementTextView"
+                    app:layout_constraintStart_toEndOf="@+id/discomfortLevelStatementTextView"
+                    app:layout_constraintTop_toTopOf="@+id/discomfortLevelStatementTextView" />
+
+                <TextView
+                    android:id="@+id/eyesightSymptomsStatementTextView_Tracker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="24dp"
+                    android:text="Eyesight Symptoms : "
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/discomfortLevelStatementTextView" />
+
+                <TextView
+                    android:id="@+id/eyesightSymptomsTextView_Tracker"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:textColor="#2DA586"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/eyesightSymptomsStatementTextView_Tracker"
+                    app:layout_constraintTop_toTopOf="@+id/eyesightSymptomsStatementTextView_Tracker" />
+
+                <TextView
+                    android:id="@+id/respirationSymptomsStatementTextView_Tracker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Respiration Symptoms : "
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/eyesightDeclarationTextView_Tracker" />
+
+                <TextView
+                    android:id="@+id/respirationSymptomsTextView_Tracker"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:textColor="#2DA586"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/respirationSymptomsStatementTextView_Tracker"
+                    app:layout_constraintTop_toTopOf="@+id/respirationSymptomsStatementTextView_Tracker" />
+
+                <TextView
+                    android:id="@+id/painSymptomsStatementTextView_Tracker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Pain Symptoms : "
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/respirationDeclarationTextView_Tracker" />
+
+                <TextView
+                    android:id="@+id/painSymptomsTextView_Tracker"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:textColor="#2DA586"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/painSymptomsStatementTextView_Tracker"
+                    app:layout_constraintTop_toTopOf="@+id/painSymptomsStatementTextView_Tracker" />
+
+                <TextView
+                    android:id="@+id/skinSymptomsStatementTextView_Tracker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Skin Symptoms : "
+                    android:visibility="visible"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/painDeclarationTextView_Tracker" />
+
+                <TextView
+                    android:id="@+id/skinSymptomsTextView_Tracker"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:textColor="#2DA586"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/skinSymptomsStatementTextView_Tracker"
+                    app:layout_constraintTop_toTopOf="@+id/skinSymptomsStatementTextView_Tracker" />
+
+                <TextView
+                    android:id="@+id/eyesightDeclarationTextView_Tracker"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/eyesightSymptomsTextView_Tracker" />
+
+                <TextView
+                    android:id="@+id/respirationDeclarationTextView_Tracker"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/respirationSymptomsTextView_Tracker" />
+
+                <TextView
+                    android:id="@+id/painDeclarationTextView_Tracker"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/painSymptomsTextView_Tracker" />
+
+                <TextView
+                    android:id="@+id/skinDeclarationTextView_Tracker"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/skinSymptomsTextView_Tracker" />
+            </android.support.constraint.ConstraintLayout>
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/chart"
+                android:layout_width="360dp"
+                android:layout_height="360dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/beginPeriodTextView_Tracker" />
+
+            <TextView
+                android:id="@+id/choosePeriodTextView_Tracker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="8dp"
+                android:text="Choose a period to analyse:"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/selectedDate_data" />
+
+            <TextView
+                android:id="@+id/beginPeriodStatementTextView_Tracker"
+                android:layout_width="77dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/symptoms_buttons_unchecked"
+                android:gravity="center"
+                android:text="Begin"
+                android:textColor="#2DA586"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/choosePeriodTextView_Tracker" />
+
+            <TextView
+                android:id="@+id/endPeriodStatementTextView_Tracker"
+                android:layout_width="77dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="60dp"
+                android:background="@drawable/symptoms_buttons_unchecked"
+                android:gravity="center"
+                android:text="End"
+                android:textColor="#2DA586"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/beginPeriodStatementTextView_Tracker" />
+
+            <TextView
+                android:id="@+id/beginPeriodTextView_Tracker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="29 September 2019"
+                app:layout_constraintEnd_toEndOf="@+id/beginPeriodStatementTextView_Tracker"
+                app:layout_constraintStart_toStartOf="@+id/beginPeriodStatementTextView_Tracker"
+                app:layout_constraintTop_toBottomOf="@+id/beginPeriodStatementTextView_Tracker" />
+
+            <TextView
+                android:id="@+id/endPeriodTextView_Tracker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="29 September 2019"
+                app:layout_constraintEnd_toEndOf="@+id/endPeriodStatementTextView_Tracker"
+                app:layout_constraintStart_toStartOf="@+id/endPeriodStatementTextView_Tracker"
+                app:layout_constraintTop_toBottomOf="@+id/endPeriodStatementTextView_Tracker" />
+
+            <TextView
+                android:id="@+id/eyesightColorLegendTextView"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:background="#c12552"
+                android:text=""
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/chart" />
+
+            <TextView
+                android:id="@+id/eyesightStatementLegentTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:gravity="center"
+                android:text="Eyesight proportion : "
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/eyesightColorLegendTextView"
+                app:layout_constraintStart_toEndOf="@+id/eyesightColorLegendTextView"
+                app:layout_constraintTop_toTopOf="@+id/eyesightColorLegendTextView" />
+
+            <TextView
+                android:id="@+id/eyesightValueLegendTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:gravity="center"
+                android:text="0% (0)"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/eyesightColorLegendTextView"
+                app:layout_constraintStart_toEndOf="@+id/eyesightStatementLegentTextView"
+                app:layout_constraintTop_toTopOf="@+id/eyesightColorLegendTextView" />
+
+            <TextView
+                android:id="@+id/respirationColorLegendTextView"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginTop="32dp"
+                android:background="#ff6600"
+                android:text=""
+                app:layout_constraintStart_toStartOf="@+id/eyesightColorLegendTextView"
+                app:layout_constraintTop_toBottomOf="@+id/eyesightColorLegendTextView" />
+
+            <TextView
+                android:id="@+id/respirationStatementLegentTextview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:gravity="center"
+                android:text="Respiration proportion : "
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/respirationColorLegendTextView"
+                app:layout_constraintStart_toEndOf="@+id/respirationColorLegendTextView"
+                app:layout_constraintTop_toTopOf="@+id/respirationColorLegendTextView" />
+
+            <TextView
+                android:id="@+id/respirationValueLegendTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:gravity="center"
+                android:text="0% (0)"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/respirationColorLegendTextView"
+                app:layout_constraintStart_toEndOf="@+id/respirationStatementLegentTextview"
+                app:layout_constraintTop_toTopOf="@+id/respirationColorLegendTextView" />
+
+            <TextView
+                android:id="@+id/painColorLegendTextView"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginTop="32dp"
+                android:background="#f5c700"
+                android:text=""
+                app:layout_constraintStart_toStartOf="@+id/respirationColorLegendTextView"
+                app:layout_constraintTop_toBottomOf="@+id/respirationColorLegendTextView" />
+
+            <TextView
+                android:id="@+id/painStatementLegentTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:gravity="center"
+                android:text="Pain proportion : "
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/painColorLegendTextView"
+                app:layout_constraintStart_toEndOf="@+id/painColorLegendTextView"
+                app:layout_constraintTop_toTopOf="@+id/painColorLegendTextView" />
+
+            <TextView
+                android:id="@+id/painValueLegendTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:gravity="center"
+                android:text="0% (0)"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/painColorLegendTextView"
+                app:layout_constraintStart_toEndOf="@+id/painStatementLegentTextView"
+                app:layout_constraintTop_toTopOf="@+id/painColorLegendTextView" />
+
+            <TextView
+                android:id="@+id/skinColorLegendTextView"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginTop="32dp"
+                android:background="#6a961f"
+                android:text=""
+                app:layout_constraintStart_toStartOf="@+id/painColorLegendTextView"
+                app:layout_constraintTop_toBottomOf="@+id/painColorLegendTextView" />
+
+            <TextView
+                android:id="@+id/skinStatementLegentTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:gravity="center"
+                android:text="Skin proportion : "
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/skinColorLegendTextView"
+                app:layout_constraintStart_toEndOf="@+id/skinColorLegendTextView"
+                app:layout_constraintTop_toTopOf="@+id/skinColorLegendTextView" />
+
+            <TextView
+                android:id="@+id/skinValueLegendTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:gravity="center"
+                android:text="0% (0)"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/skinColorLegendTextView"
+                app:layout_constraintStart_toEndOf="@+id/skinStatementLegentTextView"
+                app:layout_constraintTop_toTopOf="@+id/skinColorLegendTextView" />
+
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
